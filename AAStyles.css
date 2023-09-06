@@ -1,0 +1,258 @@
+.content-container {
+    margin-right: 120px;
+}
+
+.fixed-div {
+    /* position: absolute; */
+    top: 100px;
+    right: 20px;
+    width: 96%;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+
+.syllable {
+    position: relative;
+    display: inline-block;
+    color: #bc8100;
+}
+
+.syllable .note {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    background-color: #bc8100;
+    color: #fff;
+    padding: 4px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+	
+      display: flex;
+      align-items: center;
+      justify-content: center;	
+	  height:18px;
+}
+
+.blue-button {
+    background-color: #8b3c01;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.blue-button:hover {
+    background-color: #bc8100;
+}
+
+.blue-button:active {
+    background-color: #bc8100;
+}
+
+#container {
+    font-family: Arial;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+/* Estilos para centrar el contenido verticalmente y horizontalmente */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
+
+/*
+body {
+    margin: 20;
+    padding: 20;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    background-color: #f0f4f8;
+}
+
+.content {
+    background-color: #fff;
+    width: 700px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+}
+*/
+
+    /* TOOLTIP */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+    .tooltip-content {
+	font-family: Arial;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+	  width: 80px; /* Ajusta el ancho del tooltip */
+	  text-align:center;
+    }
+    .tooltip:hover .tooltip-content {
+      opacity: 1;
+      visibility: visible;
+    }
+	
+	
+    .tooltipPrevNext {
+      position: relative;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+    }
+    .tooltipPrevNext-content {
+	font-family: Arial;
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s, visibility 0.2s;
+	  width: 200px; /* Ajusta el ancho del tooltip */
+	  text-align:center;
+    }
+    .tooltipPrevNext:hover .tooltipPrevNext-content {
+      opacity: 1;
+      visibility: visible;
+    }
+
+	
+	
+	
+	/* ALTERNAR VISIBILIDAD DE LOS DIVS */
+    .div-container {
+      display: flex;
+    }
+    .div {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color:white;
+	  
+		font-family: Arial;
+		padding-left: 20px;
+		font-size: 20px;	  
+    }
+    .hidden {
+      display: none;
+    }
+    .floating-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+    .floating-right button {
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+
+
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .modal-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+	
+	
+	
+	h3.post-title {
+		font-weight: b;
+		margin: 0;
+		font-weight: bold;
+		font-size: 24px;
+	}
+
+	.InterlineadoGuitarra {
+		line-height: 2.5;
+		margin-bottom: 10px;
+	}
+
+	.InterlineadoLetra {
+		line-height: 1.7;
+		margin-bottom: 40px;
+	}
+
+
+    .chord {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .chord-tooltip {
+      position: absolute;
+      top: -180px;
+      left: -40px;
+      display: none;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 3px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .chord:hover .chord-tooltip {
+      display: block;
+    }
+	
+	html .post-body img {
+	    box-sizing: border-box !important;
+	    max-width: 100px !important; /*este valor es incorrecto, pero sirve asi, para sobreescribir el valor original */
+	}
