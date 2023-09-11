@@ -1,4 +1,6 @@
 var syllables = document.getElementsByClassName("syllable");
+var Repo = "https://jmladino.github.io/AlabanzasdelAlma/";
+//var Repo = "";
 
 var TonalidadAmericana = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 var TonalidadLatina = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
@@ -19,7 +21,7 @@ function transposeNotes(semiTones) {
             var transposedIndex = (currentIndex + semiTones + TonalidadAmericana.length) % TonalidadAmericana.length;
             noteElement.textContent = TonalidadAmericana[transposedIndex] + Nota2;
 
-				var LinkNuevaNota = "https://jmladino.github.io/AlabanzasdelAlma/FullChords/" + noteElement.textContent + ".png";
+				var LinkNuevaNota = Repo + "FullChords/" + Instrumento + "/" + noteElement.textContent + ".png";
 				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
 				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
         }
@@ -28,7 +30,7 @@ function transposeNotes(semiTones) {
             var transposedIndex = (currentIndex + semiTones + TonalidadLatina.length) % TonalidadLatina.length;
             noteElement.textContent = TonalidadLatina[transposedIndex] + Nota2;
 			
-				var LinkNuevaNota = "https://jmladino.github.io/AlabanzasdelAlma/FullChords/" + noteElement.textContent + ".png";
+				var LinkNuevaNota = Repo + "FullChords/" + Instrumento + "/" + noteElement.textContent + ".png";
 				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
 				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");			
         }
@@ -50,7 +52,7 @@ function convertirNotacion() {
                 noteElement.textContent = escalaAmericana[posicion];
                 noteElement.setAttribute("data-notation", "Americana");
 				
-				var LinkNuevaNota = "https://jmladino.github.io/AlabanzasdelAlma/FullChords/" + noteElement.textContent + ".png";
+				var LinkNuevaNota = Repo + "FullChords/" + Instrumento + "/" + noteElement.textContent + ".png";
 				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
 				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
             }
@@ -61,7 +63,7 @@ function convertirNotacion() {
                 noteElement.textContent = escalaLatina[posicion];
                 noteElement.setAttribute("data-notation", "Latina");
 				
-				var LinkNuevaNota = "https://jmladino.github.io/AlabanzasdelAlma/FullChords/" + noteElement.textContent + ".png";
+				var LinkNuevaNota = Repo + "FullChords/" + Instrumento + "/" + noteElement.textContent + ".png";
 				noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
 				noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");				
             }
@@ -93,7 +95,7 @@ function TonalidadInicial() {
         noteElement.textContent = AcordesOriginales[i];
         noteElement.setAttribute("data-notation", "Latina");
 		
-		var LinkNuevaNota = "https://jmladino.github.io/AlabanzasdelAlma/FullChords/" + noteElement.textContent + ".png";
+		var LinkNuevaNota = Repo + "FullChords/" + Instrumento + "/" + noteElement.textContent + ".png";
 		noteElement.parentNode.parentNode.dataset.tabsaurus = noteElement.textContent;
 		noteElement.parentNode.parentNode.querySelector(".chord-tooltip img").src = LinkNuevaNota.replace(new RegExp("#", 'g'), "Sost");
     }
@@ -117,7 +119,7 @@ function mostrarAcordes() {
         var currentNote = ListAcordesDistinct[i];
 
         var imgElement = document.createElement("img");
-        imgElement.src = "https://jmladino.github.io/AlabanzasdelAlma/FullChords/" + currentNote + ".png"
+        imgElement.src = Repo + "FullChords/" + Instrumento + "/" + currentNote + ".png"
         imgElement.alt = currentNote;
         //imgElement.style.maxWidth = "100px";
         imgElement.style.width = "120px";
@@ -137,17 +139,28 @@ function getDistinctValues(array) {
 document.addEventListener("DOMContentLoaded", onLoad);		
 
 const DIVLetra = document.getElementById("DIVLetra");
-const DIVGuitarra = document.getElementById("DIVGuitarra");
+const DIVAcordes = document.getElementById("DIVAcordes");
 const btnGuitarra = document.getElementById("btnGuitarra");
+const btnUkelele = document.getElementById("btnUkelele");
 const btnLetra = document.getElementById("btnLetra");
+var Instrumento = "Guitarra"; // Guitarra o Ukelele
 
 btnGuitarra.addEventListener("click", function() {
   DIVLetra.classList.add("hidden");
-  DIVGuitarra.classList.remove("hidden");
+  DIVAcordes.classList.remove("hidden");
+  Instrumento = "Guitarra";
+  TonalidadInicial();
+});
+
+btnUkelele.addEventListener("click", function() {
+  DIVLetra.classList.add("hidden");
+  DIVAcordes.classList.remove("hidden");
+  Instrumento = "Ukelele";
+  TonalidadInicial();
 });
 
 btnLetra.addEventListener("click", function() {
-  DIVGuitarra.classList.add("hidden");
+  DIVAcordes.classList.add("hidden");
   DIVLetra.classList.remove("hidden");
 });
 

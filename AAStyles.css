@@ -231,6 +231,14 @@ body {
 		margin-bottom: 40px;
 	}
 
+	.comentario {
+		color: #888; /* gris */
+		font-style: italic; /* cursiva */
+		background-color: #f7f7f7; /* fondo gris claro */
+		padding: 4px; 
+		border: 1px solid #ddd; 
+		font-size:16px;
+	}
 
     .chord {
       position: relative;
