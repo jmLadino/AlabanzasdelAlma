@@ -39,9 +39,18 @@
         // Función para buscar elementos por texto
         document.querySelector('#buscar').addEventListener('keyup', function() {
             const texto = this.value.toLowerCase();
+			
             const elementos = document.querySelectorAll('.texto-centro');
             elementos.forEach(function(elemento) {
-                const contenido = elemento.textContent.toLowerCase();
+				var numero = "";
+				if (elemento.parentNode.parentNode.getElementsByClassName("texto-arriba") && elemento.parentNode.parentNode.getElementsByClassName("texto-arriba").length > 0)
+				{
+					numero = elemento.parentNode.parentNode.getElementsByClassName("texto-arriba")[0].innerText.toLowerCase();
+					numero = numero.replace("#", "");
+				}
+
+                var contenido = elemento.textContent.toLowerCase();
+				contenido = numero + " " + contenido;
                 if (contenido.includes(texto)) {
                     elemento.parentNode.parentNode.style.display = 'block';
 					visibleSection(elemento.parentNode.parentNode.parentNode.id, true);
