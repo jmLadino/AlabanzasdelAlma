@@ -1,15 +1,15 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Dios hizo el lindo jardín, pin-pin<br />Dios cuida los pajaritos, piu-piu<br />Él cuida también las flooo-res<br />Y todos los pecesitos<br /></p><p class="InterlineadoLetra">Fue Dios quien hizo al gallo, co-co<br />La gallina y los pollitos, piu-piu<br />El buey también el cabaaa-llo<br />Y mi bonito perrito, guau-guau<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
-		<span class="tooltipPrevNext">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Dios hizo el lindo jardín, pin-pin<br />Dios cuida los pajaritos, piu-piu<br />Él cuida también las flooo-res<br />Y todos los pecesitos<br /></p><p class="InterlineadoLetra">Fue Dios quien hizo al gallo, co-co<br />La gallina y los pollitos, piu-piu<br />El buey también el cabaaa-llo<br />Y mi bonito perrito, guau-guau<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Letra</span>
 		</span>
 		
-		<span class="tooltipPrevNext">
+		<span class="tooltip">
 			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Guitarra</span>
 		</span>
 
-		<span class="tooltipPrevNext">
+		<span class="tooltip">
 			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltipPrevNext-content">Ukelele</span>
 		</span>
