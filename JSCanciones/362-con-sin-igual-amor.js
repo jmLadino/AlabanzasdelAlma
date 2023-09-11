@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1<br />Con sin igual amor Cristo me ama,<br />su dulce paz en mi alma derrama,<br />y por salvarme su vida dio:<br />ya pertenezco a él.<br /></p><p class="InterlineadoLetra">Coro<br />&emsp;Ya pertenezco a Cristo,<br />&emsp;¡cuán pura es su amistad!<br />&emsp;Por las edades durará,<br />&emsp;y por la eternidad.<br /></p><p class="InterlineadoLetra">2<br />Por mis pecados fui condenado,<br />mas hoy por Cristo soy perdonado;<br />del hondo abismo me levantó:<br />ya pertenezco a él.<br /></p><p class="InterlineadoLetra">3<br />Mi corazón palpita de gozo,<br />Cristo es de Dios el don más precioso;<br />por redimirme su sangre dio,<br />ya pertenezco a él.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1<br />Con sin igual amor Cristo me ama,<br />su dulce paz en mi alma derrama,<br />y por salvarme su vida dio:<br />ya pertenezco a él.<br /></p><p class="InterlineadoLetra">Coro<br />&emsp;Ya pertenezco a Cristo,<br />&emsp;¡cuán pura es su amistad!<br />&emsp;Por las edades durará,<br />&emsp;y por la eternidad.<br /></p><p class="InterlineadoLetra">2<br />Por mis pecados fui condenado,<br />mas hoy por Cristo soy perdonado;<br />del hondo abismo me levantó:<br />ya pertenezco a él.<br /></p><p class="InterlineadoLetra">3<br />Mi corazón palpita de gozo,<br />Cristo es de Dios el don más precioso;<br />por redimirme su sangre dio,<br />ya pertenezco a él.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltipPrevNext">
-			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Letra</span>
 		</span>
 		
 		<span class="tooltipPrevNext">
-			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Guitarra</span>
 		</span>
 
 		<span class="tooltipPrevNext">
-			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltipPrevNext-content">Ukelele</span>
 		</span>
 	</div>	

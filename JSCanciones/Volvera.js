@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">No me importa lo que diga la gente<br />no me importa lo que digan de mi<br />soporta un poquito más<br />que Jesucristo ya viene<br />debes estar preparado<br />porque él ha prometido volver y así lo hará<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;// Volverá, Volverá Jesús volverá<br />&emsp;el vendrá otra vez por ti y por mí //<br /></p><p class="InterlineadoLetra">Hambre dolor y pestilencias<br />guerras y rumores de guerras<br />se han levantado falsos profetas<br />diciendo que son el cristo<br />pero acabarán porque Él ha prometido<br />volver y así lo hará<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">No me importa lo que diga la gente<br />no me importa lo que digan de mi<br />soporta un poquito más<br />que Jesucristo ya viene<br />debes estar preparado<br />porque él ha prometido volver y así lo hará<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;// Volverá, Volverá Jesús volverá<br />&emsp;el vendrá otra vez por ti y por mí //<br /></p><p class="InterlineadoLetra">Hambre dolor y pestilencias<br />guerras y rumores de guerras<br />se han levantado falsos profetas<br />diciendo que son el cristo<br />pero acabarán porque Él ha prometido<br />volver y así lo hará<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltipPrevNext">
-			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Letra</span>
 		</span>
 		
 		<span class="tooltipPrevNext">
-			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Guitarra</span>
 		</span>
 
 		<span class="tooltipPrevNext">
-			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltipPrevNext-content">Ukelele</span>
 		</span>
 	</div>	

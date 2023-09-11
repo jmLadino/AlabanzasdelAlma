@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">El hombre prudente su casa construyó<br />El hombre prudente su casa construyó<br />El hombre prudente su casa construyó<br />en la roca construyó<br /></p><p class="InterlineadoLetra">Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />y la casa no cayó<br /></p><p class="InterlineadoLetra">El hombre insensato su casa construyó<br />El hombre insensato su casa construyó<br />El hombre insensato su casa construyó<br />en la arena construyó<br /></p><p class="InterlineadoLetra">Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />y la casa se cayó<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">El hombre prudente su casa construyó<br />El hombre prudente su casa construyó<br />El hombre prudente su casa construyó<br />en la roca construyó<br /></p><p class="InterlineadoLetra">Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />y la casa no cayó<br /></p><p class="InterlineadoLetra">El hombre insensato su casa construyó<br />El hombre insensato su casa construyó<br />El hombre insensato su casa construyó<br />en la arena construyó<br /></p><p class="InterlineadoLetra">Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />Vinieron las lluvias, se agita el mar<br />y la casa se cayó<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltipPrevNext">
-			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Letra</span>
 		</span>
 		
 		<span class="tooltipPrevNext">
-			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Guitarra</span>
 		</span>
 
 		<span class="tooltipPrevNext">
-			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltipPrevNext-content">Ukelele</span>
 		</span>
 	</div>	

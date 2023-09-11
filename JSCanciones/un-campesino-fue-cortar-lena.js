@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Un campesino fue a cortar leña<br />A la orilla del río se encontraba<br />Corta, corta que corta<br />Corta, corta que corta<br />Y de repente, el hacha se cayó<br />Bajo el agua el hacha estaba<br />Y el campesino se entristeció<br /></p><p class="InterlineadoLetra">Y el profeta Eliseo lo miraba<br />Y un milagro realizó<br />Hizo flotar el hacha, el hacha<br />Hizo flotar el hacha, el hacha<br />Hizo flotar el hacha, el hacha, hizo flotar<br />Y el campesino saltaba en un pie,<br />Saltaba en el otro, saltaba en un pie,<br />Saltaba en el otro, saltaba en un pie.<br /></p><p class="InterlineadoLetra">Y a todos les contaba lo que Dios hizo con él<br />Y a todos les contaba lo que Dios hizo con él<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Un campesino fue a cortar leña<br />A la orilla del río se encontraba<br />Corta, corta que corta<br />Corta, corta que corta<br />Y de repente, el hacha se cayó<br />Bajo el agua el hacha estaba<br />Y el campesino se entristeció<br /></p><p class="InterlineadoLetra">Y el profeta Eliseo lo miraba<br />Y un milagro realizó<br />Hizo flotar el hacha, el hacha<br />Hizo flotar el hacha, el hacha<br />Hizo flotar el hacha, el hacha, hizo flotar<br />Y el campesino saltaba en un pie,<br />Saltaba en el otro, saltaba en un pie,<br />Saltaba en el otro, saltaba en un pie.<br /></p><p class="InterlineadoLetra">Y a todos les contaba lo que Dios hizo con él<br />Y a todos les contaba lo que Dios hizo con él<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltipPrevNext">
-			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Letra</span>
 		</span>
 		
 		<span class="tooltipPrevNext">
-			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Guitarra</span>
 		</span>
 
 		<span class="tooltipPrevNext">
-			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltipPrevNext-content">Ukelele</span>
 		</span>
 	</div>	

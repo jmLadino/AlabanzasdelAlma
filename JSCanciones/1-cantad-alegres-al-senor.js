@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />Cantad alegres al Señor,<br />mortales todos por doquier;<br />servidle siempre con fervor,<br />obedecedle con placer.<br /></p><p class="InterlineadoLetra">2.<br />Con gratitud canción alzad<br />al Hacedor que el ser os dio;<br />al Dios excelso venerad,<br />que como Padre nos amó.<br /></p><p class="InterlineadoLetra">3.<br />Su pueblo somos: salvará<br />a los que busquen al Señor;<br />ninguno de ellos dejará;<br />él los ampara con su amor.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />Cantad alegres al Señor,<br />mortales todos por doquier;<br />servidle siempre con fervor,<br />obedecedle con placer.<br /></p><p class="InterlineadoLetra">2.<br />Con gratitud canción alzad<br />al Hacedor que el ser os dio;<br />al Dios excelso venerad,<br />que como Padre nos amó.<br /></p><p class="InterlineadoLetra">3.<br />Su pueblo somos: salvará<br />a los que busquen al Señor;<br />ninguno de ellos dejará;<br />él los ampara con su amor.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltipPrevNext">
-			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Letra</span>
 		</span>
 		
 		<span class="tooltipPrevNext">
-			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltipPrevNext-content">Guitarra</span>
 		</span>
 
 		<span class="tooltipPrevNext">
-			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltipPrevNext-content">Ukelele</span>
 		</span>
 	</div>	

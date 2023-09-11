@@ -148,6 +148,8 @@ const btnGuitarra2 = document.getElementById("btnGuitarra2");
 const btnUkelele2 = document.getElementById("btnUkelele2");
 const btnLetra2 = document.getElementById("btnLetra2");
 
+const btnAcordes = document.getElementById("btnAcordes");
+
 var Instrumento = "Guitarra"; // Guitarra o Ukelele
 
 btnGuitarra.addEventListener("click", function() {
@@ -162,6 +164,7 @@ function clicGuitarra()
 	DIVAcordes.classList.remove("hidden");
 	Instrumento = "Guitarra";
 	TonalidadInicial();
+	btnAcordes.textContent = "Acordes Guitarra";
 }
 
 btnUkelele.addEventListener("click", function() {
@@ -175,6 +178,7 @@ function clicUkelele(){
 	DIVAcordes.classList.remove("hidden");
 	Instrumento = "Ukelele";
 	TonalidadInicial();
+	btnAcordes.textContent = "Acordes Ukelele";
 }
 
 
@@ -189,7 +193,6 @@ function clicLetra(){
 	DIVLetra.classList.remove("hidden");
 }
 
-const btnAcordes = document.getElementById("btnAcordes");
 const modalOverlay = document.getElementById("modalOverlay");
 const closeModalButton = document.getElementById("closeModalButton");
 const imageContainer = document.getElementById("imageContainer");
