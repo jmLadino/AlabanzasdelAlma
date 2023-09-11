@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">La B-I-B-L-I-A<br />Es el libro de mi Dios<br />En ella siempre confío yo<br />La B-I-B-L-I-A<br /></p>`;const DIV_LETRA = document.getElementById("DIV_LETRA");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
+﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">La B-I-B-L-I-A<br />Es el libro de mi Dios<br />En ella siempre confío yo<br />La B-I-B-L-I-A<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
                 <div class="floating-right">
                     <button id="btnLetra" class="blue-button">Solo Letra</button>
                 </div>
