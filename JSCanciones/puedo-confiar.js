@@ -1,17 +1,17 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Puedo confiar en el Señor<br />que me va a guiar,<br />Puedo confiar en el Señor<br />no me va a fallar.<br />Si el sol llegara a oscurecer<br />y no brille más<br />yo igual confío en el Señor<br />no me va a fallar.<br /></p><p class="InterlineadoLetra">Puedo descansar, puedo descansar<br />y una mansión, Cristo me dará<br />Si el sol llegara a oscurecer<br />y no brille más<br />yo igual confío en el Señor<br />no me va a fallar.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Puedo confiar en el Señor<br />que me va a guiar,<br />Puedo confiar en el Señor<br />no me va a fallar.<br />Si el sol llegara a oscurecer<br />y no brille más<br />yo igual confío en el Señor<br />no me va a fallar.<br /></p><p class="InterlineadoLetra">Puedo descansar, puedo descansar<br />y una mansión, Cristo me dará<br />Si el sol llegara a oscurecer<br />y no brille más<br />yo igual confío en el Señor<br />no me va a fallar.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
-			<span class="tooltipPrevNext-content">Letra</span>
+			<span class="tooltip-content">Letra</span>
 		</span>
 		
 		<span class="tooltip">
 			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
-			<span class="tooltipPrevNext-content">Guitarra</span>
+			<span class="tooltip-content">Guitarra</span>
 		</span>
 
 		<span class="tooltip">
 			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
-			<span class="tooltipPrevNext-content">Ukelele</span>
+			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
                 <br />

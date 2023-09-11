@@ -1,17 +1,17 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Vengo a ti Jesús, quiero renovar mi ser,<br />Con el gran amor, que encontré en ti,<br />Yo se que todo el mal, manchas que en mi están,<br />Se terminarán,<br />por tu gracia y amor.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;Ven Jesús, llévame en tus brazos,<br />&emsp;Quiero estar, siempre junto a ti,<br />&emsp;Y así volar, tan alto como un ave,<br />&emsp;Pues quiero recibir tu espíritu en mí,<br />&emsp;Por tu gracia y amor.<br /></p><p class="InterlineadoLetra">Con mis ojos hoy, quiero contemplar tu faz,<br />Conocer tu amor y crecer en ti,<br />Renueva mi pensar, enséñame de tu verdad,<br />Cada día más,<br />por tu gracia y amor.<br /></p><p class="InterlineadoLetra"><b>CORO</b>: x2<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Vengo a ti Jesús, quiero renovar mi ser,<br />Con el gran amor, que encontré en ti,<br />Yo se que todo el mal, manchas que en mi están,<br />Se terminarán,<br />por tu gracia y amor.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;Ven Jesús, llévame en tus brazos,<br />&emsp;Quiero estar, siempre junto a ti,<br />&emsp;Y así volar, tan alto como un ave,<br />&emsp;Pues quiero recibir tu espíritu en mí,<br />&emsp;Por tu gracia y amor.<br /></p><p class="InterlineadoLetra">Con mis ojos hoy, quiero contemplar tu faz,<br />Conocer tu amor y crecer en ti,<br />Renueva mi pensar, enséñame de tu verdad,<br />Cada día más,<br />por tu gracia y amor.<br /></p><p class="InterlineadoLetra"><b>CORO</b>: x2<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
-			<span class="tooltipPrevNext-content">Letra</span>
+			<span class="tooltip-content">Letra</span>
 		</span>
 		
 		<span class="tooltip">
 			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
-			<span class="tooltipPrevNext-content">Guitarra</span>
+			<span class="tooltip-content">Guitarra</span>
 		</span>
 
 		<span class="tooltip">
 			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
-			<span class="tooltipPrevNext-content">Ukelele</span>
+			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
                 <br />
