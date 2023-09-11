@@ -1,0 +1,41 @@
+﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">// Cuando el pueblo de Dios ora,<br />suceden cosas,<br />suceden cosas maravillosas //<br /></p><p class="InterlineadoLetra">// Hay sanidad, hay salvación<br />y se siente la presencia del Señor //<br /></p>`;const DIV_LETRA = document.getElementById("DIV_LETRA");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
+                <div class="floating-right">
+                    <button id="btnLetra" class="blue-button">Solo Letra</button>
+                </div>
+                <br />
+                <div id="DIV_Ribbon">
+                  <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
+                  <span class="tooltip"><button class="blue-button" onclick="transposeNotes(-1)">T-</button><span class="tooltip-content">Bajar Medio Tono</span></span>
+                  <span class="tooltip"><button class="blue-button" onclick="TonalidadInicial()">T0</button><span class="tooltip-content">Tonalidad Inicial</span></span>
+                  <span class="tooltip"><button class="blue-button" onclick="convertirNotacion()">Do / C</button><span class="tooltip-content">Alternar Notación</span></span>
+                  <button id="btnAcordes" class="blue-button">Acordes</button>
+                </div>
+
+                <div id="container">
+                    <div class="modal-overlay" id="modalOverlay">
+                        <div class="modal-content">
+                            <div id="imageContainer" class="fixed-div"></div>
+                            <button id="closeModalButton">Cerrar</button>
+                        </div>
+                    </div>
+
+                    <p class="InterlineadoGuitarra">
+</p><p class="InterlineadoGuitarra">
+// Cuando el <span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Lam.png' alt="Lam" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">pue<span class="note" data-notation="Latina">Lam</span></span></span>blo de Dios ora,<br />
+su<span class="chord" data-tabsaurus="Do"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Do.png' alt="Do" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ce<span class="note" data-notation="Latina">Do</span></span></span>den <span class="chord" data-tabsaurus="Mi"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Mi.png' alt="Mi" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">co<span class="note" data-notation="Latina">Mi</span></span></span>sas, su<span class="chord" data-tabsaurus="Do"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Do.png' alt="Do" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ce<span class="note" data-notation="Latina">Do</span></span></span>den <span class="chord" data-tabsaurus="Mi"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Mi.png' alt="Mi" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">co<span class="note" data-notation="Latina">Mi</span></span></span>sas maravi<span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Lam.png' alt="Lam" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">llo<span class="note" data-notation="Latina">Lam</span></span></span>sas //<br />
+</p><p class="InterlineadoGuitarra">
+Hay sani<span class="chord" data-tabsaurus="Rem"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Rem.png' alt="Rem" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">dad<span class="note" data-notation="Latina">Rem</span></span></span>, hay salva<span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Lam.png' alt="Lam" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ción<span class="note" data-notation="Latina">Lam</span></span></span><br />
+y se <span class="chord" data-tabsaurus="Mi"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Mi.png' alt="Mi" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">sien<span class="note" data-notation="Latina">Mi</span></span></span>te la presencia del Se<span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Lam.png' alt="Lam" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ñor<span class="note" data-notation="Latina">Lam</span></span></span>&emsp;<span class="chord" data-tabsaurus="La7"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/La7.png' alt="La7" style="height:140px;width: 100px;"></span><span class="syllable">&emsp;<span class="note" data-notation="Latina">La7</span></span>&emsp;</span><br />
+</p><p class="InterlineadoGuitarra">
+Hay sani<span class="chord" data-tabsaurus="Rem"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Rem.png' alt="Rem" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">dad<span class="note" data-notation="Latina">Rem</span></span></span>, hay salva<span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Lam.png' alt="Lam" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ción<span class="note" data-notation="Latina">Lam</span></span></span><br />
+y se <span class="chord" data-tabsaurus="Mi"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Mi.png' alt="Mi" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">sien<span class="note" data-notation="Latina">Mi</span></span></span>te la presencia del Se<span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Lam.png' alt="Lam" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ñor<span class="note" data-notation="Latina">Lam</span></span></span><br />
+</p><p class="InterlineadoGuitarra">
+</p>
+                </div>
+`;
+const DIV_Acordes = document.getElementById("DIVAcordes");
+DIV_Acordes.innerHTML = contenidoHTML_Acordes;
+const contenidoHTML_Youtube = ``;
+const DIV_Youtube = document.getElementById("DIVYoutube");
+DIV_Youtube.innerHTML = contenidoHTML_Youtube;
+const contenidoHTML_Cursor = `<div id="DIV_Cursor" class="center">  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/construye-tu-casa-sobre-la-roca.html"><button class="blue-button">Anterior</button></a><span class="tooltipPrevNext-content">33. Construye tu casa sobre la roca</span></span>&emsp;  <a href="https://alabanzasdelalma.blogspot.com/2023/06/indice.html">      <button class="blue-button">INDICE</button>  </a>  &emsp;  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/demos-gracias.html"><button class="blue-button">Siguiente</button></a><span class="tooltipPrevNext-content">35. Demos gracias</span></span></div>`;const DIV_CURSOR = document.getElementById("DIVCursor");DIV_CURSOR.innerHTML = contenidoHTML_Cursor;
