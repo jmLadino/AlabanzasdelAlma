@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">1.<br />¡Suenen dulces himnos gratos al Señor<br />y óiganse en concierto universal!<br />Desde el alto cielo baja el Salvador<br />para beneficio del mortal.<br /></p><p class="InterlineadoLetra">Coro<br />&emsp;¡Gloria!, ¡gloria sea a nuestro Dios!<br />&emsp;¡Gloria!, sí, cantemos a una voz.<br />&emsp;Y el cantar de gloria que se oyó en Belén,<br />&emsp;sea nuestro cántico también.<br /></p><p class="InterlineadoLetra">2.<br />Montes y collados fluyan leche y miel,<br />y abundancia esparzan y solaz.<br />Gócense los pueblos, gócese Israel,<br />que a la tierra viene ya la paz.<br /></p><p class="InterlineadoLetra">3.<br />Salte, de alegría lleno el corazón,<br />la abatida y pobre humanidad;<br />Dios se compadece viendo su aflicción<br />y le muestra buena voluntad.<br /></p><p class="InterlineadoLetra">4.<br />Vibre en nuestros pechos noble gratitud<br />hacia quien nos brinda redención;<br />y a Jesús el Cristo, que nos da salud,<br />tributemos nuestra adoración.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />¡Suenen dulces himnos gratos al Señor<br />y óiganse en concierto universal!<br />Desde el alto cielo baja el Salvador<br />para beneficio del mortal.<br /></p><p class="InterlineadoLetra">Coro<br />&emsp;¡Gloria!, ¡gloria sea a nuestro Dios!<br />&emsp;¡Gloria!, sí, cantemos a una voz.<br />&emsp;Y el cantar de gloria que se oyó en Belén,<br />&emsp;sea nuestro cántico también.<br /></p><p class="InterlineadoLetra">2.<br />Montes y collados fluyan leche y miel,<br />y abundancia esparzan y solaz.<br />Gócense los pueblos, gócese Israel,<br />que a la tierra viene ya la paz.<br /></p><p class="InterlineadoLetra">3.<br />Salte, de alegría lleno el corazón,<br />la abatida y pobre humanidad;<br />Dios se compadece viendo su aflicción<br />y le muestra buena voluntad.<br /></p><p class="InterlineadoLetra">4.<br />Vibre en nuestros pechos noble gratitud<br />hacia quien nos brinda redención;<br />y a Jesús el Cristo, que nos da salud,<br />tributemos nuestra adoración.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

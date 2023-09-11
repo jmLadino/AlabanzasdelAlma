@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">Un simple muchachito<br />que se llamaba David<br />un simple pastorcito<br />cuidaba su redil<br /></p><p class="InterlineadoLetra">De un arroyito cinco piedritas tomó<br />Un simple muchachito<br />Armado de valor<br /></p><p class="InterlineadoLetra">Y una pequeña piedra<br />En su onda colocó<br />Una pequeña piedra<br />Y la onda giró y giró<br /></p><p class="InterlineadoLetra">// Giró y giró, Giró y giró, Giró y giró y giró<br />Aquella piedrita echó a volar<br />Y el gigante se desplomó //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Un simple muchachito<br />que se llamaba David<br />un simple pastorcito<br />cuidaba su redil<br /></p><p class="InterlineadoLetra">De un arroyito cinco piedritas tomó<br />Un simple muchachito<br />Armado de valor<br /></p><p class="InterlineadoLetra">Y una pequeña piedra<br />En su onda colocó<br />Una pequeña piedra<br />Y la onda giró y giró<br /></p><p class="InterlineadoLetra">// Giró y giró, Giró y giró, Giró y giró y giró<br />Aquella piedrita echó a volar<br />Y el gigante se desplomó //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

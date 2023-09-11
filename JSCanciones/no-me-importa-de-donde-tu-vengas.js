@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">No me importa de donde tu vengas<br />Si detrás del calvario tú estás<br />Si tu corazón es como el mío<br />Dame la mano y mi hermano serás<br /></p><p class="InterlineadoLetra">// Dame la mano, querido hermano,<br />Dame la mano y mi hermano serás //<br /></p><p class="InterlineadoLetra">Hay un texto que sale en la Biblia<br />Que se encuentra en primera de Juan<br />Todo aquel que no ama a su hermano<br />Mentiroso llamado será<br /></p><p class="InterlineadoLetra">// Dame la mano, querido hermano,<br />Dame la mano y mi hermano serás //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">No me importa de donde tu vengas<br />Si detrás del calvario tú estás<br />Si tu corazón es como el mío<br />Dame la mano y mi hermano serás<br /></p><p class="InterlineadoLetra">// Dame la mano, querido hermano,<br />Dame la mano y mi hermano serás //<br /></p><p class="InterlineadoLetra">Hay un texto que sale en la Biblia<br />Que se encuentra en primera de Juan<br />Todo aquel que no ama a su hermano<br />Mentiroso llamado será<br /></p><p class="InterlineadoLetra">// Dame la mano, querido hermano,<br />Dame la mano y mi hermano serás //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

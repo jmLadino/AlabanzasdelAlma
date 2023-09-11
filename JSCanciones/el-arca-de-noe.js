@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">Hombre muy famoso<br />en la historia fue Noé<br />hizo un arca inmensa<br />que medía 80 pies<br />la pintó con alquitrán<br />y le puso gran farol<br />y a los animales los metió<br />de dos en dos<br /></p><p class="InterlineadoLetra">Doña cebra entró con<br />con su lisado camisón<br />la siguió el camello<br />la serpiente cascabel,<br />el monito orangután<br />el ratón y el puerco espín<br />la paloma, el burro, el conejo y el zorzal<br /></p><p class="InterlineadoLetra">Cerca de cuarenta días<br />duró el chaparrón<br />Hasta que el inmenso bote<br />quieto se quedó<br /></p><p class="InterlineadoLetra">// Ya salió el señor Noé,<br />que en el viaje no temió,<br />Bajo el arco iris<br />muchas gracias le dio a Dios. //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Hombre muy famoso<br />en la historia fue Noé<br />hizo un arca inmensa<br />que medía 80 pies<br />la pintó con alquitrán<br />y le puso gran farol<br />y a los animales los metió<br />de dos en dos<br /></p><p class="InterlineadoLetra">Doña cebra entró con<br />con su lisado camisón<br />la siguió el camello<br />la serpiente cascabel,<br />el monito orangután<br />el ratón y el puerco espín<br />la paloma, el burro, el conejo y el zorzal<br /></p><p class="InterlineadoLetra">Cerca de cuarenta días<br />duró el chaparrón<br />Hasta que el inmenso bote<br />quieto se quedó<br /></p><p class="InterlineadoLetra">// Ya salió el señor Noé,<br />que en el viaje no temió,<br />Bajo el arco iris<br />muchas gracias le dio a Dios. //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

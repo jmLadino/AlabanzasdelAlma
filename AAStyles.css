@@ -264,3 +264,23 @@ body {
 	    box-sizing: border-box !important;
 	    max-width: 100px !important; /*este valor es incorrecto, pero sirve asi, para sobreescribir el valor original */
 	}
+	
+.image-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}	
+	
+.imagebutton {
+    width: 40px; 
+    height: auto; 
+	padding:5px;
+	
+	cursor: pointer;
+    border-radius: 20%; 
+	background-color: #ffffff;
+}
+
+.imagebutton:hover {
+    background-color: #cccccc;
+}		

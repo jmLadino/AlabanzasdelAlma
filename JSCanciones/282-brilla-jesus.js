@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">1.<br />Cristo, tu gran amor me inspira;<br />Cristo, tu gran amor me anima;<br />pues tu luz ilumina la oscuridad,<br />tu verdad me conduce a la libertad.<br />Brilla en mí, brilla en mí.<br /></p><p class="InterlineadoLetra">Coro<br />&emsp;¡Brilla, Jesús!<br />&emsp;Danos hoy la luz que da tu gloria,<br />&emsp;pues tu calor trae paz y amor.<br />&emsp;Ven como el Sol<br />&emsp;de justicia y misericordia.<br />&emsp;¡Brilla, Jesús! Danos hoy tu luz.<br /></p><p class="InterlineadoLetra">2.<br />Cristo, vengo a tu presencia,<br />atraído por tu pureza.<br />Examina mi vida y pruébame;<br />limpia toda maldad con tu sangre.<br />Brilla en mí, brilla en mí.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />Cristo, tu gran amor me inspira;<br />Cristo, tu gran amor me anima;<br />pues tu luz ilumina la oscuridad,<br />tu verdad me conduce a la libertad.<br />Brilla en mí, brilla en mí.<br /></p><p class="InterlineadoLetra">Coro<br />&emsp;¡Brilla, Jesús!<br />&emsp;Danos hoy la luz que da tu gloria,<br />&emsp;pues tu calor trae paz y amor.<br />&emsp;Ven como el Sol<br />&emsp;de justicia y misericordia.<br />&emsp;¡Brilla, Jesús! Danos hoy tu luz.<br /></p><p class="InterlineadoLetra">2.<br />Cristo, vengo a tu presencia,<br />atraído por tu pureza.<br />Examina mi vida y pruébame;<br />limpia toda maldad con tu sangre.<br />Brilla en mí, brilla en mí.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">Quiero cantar una linda canción<br />de un hombre que me transformó,<br />quiero cantar una linda canción<br />de aquel que mi vida cambió.<br /></p><p class="InterlineadoLetra">Es mi amigo Jesús, es mi amigo Jesús.<br />El es Dios, el es Rey, es amor y verdad,<br />solo en Él encontré esa paz que busqué,<br />solo en Él encontré la felicidad.<br /></p><p class="InterlineadoLetra">Unidos cantemos y gloria entonemos<br />al maravilloso Jesús.<br />Unidos cantemos y gloria entonemos<br />al maravilloso Jesús.<br /></p><p class="InterlineadoLetra">Religiones habrán, pero no salvarán.<br />solo el Hijo de Dios, puede dar salvación.<br />solo en Él encontré esa paz que busqué,<br />solo en Él encontré la felicidad.<br /></p><p class="InterlineadoLetra">Quiero invitarte para que conozcas<br />a Cristo mi Rey y Señor,<br />quiero que sientas el gozo de ver<br />su bondad y su grande amor.<br /></p><p class="InterlineadoLetra">Es mi amigo Jesús, es mi amigo Jesús.<br />El es Dios, el es Rey, es amor y verdad,<br />solo en Él encontré esa paz que busqué,<br />solo en Él encontré la felicidad.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Quiero cantar una linda canción<br />de un hombre que me transformó,<br />quiero cantar una linda canción<br />de aquel que mi vida cambió.<br /></p><p class="InterlineadoLetra">Es mi amigo Jesús, es mi amigo Jesús.<br />El es Dios, el es Rey, es amor y verdad,<br />solo en Él encontré esa paz que busqué,<br />solo en Él encontré la felicidad.<br /></p><p class="InterlineadoLetra">Unidos cantemos y gloria entonemos<br />al maravilloso Jesús.<br />Unidos cantemos y gloria entonemos<br />al maravilloso Jesús.<br /></p><p class="InterlineadoLetra">Religiones habrán, pero no salvarán.<br />solo el Hijo de Dios, puede dar salvación.<br />solo en Él encontré esa paz que busqué,<br />solo en Él encontré la felicidad.<br /></p><p class="InterlineadoLetra">Quiero invitarte para que conozcas<br />a Cristo mi Rey y Señor,<br />quiero que sientas el gozo de ver<br />su bondad y su grande amor.<br /></p><p class="InterlineadoLetra">Es mi amigo Jesús, es mi amigo Jesús.<br />El es Dios, el es Rey, es amor y verdad,<br />solo en Él encontré esa paz que busqué,<br />solo en Él encontré la felicidad.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

@@ -143,27 +143,51 @@ const DIVAcordes = document.getElementById("DIVAcordes");
 const btnGuitarra = document.getElementById("btnGuitarra");
 const btnUkelele = document.getElementById("btnUkelele");
 const btnLetra = document.getElementById("btnLetra");
+
+const btnGuitarra2 = document.getElementById("btnGuitarra2");
+const btnUkelele2 = document.getElementById("btnUkelele2");
+const btnLetra2 = document.getElementById("btnLetra2");
+
 var Instrumento = "Guitarra"; // Guitarra o Ukelele
 
 btnGuitarra.addEventListener("click", function() {
-  DIVLetra.classList.add("hidden");
-  DIVAcordes.classList.remove("hidden");
-  Instrumento = "Guitarra";
-  TonalidadInicial();
+	clicGuitarra();
 });
+btnGuitarra2.addEventListener("click", function() {
+	clicGuitarra();
+});
+function clicGuitarra()
+{
+	DIVLetra.classList.add("hidden");
+	DIVAcordes.classList.remove("hidden");
+	Instrumento = "Guitarra";
+	TonalidadInicial();
+}
 
 btnUkelele.addEventListener("click", function() {
-  DIVLetra.classList.add("hidden");
-  DIVAcordes.classList.remove("hidden");
-  Instrumento = "Ukelele";
-  TonalidadInicial();
+	clicUkelele();
 });
+btnUkelele2.addEventListener("click", function() {
+	clicUkelele();
+});
+function clicUkelele(){
+	DIVLetra.classList.add("hidden");
+	DIVAcordes.classList.remove("hidden");
+	Instrumento = "Ukelele";
+	TonalidadInicial();
+}
+
 
 btnLetra.addEventListener("click", function() {
-  DIVAcordes.classList.add("hidden");
-  DIVLetra.classList.remove("hidden");
+	clicLetra();
 });
-
+btnLetra2.addEventListener("click", function() {
+	clicLetra();
+});
+function clicLetra(){
+	DIVAcordes.classList.add("hidden");
+	DIVLetra.classList.remove("hidden");
+}
 
 const btnAcordes = document.getElementById("btnAcordes");
 const modalOverlay = document.getElementById("modalOverlay");

@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">Alto escúchame, no sigas caminando más<br />hoy quiero contarte lo que Dios hizo por mí.<br />Tienes que saber que un día me entregué al Señor<br />soy un hombre nuevo y ahora vivo para Él.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;Que alegría es ser un testigo de Dios,<br />&emsp;es sentirlo por fe en el corazón,<br />&emsp;y aunque todos me digan eso no es verdad,<br />&emsp;yo lo siento en mi vida, aún más, aún más.<br /></p><p class="InterlineadoLetra">Dios te quiere a ti, eres importante para Él,<br />debes aceptarlo ahora mismo por la fe,<br />Aunque tengas dudas Dios después te las aclarará<br />deja el conformismo de este mundo y síguele.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Alto escúchame, no sigas caminando más<br />hoy quiero contarte lo que Dios hizo por mí.<br />Tienes que saber que un día me entregué al Señor<br />soy un hombre nuevo y ahora vivo para Él.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;Que alegría es ser un testigo de Dios,<br />&emsp;es sentirlo por fe en el corazón,<br />&emsp;y aunque todos me digan eso no es verdad,<br />&emsp;yo lo siento en mi vida, aún más, aún más.<br /></p><p class="InterlineadoLetra">Dios te quiere a ti, eres importante para Él,<br />debes aceptarlo ahora mismo por la fe,<br />Aunque tengas dudas Dios después te las aclarará<br />deja el conformismo de este mundo y síguele.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

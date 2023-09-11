@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">// Que no se apague el fuego<br />que hay en mi corazón<br />que no se apague el fuego<br />que siga ardiendo más y más//<br /></p><p class="InterlineadoLetra">// Dame gozo Señor,<br />dame paz y amor,<br />porque voy a morar más allá del sol //<br /></p><p class="InterlineadoLetra">Cuando el alma está triste y vacía<br />cuando el alma está triste y vacía,<br />es difícil orar durante el día y cantar<br />cuando el alma está triste y vacía.<br /></p><p class="InterlineadoLetra">Cuando el alma está llena de amor de Dios<br />Cuando el alma está llena de amor de Dios<br />es más fácil orar durante el día y cantar<br />cuando el alma está llena de amor de Dios.<br /></p><p class="InterlineadoLetra">// Que no se apague el fuego<br />que hay en mi corazón<br />que no se apague el fuego<br />que siga ardiendo más y más //<br /></p><p class="InterlineadoLetra">// Dame gozo Señor,<br />dame paz y amor,<br />porque voy a morar más allá del sol //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">// Que no se apague el fuego<br />que hay en mi corazón<br />que no se apague el fuego<br />que siga ardiendo más y más//<br /></p><p class="InterlineadoLetra">// Dame gozo Señor,<br />dame paz y amor,<br />porque voy a morar más allá del sol //<br /></p><p class="InterlineadoLetra">Cuando el alma está triste y vacía<br />cuando el alma está triste y vacía,<br />es difícil orar durante el día y cantar<br />cuando el alma está triste y vacía.<br /></p><p class="InterlineadoLetra">Cuando el alma está llena de amor de Dios<br />Cuando el alma está llena de amor de Dios<br />es más fácil orar durante el día y cantar<br />cuando el alma está llena de amor de Dios.<br /></p><p class="InterlineadoLetra">// Que no se apague el fuego<br />que hay en mi corazón<br />que no se apague el fuego<br />que siga ardiendo más y más //<br /></p><p class="InterlineadoLetra">// Dame gozo Señor,<br />dame paz y amor,<br />porque voy a morar más allá del sol //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>

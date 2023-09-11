@@ -1,7 +1,19 @@
-﻿const contenidoHTML_Letra = `<div class="floating-right">   <button id="btnGuitarra" class="blue-button">Guitarra</button>   <button id="btnUkelele" class="blue-button">Ukelele</button></div><p class="InterlineadoLetra">// Él es Señor Jehová, Dios poderoso //<br />Señor y Adonai,<br />la Roca eterna.<br />Y es gran señor que te puede restaurar.<br /></p><p class="InterlineadoLetra">Él es el gran Yo soy,<br />el Dios de Abraham.<br />Señor Jehová Shalom, el Dios de paz yo soy.<br />El Dios de Israel, Señor eterno,<br />Y es gran Señor que te puede restaurar.<br /></p><p class="InterlineadoLetra"><b>CORO</b><br />&emsp;// Canta aleluya, canta aleluya //<br />&emsp;Él es Señor Jehová, Dios poderoso.<br />&emsp;Y es gran señor que te puede restaurar.<br /></p><p class="InterlineadoLetra">Él es gran proveedor, Jehová Jireh.<br />Es nuestro salvador, nuestro Mesías.<br />Su hijo él envió y aquí testificó,<br />Y es gran señor que te puede restaurar.<br /></p><p class="InterlineadoLetra"><b>CORO</b> x2<br /></p><p class="InterlineadoLetra">Y es gran señor que te puede<br />restauraaaaaaaaaar.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `
-                <div class="floating-right">
-                    <button id="btnLetra" class="blue-button">Solo Letra</button>
-                </div>
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltipPrevNext">			<img id="btnLetra" src="imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltipPrevNext-content">Letra</span>		</span>				<span class="tooltipPrevNext">			<img id="btnGuitarra" src="imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltipPrevNext-content">Guitarra</span>		</span>		<span class="tooltipPrevNext">			<img id="btnUkelele" src="imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltipPrevNext-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">// Él es Señor Jehová, Dios poderoso //<br />Señor y Adonai,<br />la Roca eterna.<br />Y es gran señor que te puede restaurar.<br /></p><p class="InterlineadoLetra">Él es el gran Yo soy,<br />el Dios de Abraham.<br />Señor Jehová Shalom, el Dios de paz yo soy.<br />El Dios de Israel, Señor eterno,<br />Y es gran Señor que te puede restaurar.<br /></p><p class="InterlineadoLetra"><b>CORO</b><br />&emsp;// Canta aleluya, canta aleluya //<br />&emsp;Él es Señor Jehová, Dios poderoso.<br />&emsp;Y es gran señor que te puede restaurar.<br /></p><p class="InterlineadoLetra">Él es gran proveedor, Jehová Jireh.<br />Es nuestro salvador, nuestro Mesías.<br />Su hijo él envió y aquí testificó,<br />Y es gran señor que te puede restaurar.<br /></p><p class="InterlineadoLetra"><b>CORO</b> x2<br /></p><p class="InterlineadoLetra">Y es gran señor que te puede<br />restauraaaaaaaaaar.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+		<span class="tooltipPrevNext">
+			<img id="btnLetra2" src="imgmicrofono.png" alt="Letra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Letra</span>
+		</span>
+		
+		<span class="tooltipPrevNext">
+			<img id="btnGuitarra2" src="imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<span class="tooltipPrevNext-content">Guitarra</span>
+		</span>
+
+		<span class="tooltipPrevNext">
+			<img id="btnUkelele2" src="imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<span class="tooltipPrevNext-content">Ukelele</span>
+		</span>
+	</div>	
                 <br />
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
