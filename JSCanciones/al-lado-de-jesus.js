@@ -82,7 +82,9 @@ camina al <span class="chord" data-tabsaurus="Fa"><span class="chord-tooltip"><i
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/EOaexeUO-R4?si=0Z34QFhkyWdbQsJS" title="Al lado de Jesús" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/0D20KYBEjkg?si=7vRk3V2Xp6rUZxwo" title="Al lado de Jesús" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 const contenidoHTML_Cursor = `  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/alelu-alelu-aleluya.html"><button class="blue-button">Anterior</button></a><span class="tooltipPrevNext-content">23. Alelu, alelu, aleluya</span></span>&emsp;  <a href="https://alabanzasdelalma.blogspot.com/2023/06/indice.html">      <button class="blue-button">INDICE</button>  </a>  &emsp;  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/alto-escuchame.html"><button class="blue-button">Siguiente</button></a><span class="tooltipPrevNext-content">25. Alto escúchame</span></span>`;const DIV_CURSOR = document.getElementById("DIVCursor");DIV_CURSOR.innerHTML = contenidoHTML_Cursor;
