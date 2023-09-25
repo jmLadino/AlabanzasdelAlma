@@ -5,8 +5,23 @@ var Repo = "https://jmladino.github.io/AlabanzasdelAlma/";
 var TonalidadAmericana = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 var TonalidadLatina = ["Do", "Do#", "Re", "Re#", "Mi", "Fa", "Fa#", "Sol", "Sol#", "La", "La#", "Si"];
 
-var escalaAmericana = ["C", "Cm", "Cm7", "C7", "C#", "C#m", "C#m7", "C#7", "D", "Dm", "Dm7", "D7", "D#", "D#m", "D#m7", "D#7", "E", "Em", "Em7", "E7", "F", "Fm", "Fm7", "F7", "F#", "F#m", "F#m7", "F#7", "G", "Gm", "Gm7", "G7", "G#", "G#m", "G#m7", "G#7", "A", "Am", "Am7", "A7", "A#", "A#m", "A#m7", "A#7", "B", "Bm", "Bm7", "B7"];
-var escalaLatina = ["Do", "Dom", "Dom7", "Do7", "Do#", "Do#m", "Do#m7", "Do#7", "Re", "Rem", "Rem7", "Re7", "Re#", "Re#m", "Re#m7", "Re#7", "Mi", "Mim", "Mim7", "Mi7", "Fa", "Fam", "Fam7", "Fa7", "Fa#", "Fa#m", "Fa#m7", "Fa#7", "Sol", "Solm", "Solm7", "Sol7", "Sol#", "Sol#m", "Sol#m7", "Sol#7", "La", "Lam", "Lam7", "La7", "La#", "La#m", "La#m7", "La#7", "Si", "Sim", "Sim7", "Si7"];
+var escalaAmericana = ["C", "Cm", "Cm7", "C7", "C#", "C#m", "C#m7", "C#7", "D", "Dm", "Dm7", "D7", "D#", "D#m", "D#m7", "D#7", "E", "Em", "Em7", "E7", "F", "Fm", "Fm7", "F7", "F#", "F#m", "F#m7", "F#7", "G", "Gm", "Gm7", "G7", "G#", "G#m", "G#m7", "G#7", "A", "Am", "Am7", "A7", "A#", "A#m", "A#m7", "A#7", "B", "Bm", "Bm7", "B7", 
+						"Cmaj7", "Csus4", "C#maj7", "C#sus4",
+						"Dmaj7", "Dsus4", "D#maj7", "D#sus4",
+						"Emaj7", "Esus4", 
+						"Fmaj7", "Fsus4", "F#maj7", "F#sus4",
+						"Gmaj7", "Gsus4", "G#maj7", "G#sus4",
+						"Amaj7", "Asus4", "A#maj7", "A#sus4",
+						"Bmaj7", "Bsus4"];
+var escalaLatina = ["Do", "Dom", "Dom7", "Do7", "Do#", "Do#m", "Do#m7", "Do#7", "Re", "Rem", "Rem7", "Re7", "Re#", "Re#m", "Re#m7", "Re#7", "Mi", "Mim", "Mim7", "Mi7", "Fa", "Fam", "Fam7", "Fa7", "Fa#", "Fa#m", "Fa#m7", "Fa#7", "Sol", "Solm", "Solm7", "Sol7", "Sol#", "Sol#m", "Sol#m7", "Sol#7", "La", "Lam", "Lam7", "La7", "La#", "La#m", "La#m7", "La#7", "Si", "Sim", "Sim7", "Si7",
+						"Domaj7", "Dosus4", "Do#maj7", "Do#sus4",
+						"Remaj7", "Resus4", "Re#maj7", "Re#sus4",
+						"Mimaj7", "Misus4", 
+						"Famaj7", "Fasus4", "Fa#maj7", "Fa#sus4",
+						"Solmaj7", "Solsus4", "Sol#maj7", "Sol#sus4",
+						"Lamaj7", "Lasus4", "La#maj7", "La#sus4",
+						"Simaj7", "Sisus4"];
+
 
 function transposeNotes(semiTones) {
     for (var i = 0; i < syllables.length; i++) {
