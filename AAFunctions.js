@@ -28,7 +28,7 @@ function transposeNotes(semiTones) {
         var noteElement = syllables[i].querySelector(".note");
         var currentNote = noteElement.textContent;
 
-        var NotaBase = currentNote.replace("m", "").replace("7", "");
+        var NotaBase = currentNote.replace("maj7", "").replace("m", "").replace("7", "");
         var Nota2 = currentNote.replace(NotaBase, ""); // solo queda el 7 y m
 
         if (TonalidadAmericana.includes(NotaBase)) {
