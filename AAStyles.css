@@ -16,14 +16,14 @@
 .syllable {
     position: relative;
     display: inline-block;
-    color: #bc8100;
+    color: #4F6F52;
 }
 
 .syllable .note {
     position: absolute;
     top: -11px;
     left: 0;
-    background-color: #bc8100;
+    background-color: #4F6F52;
     color: #fff;
     padding: 4px;
     padding-bottom: 2px;
@@ -32,15 +32,14 @@
     font-size: 14px;
     text-align: center;
     white-space: nowrap;
-	
-      display: flex;
-      align-items: center;
-      justify-content: center;	
-	  height:18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:18px;
 }
 
 .blue-button {
-    background-color: #8b3c01;
+    background-color: #4F6F52;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -52,17 +51,18 @@
 }
 
 .blue-button:hover {
-    background-color: #bc8100;
+    background-color: #86A789;
 }
 
 .blue-button:active {
-    background-color: #bc8100;
+    background-color: #86A789;
 }
 
 #container {
     font-family: Arial;
     padding-left: 20px;
     font-size: 20px;
+	color:#000000;
 }
 
 /* Estilos para centrar el contenido verticalmente y horizontalmente */
