@@ -14,7 +14,7 @@
         .item {
             max-width: 160px;
 			max-height: 70px;
-            background-color: #c28b00;
+            background-color: #86A789;
             color: #fff;
             border-radius: 5px;
             cursor: pointer;
@@ -26,7 +26,7 @@
         }
 
         .item:hover {
-            background-color: #8b3c01;
+            background-color: #D2E3C8;
         }
 		
 		
@@ -121,7 +121,7 @@
 
         /* Estilos CSS para las secciones colapsables */
         .seccion {
-            background-color: #82867b;
+            background-color: #4F6F52;
 			color: #fff;
             padding: 10px;
             margin: 5px;
@@ -131,7 +131,7 @@
         }
 
         .seccion:hover {
-            background-color: #ccc;
+            background-color: #D2E3C8;
         }
 		
         .contenido {
@@ -144,3 +144,17 @@
            max-height: 300px;
 
         }	
+	
+.sortContainer {
+position: relative;
+height: 35px;
+}
+	
+.sortBtn {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+	margin: 1px;
+}	
+	
+
