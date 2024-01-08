@@ -40,15 +40,6 @@
         document.querySelector('#buscar').addEventListener('keyup', function() {
             const texto = this.value.toLowerCase();
 			
-			if (texto == "")
-			{
-				visibleSection("indice1", false);
-				visibleSection("indice2", false);
-				visibleSection("indice3", false);
-				visibleSection("indice4", false);
-				return;
-			}
-			
             const elementos = document.querySelectorAll('.texto-centro');
             elementos.forEach(function(elemento) {
 				var numero = "";
@@ -67,7 +58,15 @@
                     elemento.parentNode.parentNode.style.display = 'none';
                 }
             });
-        });
+		
+			if (texto == "")
+			{
+				visibleSection("indice1", false);
+				visibleSection("indice2", false);
+				visibleSection("indice3", false);
+				visibleSection("indice4", false);
+			}
+		});
 		
 		
         // Función para alternar la visibilidad de las secciones
