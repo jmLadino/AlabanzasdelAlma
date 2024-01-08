@@ -86,4 +86,50 @@
 			var elemento = document.getElementById(strSeccion);
 			var strVisible = (visible ? "block" : "none");
 			elemento.style.display = strVisible;
-        }		
+        }
+
+
+// FUNCIONES DE ORDENAMIENTO DE SECCIONES
+  function ordenarAlfabeticamente(NombreSeccion) {
+    var contenedor = document.getElementById(NombreSeccion);
+    var items = contenedor.getElementsByClassName("item");
+    var itemsArray = Array.from(items);
+
+    itemsArray.sort(function(a, b) {
+      var textoA = a.querySelector(".texto-centro").textContent.trim();
+      var textoB = b.querySelector(".texto-centro").textContent.trim();
+
+	  textoA = textoA.replace("¿", "");
+	  textoB = textoB.replace("¿", "");
+	  
+      return textoA.localeCompare(textoB);
+    });
+
+    while (contenedor.firstChild) {
+      contenedor.removeChild(contenedor.firstChild);
+    }
+
+    itemsArray.forEach(function(item) {
+      contenedor.appendChild(item);
+    });
+  }
+  
+  function ordenarPorNumero(NombreSeccion) {
+    var contenedor = document.getElementById(NombreSeccion);
+    var items = contenedor.getElementsByClassName("item");
+    var itemsArray = Array.from(items);
+
+    itemsArray.sort(function(a, b) {
+      var NumeroA = parseInt(a.querySelector(".texto-arriba").textContent.trim(), 10);
+      var NumeroB = parseInt(b.querySelector(".texto-arriba").textContent.trim(), 10);
+      return NumeroA - NumeroB;
+    });
+
+    while (contenedor.firstChild) {
+      contenedor.removeChild(contenedor.firstChild);
+    }
+
+    itemsArray.forEach(function(item) {
+      contenedor.appendChild(item);
+    });
+  }  		

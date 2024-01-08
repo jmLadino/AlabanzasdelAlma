@@ -75,8 +75,8 @@ C.<br />
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/IjMqKGjWirQ?si=DPUVt_SKBE62cvu2" title="Tienes que Orar" frameborder="0" allowfullscreen></iframe>
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/IjMqKGjWirQ?si=DPUVt_SKBE62cvu2" title="75. Tienes que Orar" frameborder="0" allowfullscreen></iframe>
 `;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
-const contenidoHTML_Cursor = `  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/tengo-paz-como-un-rio.html"><button class="blue-button">Anterior</button></a><span class="tooltipPrevNext-content">69. Tengo paz como un río</span></span>&emsp;  <a href="https://alabanzasdelalma.blogspot.com/2023/06/indice.html">      <button class="blue-button">INDICE</button>  </a>  &emsp;  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/tierra-bendita-y-divina.html"><button class="blue-button">Siguiente</button></a><span class="tooltipPrevNext-content">71. Tierra bendita y divina</span></span>`;const DIV_CURSOR = document.getElementById("DIVCursor");DIV_CURSOR.innerHTML = contenidoHTML_Cursor;
+const contenidoHTML_Cursor = `  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/09/que-seria-de-mi.html"><button class="blue-button">Anterior</button></a><span class="tooltipPrevNext-content">74. Qué sería de Mí</span></span>&emsp;  <a href="https://alabanzasdelalma.blogspot.com/2023/06/indice.html">      <button class="blue-button">INDICE</button>  </a>  &emsp;  <span class="tooltipPrevNext"><a href="https://alabanzasdelalma.blogspot.com/2023/06/tu-amor-por-mi.html"><button class="blue-button">Siguiente</button></a><span class="tooltipPrevNext-content">76. Tu amor por mi</span></span>`;const DIV_CURSOR = document.getElementById("DIVCursor");DIV_CURSOR.innerHTML = contenidoHTML_Cursor;
