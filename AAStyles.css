@@ -228,6 +228,14 @@ body {
 		font-size: 24px;
 	}
 
+	.CSSAutor{
+			margin: 0;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 0.1;
+			margin-bottom: 50px;
+	}
+
 	.InterlineadoGuitarra {
 		line-height: 2.5;
 		margin-bottom: 10px;
