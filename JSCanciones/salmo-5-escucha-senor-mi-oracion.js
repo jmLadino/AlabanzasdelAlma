@@ -53,7 +53,7 @@ ante <span class="chord" data-tabsaurus="Sol"><span class="chord-tooltip"><img s
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/4WouFfWfYpI?si=cc0AOlLLr6XOjMKe" title="Salmo 5 - Escucha Señor mi oración" frameborder="0" allowfullscreen></iframe>
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/uZJaRYN_kXU?si=m83KySJnOAU7yuab" title="Salmo 5 - Escucha Señor mi oración" frameborder="0" allowfullscreen></iframe>
 `;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
