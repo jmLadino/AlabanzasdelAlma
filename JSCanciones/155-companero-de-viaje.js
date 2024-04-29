@@ -227,6 +227,7 @@ const DIV_CURSOR = document.getElementById("DIVCursor");
 DIV_CURSOR.innerHTML = contenidoHTML_Cursor;
 
 debugger;
+
 var currentUrl = window.location.href;
 if (currentUrl.includes("search")) {
     console.log("DEBE SOBREESCRIBIR EL CONTENIDO DE TODA EL DIV Y CARGAR UNICAMENTE UN SUBMENU");
