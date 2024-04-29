@@ -3,6 +3,9 @@ if (currentUrl.includes("search") && currentUrl.includes("Duo%20Zimrah")) {
 
 	const DIV_MAIN = document.getElementById("main");
 	DIV_MAIN.innerHTML = `
+
+	<link rel="stylesheet" href="https://jmladino.github.io/AlabanzasdelAlma/AAStylesIndice.css">
+	
 	<div class="seccion">Duo Zimrah</div>
 		<div class="contenido" id="seccion2">
 		
