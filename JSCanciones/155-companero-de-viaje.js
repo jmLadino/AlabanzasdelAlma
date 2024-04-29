@@ -40,11 +40,9 @@ if (currentUrl.includes("search") && currentUrl.includes("Duo%20Zimrah")) {
 			</div>
 		</div>
 	</div>`;
-
-	return;
     //console.log("DEBE SOBREESCRIBIR EL CONTENIDO DE TODA EL DIV Y CARGAR UNICAMENTE UN SUBMENU");
 } else {
-    //console.log("DEBE PROCEDER LA CARGA NORMAL");
+	//console.log("DEBE PROCEDER LA CARGA NORMAL");
 }
 
 
