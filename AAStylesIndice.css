@@ -25,6 +25,20 @@
             transition: background-color 0.3s ease;
         }
 
+        .itemHimnos {
+            width: 60%;
+            text-align: left;
+            background-color: #86A789;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            padding-left: 30px;
+            transition: background-color 0.3s ease;
+        }
+
         .item:hover {
             background-color: #D2E3C8;
         }
