@@ -1,4 +1,55 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">
+﻿var currentUrl = window.location.href;
+if (currentUrl.includes("search") && currentUrl.includes("Duo%20Zimrah")) {
+
+	const DIV_MAIN = document.getElementById("main");
+	DIV_MAIN.innerHTML = `
+	<div class="seccion" onclick="toggleSection('seccion2')">Duo Zimrah</div>
+		<div class="contenido" id="seccion2" style="display: none;">
+		
+			<div id="indice2">
+				<div class="item">
+					<div class="texto-arriba">150</div>
+					<a class="linkmenu" href="https://alabanzasdelalma.blogspot.com/2024/03/150-caminare-contigo.html">
+					  <div class="texto-centro">Caminaré Contigo</div>
+					</a>
+				</div>
+				<div class="item">
+					<div class="texto-arriba">151</div>
+					<a class="linkmenu" href="https://alabanzasdelalma.blogspot.com/2024/04/151-la-barca.html">
+					  <div class="texto-centro">La Barca</div>
+					</a>
+				</div>
+				<div class="item">
+					<div class="texto-arriba">152</div>
+					<a class="linkmenu" href="https://alabanzasdelalma.blogspot.com/2024/04/152-marchando-voy.html">
+					  <div class="texto-centro">Marchando voy</div>
+					</a>
+				</div>
+				<div class="item">
+					<div class="texto-arriba">155</div>
+					<a class="linkmenu" href="https://alabanzasdelalma.blogspot.com/2024/04/155-companero-de-viaje.html">
+					  <div class="texto-centro">Compañero de viaje</div>
+					</a>
+				</div>
+				<div class="item">
+					<div class="texto-arriba">160</div>
+					<a class="linkmenu" href="https://alabanzasdelalma.blogspot.com/2024/03/160-solo-no-estoy.html">
+					  <div class="texto-centro">Solo no estoy</div>
+					</a>
+				</div>			
+			</div>
+		</div>
+	</div>`;
+
+	return;
+    //console.log("DEBE SOBREESCRIBIR EL CONTENIDO DE TODA EL DIV Y CARGAR UNICAMENTE UN SUBMENU");
+} else {
+    //console.log("DEBE PROCEDER LA CARGA NORMAL");
+}
+
+
+
+const contenidoHTML_Letra = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -65,6 +116,7 @@ vamos en la misma dirección<br />
 compañero de viaje al pronto destino<br />
 </p>
 `;
+
 const DIV_LETRA = document.getElementById("DIVLetra");
 DIV_LETRA.innerHTML = contenidoHTML_Letra;
 const contenidoHTML_Acordes = `	<div class="image-container">
@@ -227,10 +279,3 @@ const DIV_CURSOR = document.getElementById("DIVCursor");
 DIV_CURSOR.innerHTML = contenidoHTML_Cursor;
 
 debugger;
-
-var currentUrl = window.location.href;
-if (currentUrl.includes("search")) {
-    console.log("DEBE SOBREESCRIBIR EL CONTENIDO DE TODA EL DIV Y CARGAR UNICAMENTE UN SUBMENU");
-} else {
-    console.log("DEBE PROCEDER LA CARGA NORMAL");
-}
