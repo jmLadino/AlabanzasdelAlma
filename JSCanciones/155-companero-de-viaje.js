@@ -2,6 +2,12 @@
 if (currentUrl.includes("search") && currentUrl.includes("Duo%20Zimrah")) {
 
 	const DIV_MAIN = document.getElementById("main");
+
+	DIV_MAIN.style.background = "#ffffff";
+	DIV_MAIN.style.borderRadius = "5px";
+	DIV_MAIN.style.padding = "10px";
+	DIV_MAIN.style.height = "100%";
+
 	DIV_MAIN.innerHTML = `
 
 	<link rel="stylesheet" href="https://jmladino.github.io/AlabanzasdelAlma/AAStylesIndice.css">
