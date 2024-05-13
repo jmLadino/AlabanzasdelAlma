@@ -43,29 +43,36 @@
     
     if (texto == "")
     {
-            visibleSection("indice1", true);
-            visibleSection("indice2", true);
-            visibleSection("indice3", true);
-            visibleSection("indice4", true);
+      // hace visible todos los nodos
+        const elementos = document.querySelectorAll('.texto-centro');
+      elementos.forEach(function(elemento) {
+        elemento.parentNode.parentNode.style.display = 'block';
+      });
+      
+      // oculta todas las secciones, pero deja el título visible
+      visibleSection("indice1", false, true);
+      visibleSection("indice2", false, true);
+      visibleSection("indice3", false, true);
+      visibleSection("indice4", false, true);
 
-            visibleSection("indice_CuartetoAsaf", true);
-            visibleSection("indice_DuoZimrah", true);
-            visibleSection("indice_EdithAravena", true);
-            visibleSection("indice_HeraldosdelRey", true);
-            visibleSection("indice_PrimeraFe", true);
+      visibleSection("indice_CuartetoAsaf", false, true);
+      visibleSection("indice_DuoZimrah", false, true);
+      visibleSection("indice_EdithAravena", false, true);
+      visibleSection("indice_HeraldosdelRey", false, true);
+      visibleSection("indice_PrimeraFe", false, true);
     }
     else{
       debugger; 
-      visibleSection("indice1", false);
-      visibleSection("indice2", false);
-      visibleSection("indice3", false);
-      visibleSection("indice4", false);
+      visibleSection("indice1", false, false);
+      visibleSection("indice2", false, false);
+      visibleSection("indice3", false, false);
+      visibleSection("indice4", false, false);
 
-      visibleSection("indice_CuartetoAsaf", false);
-      visibleSection("indice_DuoZimrah", false);
-      visibleSection("indice_EdithAravena", false);
-      visibleSection("indice_HeraldosdelRey", false);
-      visibleSection("indice_PrimeraFe", false);
+      visibleSection("indice_CuartetoAsaf", false, false);
+      visibleSection("indice_DuoZimrah", false, false);
+      visibleSection("indice_EdithAravena", false, false);
+      visibleSection("indice_HeraldosdelRey", false, false);
+      visibleSection("indice_PrimeraFe", false, false);
       
       const elementos = document.querySelectorAll('.texto-centro');
       elementos.forEach(function(elemento) {
@@ -86,7 +93,7 @@
         
         if (contenido.includes(texto)) {
           elemento.parentNode.parentNode.style.display = 'block';
-          visibleSection(elemento.parentNode.parentNode.parentNode.id, true);
+          visibleSection(elemento.parentNode.parentNode.parentNode.id, true, true);
         } 
       });				
     }
@@ -108,7 +115,7 @@
       }
   
       // Función para setear la visibilidad de la sección
-      function visibleSection(id, visible) {
+      function visibleSection(id, visible, VisibleTitulo) {
     // debugger;
     
           var strSeccion = "";
@@ -149,16 +156,16 @@
           elemento.style.display = strVisible;
     
     var TituloElemento = document.getElementById("Title_" + strSeccion);
-    TituloElemento.style.display = strVisible;
+    TituloElemento.style.display = (VisibleTitulo ? "block" : "none");
+
     
     if (AplicaParent){
       elemento = elemento.parentNode;
       elemento.style.display = strVisible;
-      debugger;
+
       TituloElemento = document.getElementById("Title_" + elemento.id);
-      TituloElemento.style.display = strVisible;	
+      TituloElemento.style.display = (VisibleTitulo ? "block" : "none");
     }
-    
       }
 
 
