@@ -11,6 +11,15 @@
             justify-content: center;
         }
 
+        #indice_DuoZimrah, 
+        #indice_EdithAravena,
+        #indice_PrimeraFe {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }        
+
         .item {
             max-width: 160px;
 			max-height: 70px;
