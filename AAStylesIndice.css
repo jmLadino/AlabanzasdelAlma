@@ -13,6 +13,7 @@
 
         #indice_DuoZimrah, 
         #indice_EdithAravena,
+        #indice_HeraldosdelRey,
         #indice_PrimeraFe {
             display: flex;
             flex-wrap: wrap;
@@ -156,6 +157,20 @@
             background-color: #D2E3C8;
         }
 		
+        .seccionArtista {
+            background-color: #4F6F52;
+			color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+			transition: background-color 0.3s ease;
+        }
+
+        .seccionArtista:hover {
+            background-color: #D2E3C8;
+        }
+
         .contenido {
             /*display: none;*/
             padding-left: 10px;
