@@ -65,7 +65,14 @@
 				visibleSection("indice2", false);
 				visibleSection("indice3", false);
 				visibleSection("indice4", false);
-			}
+
+        visibleSection("indice_CuartetoAsaf", false);
+        visibleSection("indice_DuoZimrah", false);
+        visibleSection("indice_EdithAravena", false);
+        visibleSection("indice_HeraldosdelRey", false);
+        visibleSection("indice_PrimeraFe", false);
+
+      }
 		});
 		
 		
@@ -81,19 +88,30 @@
 		
         // Función para setear la visibilidad de la sección
         function visibleSection(id, visible) {
-			var strSeccion = "";
-			if (id == "indice1")
-				strSeccion = "seccion1";
-			else if (id == "indice2")
-				strSeccion = "seccion2";
-			else if (id == "indice3")
-				strSeccion = "seccion3";
-			else if (id == "indice4")
-				strSeccion = "seccion4";
-			
-			var elemento = document.getElementById(strSeccion);
-			var strVisible = (visible ? "block" : "none");
-			elemento.style.display = strVisible;
+            var strSeccion = "";
+            if (id == "indice1")
+              strSeccion = "seccion1";
+            else if (id == "indice2")
+              strSeccion = "seccion2";
+            else if (id == "indice3")
+              strSeccion = "seccion3";
+            else if (id == "indice4")
+              strSeccion = "seccion4";
+
+            else if (id == "indice_CuartetoAsaf")
+              strSeccion = "seccion_CuartetoAsaf";
+            else if (id == "indice_DuoZimrah")
+              strSeccion = "seccion_DuoZimrah";
+            else if (id == "indice_EdithAravena")
+              strSeccion = "seccion_EditAravena";
+            else if (id == "indice_HeraldosdelRey")
+              strSeccion = "seccion_HeraldosdelRey";
+            else if (id == "indice_PrimeraFe")
+              strSeccion = "seccion_PrimeraFe";      
+            
+            var elemento = document.getElementById(strSeccion);
+            var strVisible = (visible ? "block" : "none");
+            elemento.style.display = strVisible;
         }
 
 
