@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="../../../_BaseFilesCancionero/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="../../../_BaseFilesCancionero/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="../../../_BaseFilesCancionero/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Los árboles se mecen, mecen, mecen<br />Los árboles se mecen, Dios es todo amor<br /></p><p class="InterlineadoLetra">Los pajaritos vuelan, vuelan, vuelan<br />Los pajaritos vuelan, Dios es todo amor<br /></p><p class="InterlineadoLetra">Las estrellitas brillan, brillan, brillan<br />Las estrellitas brillan, Dios es todo amor<br /></p><p class="InterlineadoLetra">Las flores cabecean, cabe-cean<br />Las flores cabecean, Dios es todo amor<br /></p><p class="InterlineadoLetra">El sol redondo gira, gira, gira<br />El sol redondo gira, Dios es todo amor<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Los árboles se mecen, mecen, mecen<br />Los árboles se mecen, Dios es todo amor<br /></p><p class="InterlineadoLetra">Los pajaritos vuelan, vuelan, vuelan<br />Los pajaritos vuelan, Dios es todo amor<br /></p><p class="InterlineadoLetra">Las estrellitas brillan, brillan, brillan<br />Las estrellitas brillan, Dios es todo amor<br /></p><p class="InterlineadoLetra">Las flores cabecean, cabe-cean<br />Las flores cabecean, Dios es todo amor<br /></p><p class="InterlineadoLetra">El sol redondo gira, gira, gira<br />El sol redondo gira, Dios es todo amor<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
-			<img id="btnLetra2" src="../../../_BaseFilesCancionero/imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
 		</span>
 		
 		<span class="tooltip">
-			<img id="btnGuitarra2" src="../../../_BaseFilesCancionero/imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltip-content">Guitarra</span>
 		</span>
 
 		<span class="tooltip">
-			<img id="btnUkelele2" src="../../../_BaseFilesCancionero/imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	

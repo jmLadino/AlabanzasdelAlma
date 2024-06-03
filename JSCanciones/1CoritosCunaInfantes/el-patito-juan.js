@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="../../../_BaseFilesCancionero/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="../../../_BaseFilesCancionero/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="../../../_BaseFilesCancionero/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">// Encontré al patito Juan<br />en la esquina del zaguán //<br /></p><p class="InterlineadoLetra">// Y me dijo ven que vamos a charlar<br />un consejo sano yo te voy a dar //<br /></p><p class="InterlineadoLetra">// Obedece a tu papá, obedece a tu mamá<br />y si lo haces es Señor, larga vida te dará //<br /></p><p class="InterlineadoLetra">// Cada día al despertar<br />a Jesús debes orar //<br /></p><p class="InterlineadoLetra">// Y también tu Biblia tienes que leer<br />porque así un niño bueno vas a ser //<br /></p><p class="InterlineadoLetra">// Obedece a tu papá, obedece a tu mamá<br />y si lo haces es Señor, larga vida te dará //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">// Encontré al patito Juan<br />en la esquina del zaguán //<br /></p><p class="InterlineadoLetra">// Y me dijo ven que vamos a charlar<br />un consejo sano yo te voy a dar //<br /></p><p class="InterlineadoLetra">// Obedece a tu papá, obedece a tu mamá<br />y si lo haces es Señor, larga vida te dará //<br /></p><p class="InterlineadoLetra">// Cada día al despertar<br />a Jesús debes orar //<br /></p><p class="InterlineadoLetra">// Y también tu Biblia tienes que leer<br />porque así un niño bueno vas a ser //<br /></p><p class="InterlineadoLetra">// Obedece a tu papá, obedece a tu mamá<br />y si lo haces es Señor, larga vida te dará //<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
-			<img id="btnLetra2" src="../../../_BaseFilesCancionero/imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
 		</span>
 		
 		<span class="tooltip">
-			<img id="btnGuitarra2" src="../../../_BaseFilesCancionero/imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltip-content">Guitarra</span>
 		</span>
 
 		<span class="tooltip">
-			<img id="btnUkelele2" src="../../../_BaseFilesCancionero/imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	

@@ -1,16 +1,16 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="../../../_BaseFilesCancionero/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="../../../_BaseFilesCancionero/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="../../../_BaseFilesCancionero/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Lado a lado estoy, con mi Salvador.<br />Mi amigo es Jesús.<br />Vivo por su amor, con Él yo soy feliz<br />Y de su mano siempre voy<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;Venid conmigo, juntemos las manos,<br />&emsp;Aquí donde está Jesús,<br />&emsp;Venid, cantemos en el mundo oscuro<br />&emsp;Que Cristo es nuestra luz.<br /></p><p class="InterlineadoLetra">Solitario estás desconfiado vas.<br />Todo es odio alrededor,<br />Pero en Jesús encontrarás amor,<br />Él te dará felicidad.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br /></p><p class="InterlineadoLetra">Vamos de la mano del Señor Jesús<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Lado a lado estoy, con mi Salvador.<br />Mi amigo es Jesús.<br />Vivo por su amor, con Él yo soy feliz<br />Y de su mano siempre voy<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;Venid conmigo, juntemos las manos,<br />&emsp;Aquí donde está Jesús,<br />&emsp;Venid, cantemos en el mundo oscuro<br />&emsp;Que Cristo es nuestra luz.<br /></p><p class="InterlineadoLetra">Solitario estás desconfiado vas.<br />Todo es odio alrededor,<br />Pero en Jesús encontrarás amor,<br />Él te dará felicidad.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br /></p><p class="InterlineadoLetra">Vamos de la mano del Señor Jesús<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
-			<img id="btnLetra2" src="../../../_BaseFilesCancionero/imgmicrofono.png" alt="Letra" class="imagebutton">
+			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
 		</span>
 		
 		<span class="tooltip">
-			<img id="btnGuitarra2" src="../../../_BaseFilesCancionero/imgguitarra.png" alt="Guitarra" class="imagebutton">
+			<img id="btnGuitarra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">
 			<span class="tooltip-content">Guitarra</span>
 		</span>
 
 		<span class="tooltip">
-			<img id="btnUkelele2" src="../../../_BaseFilesCancionero/imgukelele.png" alt="Ukelele" class="imagebutton">		
+			<img id="btnUkelele2" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">		
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
