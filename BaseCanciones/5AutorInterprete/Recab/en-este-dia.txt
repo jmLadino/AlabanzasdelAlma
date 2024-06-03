@@ -1,7 +1,6 @@
 INTRO
 {~;La}[TAB]{~;Do#m}[TAB]{~;Fa#}[TAB]{~;Sim}[TAB]{~;Mi}
 {~;La}[TAB]{~;Do#m}[TAB]{~;Fa#}[TAB]{~;Sim}[TAB]{~;Mi}
-
 A.
 {~;La}En este día, {~;Do#m}en este {can;Fa#}to
 quie{ro;Sim} contar lo que a mi vida ha lle{ga;Mi}do
@@ -18,6 +17,7 @@ Todo lo {dio;La} por ti
 hoy que {das;Do#m} tu por ee{él;Fa#}
 si {Cris;Sim}to nos amó, amémonos tam{bién;Mi}
 
+{~;La}[TAB]{~;Do#m}[TAB]{~;Fa#}[TAB]{~;Sim}[TAB]{~;Mi}
 A.
 
 B.
