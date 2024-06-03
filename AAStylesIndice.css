@@ -15,7 +15,8 @@
         #indice_DuoZimrah, 
         #indice_EdithAravena,
         #indice_HeraldosdelRey,
-        #indice_PrimeraFe {
+        #indice_PrimeraFe,
+		#indice_ConjuntoGuitanoRECAB {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;

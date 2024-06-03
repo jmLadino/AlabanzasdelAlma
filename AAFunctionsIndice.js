@@ -60,6 +60,7 @@
       visibleSection("indice_EdithAravena", false, true);
       visibleSection("indice_HeraldosdelRey", false, true);
       visibleSection("indice_PrimeraFe", false, true);
+	  visibleSection("indice_ConjuntoGuitanoRECAB", false, true);
     }
     else{
       debugger; 
@@ -73,6 +74,7 @@
       visibleSection("indice_EdithAravena", false, false);
       visibleSection("indice_HeraldosdelRey", false, false);
       visibleSection("indice_PrimeraFe", false, false);
+	  visibleSection("indice_ConjuntoGuitanoRECAB", false, false);
       
       const elementos = document.querySelectorAll('.texto-centro');
       elementos.forEach(function(elemento) {
@@ -118,54 +120,56 @@
       function visibleSection(id, visible, VisibleTitulo) {
     // debugger;
     
-          var strSeccion = "";
-    var AplicaParent = false;
-          if (id == "indice1")
-            strSeccion = "seccion1";
-          else if (id == "indice2")
-            strSeccion = "seccion2";
-          else if (id == "indice3")
-            strSeccion = "seccion3";
-          else if (id == "indice4")
-            strSeccion = "seccion4";
-
-          else if (id == "indice_CuartetoAsaf"){
-      strSeccion = "seccion_CuartetoAsaf";
-      AplicaParent = true;
-    }
-          else if (id == "indice_DuoZimrah"){
-      strSeccion = "seccion_DuoZimrah";
-      AplicaParent = true;
-    }
-          else if (id == "indice_EdithAravena"){
-      strSeccion = "seccion_EditAravena";
-      AplicaParent = true;
-    }
-          else if (id == "indice_HeraldosdelRey"){
-      strSeccion = "seccion_HeraldosdelRey";
-      AplicaParent = true;
-    }
-          else if (id == "indice_PrimeraFe"){
-      strSeccion = "seccion_PrimeraFe";
-      AplicaParent = true;
-    }
-            
+			var strSeccion = "";
+			var AplicaParent = false;
+			if (id == "indice1")
+				strSeccion = "seccion1";
+			else if (id == "indice2")
+				strSeccion = "seccion2";
+			else if (id == "indice3")
+				strSeccion = "seccion3";
+			else if (id == "indice4")
+				strSeccion = "seccion4";
+			else if (id == "indice_CuartetoAsaf"){
+			  strSeccion = "seccion_CuartetoAsaf";
+			  AplicaParent = true;
+			}
+			else if (id == "indice_DuoZimrah"){
+			  strSeccion = "seccion_DuoZimrah";
+			  AplicaParent = true;
+			}
+			else if (id == "indice_EdithAravena"){
+			  strSeccion = "seccion_EditAravena";
+			  AplicaParent = true;
+			}
+			else if (id == "indice_HeraldosdelRey"){
+			  strSeccion = "seccion_HeraldosdelRey";
+			  AplicaParent = true;
+			}
+			else if (id == "indice_PrimeraFe"){
+			  strSeccion = "seccion_PrimeraFe";
+			  AplicaParent = true;
+			}
+			else if (id == "indice_ConjuntoGuitanoRECAB"){
+			  strSeccion = "seccion_ConjuntoGuitanoRECAB";
+			  AplicaParent = true;
+			}
           
-          var elemento = document.getElementById(strSeccion);
-          var strVisible = (visible ? "block" : "none");
-          elemento.style.display = strVisible;
+        var elemento = document.getElementById(strSeccion);
+        var strVisible = (visible ? "block" : "none");
+        elemento.style.display = strVisible;
     
-    var TituloElemento = document.getElementById("Title_" + strSeccion);
-    TituloElemento.style.display = (VisibleTitulo ? "block" : "none");
+		var TituloElemento = document.getElementById("Title_" + strSeccion);
+		TituloElemento.style.display = (VisibleTitulo ? "block" : "none");
 
-    
-    if (AplicaParent){
-      elemento = elemento.parentNode;
-      elemento.style.display = strVisible;
 
-      TituloElemento = document.getElementById("Title_" + elemento.id);
-      TituloElemento.style.display = (VisibleTitulo ? "block" : "none");
-    }
+		if (AplicaParent){
+			elemento = elemento.parentNode;
+			elemento.style.display = strVisible;
+
+			TituloElemento = document.getElementById("Title_" + elemento.id);
+			TituloElemento.style.display = (VisibleTitulo ? "block" : "none");
+		}
       }
 
 

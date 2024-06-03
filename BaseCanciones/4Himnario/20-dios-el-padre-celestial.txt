@@ -1,0 +1,16 @@
+INTRO:
+{~;Sol}[TAB]{~;Re}[TAB]{~;Lam}[TAB]{~;Sol}[TAB]{~;Do}[TAB]{~;Re}[TAB]{~;Sol}
+
+1
+{A;Sol} Dios, {el;Re}[TAB]{Pa;Mim}dre ce{les;Re}[TAB]{tial;Sol};
+{al;Sol} Hijo, {nues;Re}[TAB]{tro;Mim}[TAB] {Re;Do}[TAB]{den;Sol}[TAB]{tor;Re};
+{al;Mim} e{ter;Re}nal {Con;Sol}[TAB]{so;Do}[TAB]{la;Re}[TAB]{dor;Sol},
+u{ni;Mim}dos, {to;Re}[TAB]{dos;Lam}[TAB] {a;Sol}[TAB]{la;Re7}[TAB]{bad;Sol}.
+{A;Do}[TAB]{mén;Sol}.
+----
+1
+A Dios, el Padre celestial;
+al Hijo, nuestro Redentor;
+al eternal Consolador,
+unidos, todos alabad.
+Amén.

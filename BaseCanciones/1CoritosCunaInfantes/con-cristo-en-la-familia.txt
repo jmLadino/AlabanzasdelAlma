@@ -1,0 +1,51 @@
+Con <b>{Cris;Re}to</b> en la familia
+Que hogar feliz, {Que;La} hogar feliz, {Que;Re} hogar feliz
+Con Cristo en la familia
+Que hogar feliz, {Que;La} hogar fe{liz;Re}
+
+Con <b>{pa;Re}pi</b> en la familia
+Que hogar feliz, {Que;La} hogar feliz, {Que;Re} hogar feliz
+Con papi en la familia
+Que hogar feliz, {Que;La} hogar fe{liz;Re}
+
+Con <b>{ma;Re}mi</b> en la familia
+Que hogar feliz, {Que;La} hogar feliz, {Que;Re} hogar feliz
+Con mami en la familia
+Que hogar feliz, {Que;La} hogar fe{liz;Re}
+
+Con <b>mi her{ma;Re}no</b> en la familia
+Que hogar feliz, {Que;La} hogar feliz, {Que;Re} hogar feliz
+Con mi hermano en la familia
+Que hogar feliz, {Que;La} hogar fe{liz;Re}
+
+Con <b>{Cris;Re}to</b> en la familia
+Que hogar feliz, {Que;La} hogar feliz
+{Que;Re} hogar feliz
+Con Cristo en la familia, Que hogar feliz
+
+{Que;La} hogar fe{liz;Re}
+----
+Con <b>Cristo</b> en la familia
+/// Que hogar feliz ///
+Con Cristo en la familia
+// Que hogar feliz //
+
+Con <b>papi</b> en la familia
+/// Que hogar feliz ///
+Con papi en la familia
+// Que hogar feliz //
+
+Con <b>mami</b> en la familia
+/// Que hogar feliz ///
+Con mami en la familia
+// Que hogar feliz //
+
+Con <b>mi hermano/a</b> en la familia
+/// Que hogar feliz ///
+Con mi hermano/a en la familia
+// Que hogar feliz //
+
+Con <b>Cristo</b> en la familia
+/// Que hogar feliz ///
+Con Cristo en la familia
+// Que hogar feliz //

@@ -1,0 +1,33 @@
+{Un;Sol} palacio tengo allá 
+más lindo que el sol,
+{Un;Do} palacio tengo allá 
+más lindo que el {sol;Sol},
+Un palacio tengo allá 
+más {lin;Mim}do que el sol,
+{En;Re} el más a{llá;Sol}.
+
+{Ben;Sol}dito Cristo contigo estaré,
+{Ben;Do}dito Cristo contigo esta{ré;Sol},
+Bendito Cristo con{ti;Mim}go estaré,
+{En;Re} el más a{llá;Sol}.
+
+{Si;Sol} tú quieres ir al cielo 
+ven al Señor,
+{Si;Do} tú quieres ir al cielo 
+ven al Se{ñor;Sol},
+Si tú quieres ir al cielo 
+{ven;Mim} al Señor,
+{Ven;Re} sin demo{rar;Sol}.
+{Ven;Re} sin demo{rar;Sol}.
+----
+/// Un palacio tengo allá 
+más lindo que el sol ///
+En el más allá.
+
+/// Bendito Cristo 
+contigo estaré ///
+En el más allá.
+
+/// Si tú quieres ir al cielo 
+ven al Señor ///
+Ven sin demorar.

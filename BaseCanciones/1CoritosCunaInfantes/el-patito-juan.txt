@@ -1,0 +1,39 @@
+INTRO
+{~;Fa}[TAB]{~;La#}[TAB]{~;Fa}[TAB]{~;Do}[TAB]{~;Fa} 
+{~;La#}[TAB]{~;Fa}[TAB]{~;Do}[TAB]{~;Fa}
+
+// Encontré al patito {Juan;Do}
+en la esquina del za{guán;Fa} // 
+
+// Y me {di;La#}jo ven que {va;Fa}mos {a;Do} char{lar;Fa} 
+un con{se;La#}jo sano {yo;Fa} te {voy;Do} a {dar;Fa}//
+
+// {O;Fa}bedece a tu pa{pá;Do}, obedece a tu ma{má;Fa}
+y si lo haces es Se{ñor;Do}, larga vida te da{rá;Fa}//
+
+// {Ca;Fa}da día al desper{tar;Do}
+a Jesús debes o{rar;Fa}// 
+
+// Y tam{bién;La#} tu Biblia {tie;Fa}nes {que;Do} le{er;Fa} 
+porque {así;La#} un niño {bue;Fa}no {vas;Do} a {ser;Fa} // 
+
+// {O;Fa}bedece a tu pa{pá;Do}, obedece a tu ma{má;Fa} 
+y si lo haces es Se{ñor;Do}, larga vida te da{rá;Fa}// 
+----
+// Encontré al patito Juan
+en la esquina del zaguán //
+
+// Y me dijo ven que vamos a charlar
+un consejo sano yo te voy a dar //
+
+// Obedece a tu papá, obedece a tu mamá
+y si lo haces es Señor, larga vida te dará //
+
+// Cada día al despertar
+a Jesús debes orar //
+
+// Y también tu Biblia tienes que leer
+porque así un niño bueno vas a ser //
+
+// Obedece a tu papá, obedece a tu mamá
+y si lo haces es Señor, larga vida te dará //

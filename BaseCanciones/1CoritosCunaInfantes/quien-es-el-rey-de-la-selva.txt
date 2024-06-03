@@ -1,0 +1,30 @@
+// ¿{Quién;Re} es el rey de la Selva?
+
+(hu hu)
+¿Quién es el rey del {mar;La}?
+(pa para para)
+¿ {Quién;Re} es el rey del uni{ver;Sol}so?
+¿Y tam{bién;La} quien es mi {rey;Re}? //
+
+{Te;La}[TAB]{di;Sol}[TAB]{go;La}
+{J-E-S-U-S;Re}
+Jesús es el rey de la selva
+Jesús es el rey del {mar;La}
+Je{sús;Re} es el rey del uni{ver;Sol}so
+Y tam{bién;La} él es mi {rey;Re}
+----
+// ¿Quién es el rey de la Selva?
+(hu hu)
+
+¿Quién es el rey del mar?
+(pa para para)
+
+¿Quién es el rey del universo?
+¿Y también quien es mi rey? //
+
+Te digo 
+J-E-S-U-S
+Jesús es el rey de la selva
+Jesús es el rey del mar
+Jesús es el rey del universo
+Y también él es mi rey

@@ -1,0 +1,43 @@
+Yo tengo {paz;Re} como un río
+tengo {paz;Sol} como un {río;Re},
+tengo {paz;Sim} como un río en mi {ser;La}
+Yo tengo {paz;Re} como un río
+tengo {paz;Sol} como un {río;Re},
+tengo {paz;Sim} como un {río;La} en mi {ser;Re}
+
+Yo tengo {go;Re}zo como una fuente
+tengo {go;Sol}zo como una {fuen;Re}te
+tengo {go;Sim}zo como una fuente en mi {ser;La}
+Yo tengo {go;Re}zo como una fuente
+tengo {go;Sol}zo como una {fuen;Re}te
+tengo {go;Sim}zo como una {fuen;La}te en mi {ser;Re}
+
+Yo tengo a{mor;Re} por mi Cristo,
+tengo a{mor;Sol} por mi {Cris;Re}to,
+tengo a{mor;Sim} por mi Cristo en mi {ser;La}
+Yo tengo a{mor;Re} por mi Cristo,
+tengo a{mor;Sol} por mi {Cris;Re}to,
+tengo a{mor;Sim} por mi {Cris;La}to en mi {ser;Re}
+
+Yo tengo {paz;Re} como un río
+tengo {go;Sol}zo como una {fuen;Re}te
+tengo a{mor;Sim} por mi Cristo en mi {ser;La}
+Yo tengo {paz;Re} como un río
+tengo {go;Sol}zo como una {fuen;Re}te
+tengo a{mor;Sim} por mi {Cris;La}to en mi {ser;Re}
+----
+// Yo tengo paz como un río
+tengo paz como un río, 
+tengo paz como un río en mi ser //
+
+// Yo tengo gozo como una fuente
+tengo gozo como una fuente
+tengo gozo como una fuente en mi ser //
+
+// Yo tengo amor por mi Cristo,
+tengo amor por mi Cristo, 
+tengo amor por mi Cristo en mi ser //
+
+// Yo tengo paz como un río
+tengo gozo como una fuente
+tengo amor por mi Cristo en mi ser //

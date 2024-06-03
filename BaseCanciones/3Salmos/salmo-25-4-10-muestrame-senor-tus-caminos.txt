@@ -1,0 +1,81 @@
+INTRO
+
+{~;Rem}[TAB]{~;Sol}[TAB]{~;Do}[TAB]{~;Fa}[TAB]{~;Solm}[TAB]{~;Do}
+{~;Fa}[TAB]{~;La#}[TAB]{~;Fa}[TAB]{~;La#}
+
+{Mués;Fa}trame, Señor tus ca{mi;La#}nos
+en{sé;Solm}ñame en tus sendas an{dar;Do}
+{mués;Fa}trame, Señor tus sen{de;La#}ros
+{di;Solm}me cómo cami{nar;Do}
+
+Porque es{toy;Fa} cansado de los {míos;La#}
+y no {quie;Solm}ro, no quiero más e{rrar;Do}
+porque es{toy;Fa} cansado de los {míos;La#}
+y no {quie;Solm}ro {ya;Do} pe{car;Rem}
+
+{~;Sol}[TAB]{~;Do}[TAB]{~;Fa}[TAB]{~;Solm}[TAB]{~;Do}
+{~;Fa}[TAB]{~;La#}[TAB]{~;Fa}[TAB]{~;La#}
+
+{Mi;Fa}ra mis tristezas y tra{ba;La#}jos
+se a{fli;Solm}ge más y más mi cora{zón;Do}
+{lí;Fa}brame de todas mis an{gus;La#}tias
+{he;Solm} confiado {to;Solm7}do a ti Se{ñor;Do}
+
+Porque es{toy;Fa} cansado de los {míos;La#}
+y no {quie;Solm}ro, no quiero más e{rrar;Do}
+porque es{toy;Fa} cansado de los {míos;La#}
+y no {quie;Solm}ro {ya;Do} pe{car;Fa}
+
+{~;Rem}[TAB]{~;Do}[TAB]{~;La#}[TAB]{~;Do}[TAB]{~;Re}
+
+<span class="comentario">(Sube tonalidad)</span>
+
+Porque es{toy;Sol} cansado de los {míos;Do}
+y no {quie;Lam}ro, no quiero más e{rrar;Re}
+porque es{toy;Sol} cansado de los {míos;Do}
+y no {quie;Lam}ro {ya;Re} pe{car;Sol}
+
+Porque es{toy;Sol} cansado de los {míos;Do}
+y no {quie;Lam}ro, no quiero más e{rrar;Re}
+porque es{toy;Sol} cansado de los {míos;Do}
+y no {quie;Lam}ro {ya;Re} pe{car;Mim}
+
+ya no {más;Re} Señor[TAB]{~;Sol}[TAB]{~;Do}
+
+y no {quie;Lam}ro {ya;Re} pe{car;Sol}
+----
+Muéstrame, Señor tus caminos
+enséñame en tus sendas andar
+muéstrame, Señor tus senderos
+dime cómo caminar
+
+Porque estoy cansado de los míos
+y no quiero, no quiero más errar
+porque estoy cansado de los míos
+y no quiero ya pecar
+
+Mira mis tristezas y trabajos
+se aflige más y más mi corazón
+líbrame de todas mis angustias
+he confiado todo a ti Señor
+
+Porque estoy cansado de los míos
+y no quiero, no quiero más errar
+porque estoy cansado de los míos
+y no quiero ya pecar
+
+<span class="comentario">(Sube tonalidad)</span>
+
+Porque estoy cansado de los míos
+y no quiero, no quiero más errar
+porque estoy cansado de los míos
+y no quiero ya pecar
+
+Porque estoy cansado de los míos
+y no quiero, no quiero más errar
+porque estoy cansado de los míos
+y no quiero ya pecar
+
+ya no más Señor
+
+y no quiero ya pecar

@@ -1,0 +1,70 @@
+INTRO:
+{~;La}[TAB]{~;Mi}[TAB]{~;Re}[TAB]{~;La}
+
+<b>A.</b>
+[TAB]{Voy;La} haciendo mis maletas
+[TAB]de viaje ya me {voy;Mi}
+[TAB]guardo en ellas el mapa
+[TAB]aventura y diver{sión;La}
+[TAB]yo coloco mi Biblia[TAB]{~;La7}
+[TAB]y también mucha ale{gría;Re}
+[TAB]tengo prisa por lle{gar;La}
+[TAB]tengo prisa por lle{gar;Mi} 
+[TAB]estoy yendo a mi ho{gar;La}[TAB]{~;La7}
+
+<b>B.</b>
+[TAB]Mi vida es un {via;Re}je
+[TAB]Mi vida es un {via;La}je
+[TAB]estoy yendo hacia a{llá;Mi}
+[TAB]estoy yendo a mi hogar
+[TAB]voy a ver a Je{sús;La}[TAB]{~;La7}
+
+[TAB]Mi vida es un {via;Re}je
+[TAB]Mi vida es un {via;La}je
+[TAB]estoy yendo hacia a{llá;Mi}
+[TAB]estoy yendo a mi hogar
+[TAB]voy a ver a Je{sús;La}
+
+<b>A + B</b>
+
+<span class="comentario">(Arpegio)</span>
+[TAB]Mi vida es un {via;Re}je
+[TAB]Mi vida es un {via;La}je
+[TAB]estoy yendo hacia a{llá;Mi}
+[TAB]estoy yendo a mi hogar
+[TAB]voy a ver a Je{sús;La}[TAB]{~;La7}
+
+<span class="comentario">(Rasgueo)</span>
+[TAB]Mi vida es un {via;Re}je
+[TAB]Mi vida es un {via;La}je
+[TAB]estoy yendo hacia a{llá;Mi}
+[TAB]estoy yendo a mi hogar
+[TAB]voy a ver a Je{sús;La}
+----
+<b>A.</b>
+[TAB]Voy haciendo mis maletas
+[TAB]de viaje ya me voy
+[TAB]guardo en ellas el mapa
+[TAB]aventura y diversión
+[TAB]yo coloco mi Biblia
+[TAB]y también mucha alegría
+[TAB]tengo prisa por llegar
+[TAB]tengo prisa por llegar 
+[TAB]estoy yendo a mi hogar
+
+<b>B.</b>
+[TAB]Mi vida es un viaje
+[TAB]Mi vida es un viaje
+[TAB]estoy yendo hacia allá
+[TAB]estoy yendo a mi hogar
+[TAB]voy a ver a Jesús.
+
+[TAB]Mi vida es un viaje
+[TAB]Mi vida es un viaje
+[TAB]estoy yendo hacia allá
+[TAB]estoy yendo a mi hogar
+[TAB]voy a ver a Jesús.
+
+<b>A + B</b>
+
+<b>B</b>
