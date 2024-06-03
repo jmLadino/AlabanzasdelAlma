@@ -33,8 +33,8 @@ No {fin;Sol}jas que no es{tás;La} oyendo
 {no;Re} te das cuenta de lo {que;Fa#m} estás haciendo
 más {tie;Sol}nes oídos y no {quie;Do}{res;La} escu{char;Re}[TAB]{~;Sim}
 más {tie;Mim}nes oídos y no {quie;La}res escu{char;Re}[TAB]{~;Fa#m}
-más {tie;Sol}nes oídos y no {quie;Do}{res;La} escu{char;Re}[TAB]{~;Sim}
-más {tie;Mim}nes oídos y no {quie;La}res escu{char;Re}
+más {tie;Sol}nes oídos y no {quie;Do}{res;La} escu{char;Re}
+
 ----
 Están tocando a la puerta
 qué te pasa que no te das cuenta
@@ -61,7 +61,6 @@ qué te pasa que no te das cuenta
 que del otro lado Cristo está
 No finjas que no estás oyendo
 no te das cuenta de lo que estás haciendo
-más tienes oídos y no quieres escuchar
 más tienes oídos y no quieres escuchar
 más tienes oídos y no quieres escuchar
 más tienes oídos y no quieres escuchar
