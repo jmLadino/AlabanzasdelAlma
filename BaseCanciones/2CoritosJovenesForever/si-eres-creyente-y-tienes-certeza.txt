@@ -1,3 +1,30 @@
 PENDIENTE (ACORDES)
 ----
-PENDIENTE (LETRA)
+// Si eres creyente y tienes certeza
+di amén (amén) //
+
+CORO
+[TAB]Si eres creyente y tienes certeza, 
+[TAB]toda la vida es una belleza
+[TAB]si eres cretente y tienes certeza,
+[TAB]di amén (amén)
+
+// Si eres creyente y tienes certeza
+bate las palmas //
+
+CORO
+
+// Si eres creyente y tienes certeza
+bate los pies //
+
+CORO
+
+// Si eres creyente y tienes certeza
+bate los 3 (amén, (palmas), (pies)) //
+
+CORO
+
+// Si eres creyente y tienes certeza
+bate al revés ((pies), (palmas), amén) //
+
+CORO
