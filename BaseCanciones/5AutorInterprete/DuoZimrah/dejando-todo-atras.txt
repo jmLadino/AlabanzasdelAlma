@@ -6,7 +6,8 @@ INTRO
 
 Hoy {es;Mi} momento de dejar mis cargas en la {cruz;La},
 de no dudarlo más,
-de {de;Si}[TAB]{cir;Do#m}le "adiós" a todo a{que;Si}llo que ocupó tu lu{gar;Mi}.
+de {de;Si}[TAB]{cir;Do#m}le "adiós" a todo 
+a{que;Si}llo que ocupó tu lu{gar;Mi}.
 Y {no;Mi}, sé que no hay nada igual,
 no puedo compa{rar;La} la luz que tú me das
 {con;Si}[TAB]{el;Do#m} peligroso brillo
@@ -14,7 +15,7 @@ no puedo compa{rar;La} la luz que tú me das
 Ya voy dejando todo a{trás;Si}...
 
 Y es {así;Mi} como se cierra una herida,
-como se hace se {día;La} si vienes a mí,
+como se hace de {día;La} si vienes a mí,
 como {to;Si}do mi pasado se {que;La}da a un costado 
 y yo {si;Mi}go el ca{mi;Si}no.
 Hoy gol{pean;Mi} a mi puerta temores y problemas
@@ -36,15 +37,15 @@ y yo {si;Mi}go el ca{mi;Si}no.
 Hoy gol{pean;Mi} a mi puerta temores y problemas
 pe{ro;La} yo no pienso abrir.
 Desde {que en;Mi}traste a mi vida, {so;Si}lo hay lugar
-
 para {ti;Do#m}, Señor, y si el {co;La}razón
 no en{cuen;Mi}tra el ca{mi;Si}no,
-no quie{ro ol;Do#m}vidar que en la {no;La}che más os{cu;Mi}ra vas con{mi;Si}go...
+no quie{ro ol;Do#m}vidar que en la {no;La}che más os{cu;Mi}ra 
+vas con{mi;Si}go...
 
 Hoy {es;Mi} momento de dejar mis cargas en la {cruz;La},
 de no dudarlo más,
-de de{cir;Do#m}le "adiós" a todo a{que;Si}llo que ocupó tu lu{gar;La}[TAB]{~;Mi}
-
+de de{cir;Do#m}le "adiós" a todo 
+a{que;Si}llo que ocupó tu lu{gar;La}
 ----
 Hoy es momento de dejar mis cargas en la cruz,
 de no dudarlo más,
@@ -56,7 +57,7 @@ que me encandiló al caminar.
 Ya voy dejando todo atrás...
 
 Y es así como se cierra una herida,
-como se hace se día si vienes a mí,
+como se hace de día si vienes a mí,
 como todo mi pasado se queda a un costado y yo sigo el camino.
 Hoy golpean a mi puerta temores y problemas
 pero yo no pienso abrir.
@@ -76,7 +77,6 @@ como todo mi pasado se queda a un costado y yo sigo el camino.
 Hoy golpean a mi puerta temores y problemas
 pero yo no pienso abrir.
 Desde que entraste a mi vida, solo hay lugar
-
 para ti, Señor, y si el corazón
 no encuentra el camino,
 no quiero olvidar que en la noche más oscura vas conmigo...
