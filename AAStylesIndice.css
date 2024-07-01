@@ -198,3 +198,31 @@ height: 35px;
 }	
 	
 
+.ArtistaBox {
+    display: flex;
+    width: 90%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.ArtistaBox.show {
+    max-height: 300px;
+
+ }
+
+.Artistaimage {
+    flex: 1;
+    max-width: 25%;
+    width: 100px;    
+}
+.Artistaimage img {
+    width: 90%;
+    height: auto;
+}
+.ArtistaDescription {
+    flex: 3;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}

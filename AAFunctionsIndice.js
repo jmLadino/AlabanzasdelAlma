@@ -139,7 +139,7 @@
 			  AplicaParent = true;
 			}
 			else if (id == "indice_EdithAravena"){
-			  strSeccion = "seccion_EditAravena";
+			  strSeccion = "seccion_EdithAravena";
 			  AplicaParent = true;
 			}
 			else if (id == "indice_HeraldosdelRey"){
