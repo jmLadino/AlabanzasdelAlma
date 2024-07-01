@@ -17,12 +17,18 @@ function filtrarPorLetra(letra) {
     }
     else {
       var primeraLetra = elemento.textContent.charAt(0).toUpperCase();
-      if (primeraLetra == "Á") primeraLetra = "A";
-      if (primeraLetra == "É") primeraLetra = "E";
-      if (primeraLetra == "Í") primeraLetra = "I";
-      if (primeraLetra == "Ó") primeraLetra = "O";
-      if (primeraLetra == "Ú") primeraLetra = "U";
-      if (primeraLetra == "¿") primeraLetra = elemento.textContent.charAt(1).toUpperCase();;
+      if (primeraLetra == "Á") 
+        primeraLetra = "A";
+      if (primeraLetra == "É") 
+        primeraLetra = "E";
+      if (primeraLetra == "Í") 
+        primeraLetra = "I";
+      if (primeraLetra == "Ó") 
+        primeraLetra = "O";
+      if (primeraLetra == "Ú") 
+        primeraLetra = "U";
+      if (primeraLetra == "¿") 
+        primeraLetra = elemento.textContent.charAt(1).toUpperCase();
 
       if (primeraLetra === letra.toUpperCase()) {
         elemento.parentNode.parentNode.style.display = 'block';
@@ -86,6 +92,10 @@ document.querySelector('#buscar').addEventListener('keyup', function () {
       var contenido = elemento.textContent.toLowerCase();
       contenido = numero + " " + contenido;
 
+      // antes de comparar, normaliza ambos textos para evitar diferencias por puntuación y/o mayúsculas
+      texto = normalizeText(texto);
+      contenido = normalizeText(contenido);
+
       if (contenido.includes(texto)) {
         elemento.parentNode.parentNode.style.display = 'block';
         visibleSection(elemento.parentNode.parentNode.parentNode.id, true, true);
@@ -93,6 +103,15 @@ document.querySelector('#buscar').addEventListener('keyup', function () {
     });
   }
 });
+
+function normalizeText(text) {
+  return text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "") // Eliminar diacríticos (tildes)
+      .replace(/[^\w\s]/g, ""); // Eliminar puntuación
+}
+
 
 
 // Función para alternar la visibilidad de las secciones
