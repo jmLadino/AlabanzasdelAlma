@@ -106,10 +106,12 @@ document.querySelector('#buscar').addEventListener('keyup', function () {
 
 function normalizeText(text) {
   return text
-      .toLowerCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "") // Eliminar diacríticos (tildes)
-      .replace(/[^\w\s]/g, ""); // Eliminar puntuación
+  .toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "") // Eliminar diacríticos (tildes)
+  .replace(/[^\w\s]/g, "") // Eliminar puntuación
+  .replace(/\s+/g, " ") // Reemplazar múltiples espacios por un solo espacio
+  .trim(); // Eliminar espacios al inicio y al final
 }
 
 
