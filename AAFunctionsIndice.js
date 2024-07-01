@@ -42,7 +42,7 @@ function filtrarPorLetra(letra) {
 
 // Función para buscar elementos por texto
 document.querySelector('#buscar').addEventListener('keyup', function () {
-  const texto = this.value.toLowerCase();
+  var texto = this.value.toLowerCase();
 
   if (texto == "") {
     // hace visible todos los nodos
