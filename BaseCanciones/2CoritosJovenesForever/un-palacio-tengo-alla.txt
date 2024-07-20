@@ -18,7 +18,11 @@ ven al Se{ñor;Sol},
 Si tú quieres ir al cielo 
 {ven;Mim} al Señor,
 {Ven;Re} sin demo{rar;Sol}.
-{Ven;Re} sin demo{rar;Sol}.
+
+Y {más;Sol} y más y más allá del sol
+y {más;Do} y más y más allá del {sol;Sol}
+y más y más y {más;Mim} allá del sol
+{En;Re} el más a{llá;Sol}.
 ----
 /// Un palacio tengo allá 
 más lindo que el sol ///
@@ -31,3 +35,6 @@ En el más allá.
 /// Si tú quieres ir al cielo 
 ven al Señor ///
 Ven sin demorar.
+
+/// Y más y más y más allá del sol ///
+En el más allá.

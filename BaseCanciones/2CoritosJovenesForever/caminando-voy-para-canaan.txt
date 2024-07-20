@@ -4,9 +4,9 @@ caminando {voy;Mi7} para Cana{án;La}
 gloria a {Dios;Mi}
 caminando {voy;Si7} para Cana{án;Mi}.
 
-Si ud no {va;Mi} no me impida {ir;Si7}
-Si ud no va no me impida {ir;Mi}
-Si ud no {va;Mi7} no me impida {ir;La}
+Si usted no {va;Mi} no me impida {ir;Si7}
+Si usted no va no me impida {ir;Mi}
+Si usted no {va;Mi7} no me impida {ir;La}
 gloria a {Dios;Mi}
 caminando {voy;Si7} para Cana{án;Mi}.
 
@@ -23,7 +23,7 @@ caminando {voy;Si7} para Cana{án;Mi}.
 gloria a Dios 
 caminando voy para Canaán. 
 
-/// Si tu no vas no me impidas a mí ///
+/// Si usted no va no me impida ir ///
 gloria a Dios 
 caminando voy para Canaán. 
 
