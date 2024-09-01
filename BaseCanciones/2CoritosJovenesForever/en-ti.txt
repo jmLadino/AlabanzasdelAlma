@@ -1,4 +1,19 @@
-PENDIENTE (ACORDES)
+// En {ti;Mi} confía mi {co;La}razón
+en {tí;Si} reposa mi {a;La}l[TAB]{ma;Mi}
+{mi;Si}[TAB]{ser;Do#m} descansa en {tí;Fa#m}
+puedo ser fe{liz;Si} //
+
+{~;Do}Por que {sé;Re} que estás o{bran;Mi}do
+{~;Do}tu per{fec;Re}ta volun{tad;Mi},
+{~;Do}en mi {vi;Re}da estás o{bran;Mi}do,
+{~;Do}tú per{fec;Re}ta volun{tad;Mi}
+
+En {ti;Mi} confía mi {co;La}razón
+en {tí;Si} reposa mi {a;La}l[TAB]{ma;Mi}
+{mi;Si}[TAB]{ser;Do#m} descansa en {tí;Fa#m}
+puedo ser fe{liz;Si}
+
+puedo ser fe{liz;Mi}
 ----
 // En ti confía mi corazón
 en tí reposa mi alma
