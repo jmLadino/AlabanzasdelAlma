@@ -1,21 +1,18 @@
-// Ale{lu;Mi}, Ale{lu;La}, Ale{lu;Fa#m}, Ale{lu;La}ya
-{Glo;Mi}{ria;Si7} a {Dios;Mi} {~;La} {~;Mi}
-
-Ale{lu;Mi}, Ale{lu;La}, Ale{lu;Fa#m}, Ale{lu;La}ya
-{Glo;Mi}{ria;Si7} a {Dios;Mi} {~;La} {~;Mi}
+// Ale{lu;Mi}, Ale{lu;La}, Ale{lu;Fa#m}, 
+Ale{lu;La}ya
+{Glo;Mi}{ria;Si7} a {Dios;Mi} {~;La} {~;Mi} //
 
 {Glo;Mi}ria a {Dios;Fa#m} Aleluya
 {Glo;Si}ria a {Dios;Mi} Aleluya
 {Glo;Mi}ria a {Dios;Fa#m} Aleluya
-{Glo;Si}ria a {Dios;Mi} //
+{Glo;Si}ria a {Dios;Mi} 
 
 ----
-// Alelu, Alelu, Alelu, Aleluya
-Gloria a Dios 
-Alelu, Alelu, Alelu, Aleluya
-Gloria a Dios
+// Alelu, Alelu, Alelu, 
+Aleluya
+Gloria a Dios //
 
 Gloria a Dios Aleluya
 Gloria a Dios Aleluya
 Gloria a Dios Aleluya
-Gloria a Dios //
+Gloria a Dios 
