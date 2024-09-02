@@ -12,6 +12,7 @@ CORO
 [TAB]y en pe{ca;Sol}[TAB]{do;Do}[TAB] {go;Sol}ber{nar;Fa},[TAB]{~;Do}
 [TAB]pre{fie;Do}ro a mi {Cris;Do7}to, su{bli;Fa}me {don;Do}
 [TAB]cual el mundo no {ha;Sol}[TAB]{de;Fa}[TAB]{dar;Do}.
+
 2
 No {quie;Do}ro el a{plau;Do7}so del {mun;Fa}do fa{laz;Do};
 prefiero en las {fi;Lam}las de {Cris;Rem}to ser{vir;Sol}.
@@ -35,11 +36,13 @@ CORO
 [TAB]y en pecado gobernar,
 [TAB]prefiero a mi Cristo, sublime don
 [TAB]cual el mundo no ha de dar.
+
 2
 No quiero el aplauso del mundo falaz;
 prefiero en las filas de Cristo servir.
 La fama del mundo es liviana y fugaz;
 prefiero por siempre a Jesús seguir.
+
 3
 Más bello que el lirio en su níveo blancor,
 mi Cristo es más dulce aún que la miel.
