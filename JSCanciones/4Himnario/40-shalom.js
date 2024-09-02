@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />Que Dios te dé su bendición,<br />shalom, shalom.<br />Te guarde Dios de todo mal,<br />shalom, shalom.<br /></p><p class="InterlineadoLetra">2.<br />Misericordia tenga de ti,<br />shalom, shalom.<br />y resplandezca su bondad,<br />shalom, shalom.<br /></p><p class="InterlineadoLetra">3.<br />Él alce su rostro sobre ti,<br />shalom, shalom.<br />Que ponga en ti su paz y amor,<br />shalom, shalom.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="CSSAutor">Números 6:24-26</p><p class="InterlineadoLetra">1.<br />Que Dios te dé su bendición,<br />shalom, shalom.<br />Te guarde Dios de todo mal,<br />shalom, shalom.<br /></p><p class="InterlineadoLetra">2.<br />Misericordia tenga de ti,<br />shalom, shalom.<br />y resplandezca su bondad,<br />shalom, shalom.<br /></p><p class="InterlineadoLetra">3.<br />Él alce su rostro sobre ti,<br />shalom, shalom.<br />Que ponga en ti su paz y amor,<br />shalom, shalom.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -14,7 +14,7 @@
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
-                <br />
+<p class="CSSAutor">Números 6:24-26</p>
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(-1)">T-</button><span class="tooltip-content">Bajar Medio Tono</span></span>
@@ -54,7 +54,8 @@ shalom, <span class="chord" data-tabsaurus="Mi"><span class="chord-tooltip"><img
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/4KKNDJYcenw?si=98rx_JTFMLMka45a" title="40. SHALOM" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 

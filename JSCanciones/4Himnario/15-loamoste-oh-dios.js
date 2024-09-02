@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />Loámoste, ¡Oh Dios!,<br />con alegre canción,<br />porque en Cristo tu Hijo<br />nos diste perdón.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;¡Aleluya! Te alabamos.<br />&emsp;¡Cuán grande es tu amor!<br />&emsp;¡Aleluya! Te adoramos,<br />&emsp;bendito Señor.<br /></p><p class="InterlineadoLetra">2.<br />A ti, oh Señor,<br />que tu trono de luz<br />has dejado por darnos<br />perdón en la cruz.<br /></p><p class="InterlineadoLetra">3.<br />Te damos loor,<br />santo Consolador,<br />que nos llenas de gozo<br />y santo valor.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="CSSAutor">1 Crónicas 29:13</p><p class="InterlineadoLetra">1.<br />Loámoste, ¡Oh Dios!,<br />con alegre canción,<br />porque en Cristo tu Hijo<br />nos diste perdón.<br /></p><p class="InterlineadoLetra"><b>CORO</b>:<br />&emsp;¡Aleluya! Te alabamos.<br />&emsp;¡Cuán grande es tu amor!<br />&emsp;¡Aleluya! Te adoramos,<br />&emsp;bendito Señor.<br /></p><p class="InterlineadoLetra">2.<br />A ti, oh Señor,<br />que tu trono de luz<br />has dejado por darnos<br />perdón en la cruz.<br /></p><p class="InterlineadoLetra">3.<br />Te damos loor,<br />santo Consolador,<br />que nos llenas de gozo<br />y santo valor.<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -14,7 +14,7 @@
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
-                <br />
+<p class="CSSAutor">1 Crónicas 29:13</p>
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(-1)">T-</button><span class="tooltip-content">Bajar Medio Tono</span></span>
@@ -59,7 +59,8 @@ y <span class="chord" data-tabsaurus="Do"><span class="chord-tooltip"><img src='
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/AHKdDx9bGGA?si=PasHwRxfGK5CllUu" title="15. Loámoste, ¡Oh Dios!" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 
