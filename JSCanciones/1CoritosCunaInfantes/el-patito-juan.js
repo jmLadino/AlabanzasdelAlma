@@ -58,7 +58,8 @@ y si lo haces es Se<span class="chord" data-tabsaurus="Do"><span class="chord-to
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/t5EUFE9PYdI?si=QM-8xzsRUQ1LLYjr" title="El patito Juan" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 

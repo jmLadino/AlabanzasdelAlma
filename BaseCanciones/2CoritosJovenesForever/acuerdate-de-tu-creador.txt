@@ -1,7 +1,19 @@
-PENDIENTE (ACORDES)
+A{cuér;Re}date de tu {Crea;Sim}dor
+en los {días;La}[TAB]{de;Sol}[TAB]{ju;La}ven{tud;Re}
+
+A{cuér;Re}date de tu {Crea;Sim}dor
+en los {días;La}[TAB]{de;Sol}[TAB]{ju;La}ven{tud;Re}[TAB]{~;Re7}
+
+{An;Sol}tes que vengan los días malos
+y {lle;Re}guen los años de los cuales digas
+{no;La} tengo en ellos contentamien{to;Re}[TAB]{Re7}
+
+{An;Sol}tes que se oscuresca el sol
+la {luz;Re}, la luna y las estrellas
+y {vuel;La}van las nubes {tras;Sol} la {llu;La}[TAB]{via;Re}.
 ----
-Acuérdate de tu Creador
-en los días de juventud
+// Acuérdate de tu Creador
+en los días de juventud //
 
 Antes que vengan los días malos
 y lleguen los años de los cuales digas

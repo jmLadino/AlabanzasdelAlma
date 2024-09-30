@@ -1,3 +1,32 @@
-PENDIENTE (ACORDES)
+{Pe;Re}dro, Santiago, Juan en el barquito
+{Pe;La}dro, Santiago, Juan en el barquito
+{Pe,Re}dro, Santiago, Juan en el barquito
+en el {mar;La} de Gali{lea;Re}
+
+Lan{za;Re}ron la red, mas no pescaron peces
+Lan{za;La}ron la red, mas no pescaron peces
+Lan{za;Re}ron la red, mas no pescaron peces
+en el {mar;La} de Gali{lea;Re}
+
+Je{sús;Re} mandó lanzar del otro lado
+Je{sús;La} mandó lanzar del otro lado
+Je{sús;Re} mandó lanzar del otro lado
+en el {mar;La} de Gali{lea;Re}
+
+Sa{ca;Re}ron la red llena de pecesitos
+Sa{ca;La}ron la red llena de pecesitos
+Sa{ca;Re}ron la red llena de pecesitos
+en el {mar;La} de Gali{lea;Re}
+
 ----
-PENDIENTE (LETRA)
+/// Pedro, Santiago, Juan en el barquito ///
+en el mar de Galilea
+
+/// Lanzaron la red, mas no pescaron peces ///
+en el mar de Galilea
+
+/// Jesús mandó lanzar del otro lado ///
+en el mar de Galilea
+
+/// Sacaron la red llena de pecesitos ///
+en el mar de Galilea

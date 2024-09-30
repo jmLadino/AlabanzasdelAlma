@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">1.<br />Dulce oración, dulce oración,<br />de toda influencia mundanal<br />elevas tú mi corazón<br />al tierno Padre celestial.<br />¡Oh, cuántas veces tuve en ti<br />auxilio en ruda tentación!<br />¡Y cuántos bienes recibí<br />mediante ti, dulce oración!<br /></p><p class="InterlineadoLetra">2.<br />Dulce oración, dulce oración,<br />al trono excelso de bondad<br />tú llevarás mi petición<br />a Dios, que escucha con piedad.<br />Creyendo espero recibir<br />divina y plena bendición,<br />y que me ayudes a vivir<br />junto a mi Dios, dulce oración<br /></p><p class="InterlineadoLetra">3.<br />Dulce oración, dulce oración,<br />aliento y gozo al alma das;<br />en este valle de aflicción<br />consuelo siempre me serás.<br />Tan solo el día&emsp;cuando esté<br />con Cristo en la celeste Sion,<br />entonces me despediré<br />feliz, de ti, dulce oración<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="CSSAutor">Efesios 6:18</p><p class="InterlineadoLetra">1.<br />Dulce oración, dulce oración,<br />de toda influencia mundanal<br />elevas tú mi corazón<br />al tierno Padre celestial.<br />¡Oh, cuántas veces tuve en ti<br />auxilio en ruda tentación!<br />¡Y cuántos bienes recibí<br />mediante ti, dulce oración!<br /></p><p class="InterlineadoLetra">2.<br />Dulce oración, dulce oración,<br />al trono excelso de bondad<br />tú llevarás mi petición<br />a Dios, que escucha con piedad.<br />Creyendo espero recibir<br />divina y plena bendición,<br />y que me ayudes a vivir<br />junto a mi Dios, dulce oración<br /></p><p class="InterlineadoLetra">3.<br />Dulce oración, dulce oración,<br />aliento y gozo al alma das;<br />en este valle de aflicción<br />consuelo siempre me serás.<br />Tan solo el día&emsp;cuando esté<br />con Cristo en la celeste Sion,<br />entonces me despediré<br />feliz, de ti, dulce oración<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -14,7 +14,7 @@
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
-                <br />
+<p class="CSSAutor">Efesios 6:18</p>
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(-1)">T-</button><span class="tooltip-content">Bajar Medio Tono</span></span>
@@ -66,7 +66,8 @@ fe<span class="chord" data-tabsaurus="Do"><span class="chord-tooltip"><img src='
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/lV68jdXg1OQ?si=BLzN2xOBcvcYf9un" title="376. Dulce oración" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 

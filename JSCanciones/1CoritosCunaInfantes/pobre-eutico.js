@@ -46,7 +46,8 @@ Se dieron cuenta que Eutico mu<span class="chord" data-tabsaurus="Do"><span clas
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/GzlXoJqSN9c?si=d-ooT0MKRYsEnDbR" title="Pobre Eutico" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 
