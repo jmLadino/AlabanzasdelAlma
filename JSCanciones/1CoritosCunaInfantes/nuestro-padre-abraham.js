@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">A.<br />Nuestro padre Abraham, tiene muchos,<br />muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú<br />y doy gracias al Señor<br /></p><p class="InterlineadoLetra">Brazo derecho<br /></p><p class="InterlineadoLetra">A.<br /></p><p class="InterlineadoLetra">Brazo derecho,<br />brazo izquierdo<br /></p><p class="InterlineadoLetra">A.<br /></p><p class="InterlineadoLetra">Brazo derecho,<br />brazo izquierdo,<br />pie derecho<br /></p><p class="InterlineadoLetra">A.<br /></p><p class="InterlineadoLetra">Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo<br /></p><p class="InterlineadoLetra">A.<br /></p><p class="InterlineadoLetra">Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo,<br />la cabeza<br /></p><p class="InterlineadoLetra">A.<br /></p><p class="InterlineadoLetra">Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo,<br />la cabeza,<br />una vuelta<br /></p><p class="InterlineadoLetra">A.<br /></p><p class="InterlineadoLetra">Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo,<br />la cabeza,<br />una vuelta<br /></p><p class="InterlineadoLetra">A SENTARSE!!!<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho</b><br /></p><p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho,<br />brazo izquierdo</b><br /></p><p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho,<br />brazo izquierdo,<br />pie derecho</b><br /></p><p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo</b><br /></p><p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo,<br />la cabeza</b><br /></p><p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo,<br />la cabeza,<br />una vuelta</b><br /></p><p class="InterlineadoLetra">Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham<br />Uno de ellos soy, igual que tú y doy gracias al Señor<br /></p><p class="InterlineadoLetra"><b>Brazo derecho,<br />brazo izquierdo,<br />pie derecho,<br />pie izquierdo,<br />la cabeza,<br />una vuelta</b><br /></p><p class="InterlineadoLetra"><span style="color:#ff0000;"><b>¡¡¡A SENTARSE!!!</b></span><br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -21,6 +21,8 @@
                   <span class="tooltip"><button class="blue-button" onclick="TonalidadInicial()">T0</button><span class="tooltip-content">Tonalidad Inicial</span></span>
                   <span class="tooltip"><button class="blue-button" onclick="convertirNotacion()">Do / C</button><span class="tooltip-content">Alternar Notación</span></span>
                   <button id="btnAcordes" class="blue-button">Acordes</button>
+                  <span class="tooltip"><button class="buttonSizeText" onclick="SizeText('aumentar')">A+</button><span class="tooltip-content">Aumentar tamaño del texto</span></span>
+                  <span class="tooltip"><button class="buttonSizeText" onclick="SizeText('disminuir')">A-</button><span class="tooltip-content">Disminuir tamaño del texto</span></span>
                 </div>
 
                 <div id="container">
@@ -32,51 +34,10 @@
                     </div>
 
                     <p class="InterlineadoGuitarra">
-A.<br />
 Nuestro <span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">pa<span class="note" data-notation="Latina">Re</span></span></span>dre Abraham, tiene muchos,<br />
 muchos hijos nuestro <span class="chord" data-tabsaurus="La"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/La.png' alt="La" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">pa<span class="note" data-notation="Latina">La</span></span></span>dre Abraham<br />
 Uno de ellos soy, igual que tú<br />
 y doy gracias al Se<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">ñor<span class="note" data-notation="Latina">Re</span></span></span><br />
-</p><p class="InterlineadoGuitarra">
-</p><p class="InterlineadoGuitarra">
-Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
-</p><p class="InterlineadoGuitarra">
-A.<br />
-</p><p class="InterlineadoGuitarra">
-Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
-brazo izquierdo<br />
-</p><p class="InterlineadoGuitarra">
-A.<br />
-</p><p class="InterlineadoGuitarra">
-Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
-brazo izquierdo,<br />
-pie derecho<br />
-</p><p class="InterlineadoGuitarra">
-A.<br />
-</p><p class="InterlineadoGuitarra">
-Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
-brazo izquierdo,<br />
-pie derecho,<br />
-pie izquierdo<br />
-</p><p class="InterlineadoGuitarra">
-A.<br />
-</p><p class="InterlineadoGuitarra">
-Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
-brazo izquierdo,<br />
-pie derecho,<br />
-pie izquierdo,<br />
-la cabeza<br />
-</p><p class="InterlineadoGuitarra">
-A.<br />
-</p><p class="InterlineadoGuitarra">
-Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
-brazo izquierdo,<br />
-pie derecho,<br />
-pie izquierdo,<br />
-la cabeza,<br />
-una vuelta<br />
-</p><p class="InterlineadoGuitarra">
-A.<br />
 </p><p class="InterlineadoGuitarra">
 Bra<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='https://jmladino.github.io/AlabanzasdelAlma/FullChords/Re.png' alt="Re" style="height:140px;width: 100px;"></span><span class="syllable" style="text-decoration: underline;">zo<span class="note" data-notation="Latina">Re</span></span></span> derecho<br />
 brazo izquierdo,<br />

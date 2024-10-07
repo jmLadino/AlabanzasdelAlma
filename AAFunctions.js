@@ -227,4 +227,11 @@ function SizeText(accion) {
     if (accion === 'aumentar') { actualSize += 2; } 
     else if (accion === 'disminuir') { actualSize -= 2; }
     contenido.querySelectorAll('p').forEach(p => { p.style.fontSize = actualSize + 'px'; });
+
+    actualSize = parseFloat(window.getComputedStyle(contenido.querySelector('.syllable span')).fontSize);
+    if (accion === 'aumentar') { actualSize += 2; } 
+    else if (accion === 'disminuir') { actualSize -= 2; }    
+    contenido.querySelectorAll('.syllable span').forEach(span => {
+        span.style.fontSize = actualSize + 'px';
+    });	    
 }
