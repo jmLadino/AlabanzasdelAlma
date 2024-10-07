@@ -1,48 +1,7 @@
-A.
 Nuestro {pa;Re}dre Abraham, tiene muchos, 
 muchos hijos nuestro {pa;La}dre Abraham
 Uno de ellos soy, igual que tú
 y doy gracias al Se{ñor;Re}
-
-
-Bra{zo;Re} derecho
-
-A.
-
-Bra{zo;Re} derecho
-brazo izquierdo
-
-A.
-
-Bra{zo;Re} derecho
-brazo izquierdo, 
-pie derecho
-
-A.
-
-Bra{zo;Re} derecho
-brazo izquierdo, 
-pie derecho, 
-pie izquierdo
-
-A.
-
-Bra{zo;Re} derecho
-brazo izquierdo, 
-pie derecho, 
-pie izquierdo, 
-la cabeza
-
-A.
-
-Bra{zo;Re} derecho
-brazo izquierdo, 
-pie derecho, 
-pie izquierdo, 
-la cabeza,
-una vuelta
-
-A.
 
 Bra{zo;Re} derecho
 brazo izquierdo, 
@@ -53,56 +12,59 @@ una vuelta
 
 A SENTARSE!!!
 ----
-A.
-Nuestro padre Abraham, tiene muchos, 
-muchos hijos nuestro padre Abraham
-Uno de ellos soy, igual que tú
-y doy gracias al Señor
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
 
-Brazo derecho
+<b>Brazo derecho</b>
 
-A.
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
 
-Brazo derecho, 
-brazo izquierdo
+<b>Brazo derecho, 
+brazo izquierdo</b>
 
-A.
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
 
-Brazo derecho, 
+<b>Brazo derecho, 
 brazo izquierdo, 
-pie derecho
+pie derecho</b>
 
-A.
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
 
-Brazo derecho, 
-brazo izquierdo, 
-pie derecho, 
-pie izquierdo
-
-A.
-
-Brazo derecho, 
+<b>Brazo derecho, 
 brazo izquierdo, 
 pie derecho, 
-pie izquierdo, 
-la cabeza
+pie izquierdo</b>
 
-A.
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
 
-Brazo derecho, 
+<b>Brazo derecho, 
 brazo izquierdo, 
 pie derecho, 
 pie izquierdo, 
-la cabeza,
-una vuelta
+la cabeza</b>
 
-A.
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
 
-Brazo derecho, 
+<b>Brazo derecho, 
 brazo izquierdo, 
 pie derecho, 
 pie izquierdo, 
 la cabeza,
-una vuelta
+una vuelta</b>
 
-A SENTARSE!!!
+Nuestro padre Abraham, tiene muchos, muchos hijos nuestro padre Abraham
+Uno de ellos soy, igual que tú y doy gracias al Señor
+
+<b>Brazo derecho, 
+brazo izquierdo, 
+pie derecho, 
+pie izquierdo, 
+la cabeza,
+una vuelta</b>
+
+<span style="color:#ff0000;"><b>¡¡¡A SENTARSE!!!</b></span>

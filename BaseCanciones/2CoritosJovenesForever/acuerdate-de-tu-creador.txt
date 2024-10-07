@@ -6,7 +6,7 @@ en los {días;La}[TAB]{de;Sol}[TAB]{ju;La}ven{tud;Re}[TAB]{~;Re7}
 
 {An;Sol}tes que vengan los días malos
 y {lle;Re}guen los años de los cuales digas
-{no;La} tengo en ellos contentamien{to;Re}[TAB]{Re7}
+{no;La} tengo en ellos contentamien{to;Re}[TAB]{~;Re7}
 
 {An;Sol}tes que se oscuresca el sol
 la {luz;Re}, la luna y las estrellas

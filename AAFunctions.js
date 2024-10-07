@@ -179,7 +179,7 @@ function clicGuitarra()
 	DIVAcordes.classList.remove("hidden");
 	Instrumento = "Guitarra";
 	TonalidadInicial();
-	btnAcordes.textContent = "Acordes Guitarra";
+	//btnAcordes.textContent = "Acordes Guitarra";
 }
 
 btnUkelele.addEventListener("click", function() {
@@ -193,7 +193,7 @@ function clicUkelele(){
 	DIVAcordes.classList.remove("hidden");
 	Instrumento = "Ukelele";
 	TonalidadInicial();
-	btnAcordes.textContent = "Acordes Ukelele";
+	//btnAcordes.textContent = "Acordes Ukelele";
 }
 
 
@@ -219,3 +219,12 @@ btnAcordes.addEventListener("click", () => {
 closeModalButton.addEventListener("click", function() {
   modalOverlay.style.display = "none";
 });
+
+function SizeText(accion) {
+    const contenido = document.getElementById('DIVAcordes');
+    let actualSize = parseFloat(window.getComputedStyle(contenido.querySelector('p')).fontSize);
+
+    if (accion === 'aumentar') { actualSize += 2; } 
+    else if (accion === 'disminuir') { actualSize -= 2; }
+    contenido.querySelectorAll('p').forEach(p => { p.style.fontSize = actualSize + 'px'; });
+}
