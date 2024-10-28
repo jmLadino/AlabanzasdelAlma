@@ -1,6 +1,6 @@
 {Pe;Re}dro, Santiago y Juan en el barquito
 {Pe;La}dro, Santiago y Juan en el barquito
-{Pe,Re}dro, Santiago y Juan en el barquito
+{Pe;Re}dro, Santiago y Juan en el barquito
 en el {mar;La} de Gali{lea;Re}
 
 Lan{za;Re}ron la red, mas no pescaron peces
