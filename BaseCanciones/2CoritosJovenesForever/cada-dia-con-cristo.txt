@@ -1,4 +1,19 @@
-PENDIENTE (ACORDES)
+INTRO
+{Sol;~} {Re;~} {Sim;~} {Mim;~} {La7;~} {Re;~}
+
+{Ca;Re}da día con Cristo
+me llena de perfecta {paz;Mim}
+{ca;La}da día con Cristo le {a;La7}mo más y {más;Re}
+
+{Él;Re} me salva y guarda, 
+y {sé;Re7} que pronto volve{rá;Sol}
+y vivir con {Cris;Re}[TAB]{Sim;~}to
+más {dul;Mim}ce cada dí{a;La} se{rá;Re}
+
+{An;Re}do con {Cris;Sol}to
+en {som;La}bra y el luz yo {voy;Re} con mi Jesús
+{An;Re}do con {Cris;Sol}to
+{Él;La} es mi amigo me{jor;Re}
 ----
 Cada día con Cristo
 me llena de perfecta paz
