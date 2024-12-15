@@ -1,4 +1,35 @@
-PENDIENTE (ACORDES)
+INTRO
+{~;Sol#m}[TAB]{~;Fa#m}[TAB]{~;Si}[TAB]{~;Mi}
+{~;Fa#m}[TAB]{~;Si}[TAB]{~;Mi}
+
+La Ley de Jeho{vá;Fa#m} es per{fec;Si}ta
+que convierte el {al;Mi}ma,
+El Testimonio de Jeho{vá;Fa#m} es {fiel;Si}
+que hace sabio al sen{ci;Mi}llo
+
+CORO: 
+[TAB]// De{sea;Mi}bles {son;La} más que el {o;Si}ro 
+[TAB]y mucho {más;Sol#m} que el oro afi{na;Do#m}do 
+[TAB]y dulces {más;La} que la {miel;Si}
+[TAB]que destila del pa{nal;Mi} //
+
+{Los;Mi} mandamientos de Jeho{vá;Fa#m} son {rec;Si}tos
+que alegran el {co;Mi}razón
+El precepto de Jeho{vá;Fa#m} es {pu;Si}ro
+que alumbra los {o;Mi}jos
+
+CORO:
+
+{El;Mi} temor de Jeho{vá;Fa#m} es {lim;Si}pio,
+que permanece para {siem;Mi}pre
+los juicios de Jeho{vá;Fa#m} son ver{dad;Si}
+todos {jus;Mi}tos
+
+CORO: 
+
+... y dulces {más;La} que la {miel;Si}
+que destila del pa{nal;Mi}
+
 ----
 La Ley de Jehová es perfecta
 que convierte el alma,
@@ -25,7 +56,5 @@ todos justos
 
 CORO: 
 
-y dulces más que la miel
-que destila del panal
-y dulces más que la miel
+... y dulces más que la miel
 que destila del panal

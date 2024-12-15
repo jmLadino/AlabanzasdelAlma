@@ -1,33 +1,47 @@
-PENDIENTE (ACORDES)
+{Yo;Re} pensaba que el hombre era 
+grande por su saber
+{gran;La}de por su valor
+{gran;Re}de por su poder
+{Yo;Re} pensaba que el hombre era 
+grande y me equivoqué, 
+pues {gran;La}de solo es {Dios;Re}[TAB]{~;Re7}.
+
+CORO
+[TAB]Sube hasta el {cie;Sol}lo y lo verás
+[TAB]que peque{ñi;Re}to el mundo es
+[TAB]sube hasta el {cie;La}lo y lo ve{rás;Re}[TAB]{~;Re7}
+[TAB]como un es{pe;Sol}jo de cristal
+[TAB]que con ca{ri;Re}ño hay que cuidar
+[TAB]sube hasta el {cie;La}lo y {lo;Sol}[TAB]{ve;La}[TAB]{rás;Re}
+
+{Mu;Re}chas veces el hombre 
+pensaba ser como Dios
+que{ría;La} ser como Dios
+so{ña;Re}ba ser como Dios
+muchas veces el hombre
+soñaba y se despertó
+pues {gran;La}de solo es {Dios;Re}[TAB]{~;Re7}.
 ----
 Yo pensaba que el hombre era 
-grande por su poder
-grande por su valor
 grande por su saber
+grande por su valor
+grande por su poder
 Yo pensaba que el hombre era 
 grande y me equivoqué, 
 pues grande solo es Dios.
 
 CORO
 [TAB]Sube hasta el cielo y lo verás
-[TAB]que pequeñito el hombre es
+[TAB]que pequeñito el mundo es
 [TAB]sube hasta el cielo y lo verás
-[TAB]como un juguete de cristal
+[TAB]como un espejo de cristal
 [TAB]que con cariño hay que cuidar
 [TAB]sube hasta el cielo y lo verás
 
-Muchas veces el hombre buscaba ser como Dios
-creía ser como Dios
+Muchas veces el hombre 
+pensaba ser como Dios
+quería ser como Dios
 soñaba ser como Dios
-muchas veces el hombre soñaba y se despertó
+muchas veces el hombre
+soñaba y se despertó
 pues grande solo es Dios.
-
-CORO 
-
-Caminando por la vida hay veces que encontrarás
-cosas que extrañarás
-hombres que admirarás
-caminando por la vida hay veces que pensarás
-que el hombre es como Dios
-
-CORO

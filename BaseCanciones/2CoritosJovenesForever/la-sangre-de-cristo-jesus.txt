@@ -1,11 +1,34 @@
-PENDIENTE (ACORDES)
+INTRO
+{~;La}[TAB]{~;Re}[TAB]{~;Mi}[TAB]{~;La}
+{~;La}[TAB]{~;Re}[TAB]{~;Mi}
+
+Con la o{fren;La}da de a{mor;Re} del cor{de;Mi}ro
+y su {san;La}gre ver{ti;Re}da por {mí;Mi}, 
+me {ha;Do} perdonado de {to;Lam}da mal{dad;Sol};
+Con {ella;Lam} me {dio;Rem} liber{tad;Mi}.
+
+No {exis;La}ten ca{de;Re}nas a{tán;Mi}do{me;La}
+por {gra;La}cia de {mi;Re} Salva{dor;Mi},
+el {pre;Fa#m}cio pa{gó;Do#m} por mi {Sal;Re}va{ción;La},
+su {muer;Sim}te me {dio;Mi} reden{ción;La}.[TAB]{~;Re}
+
+La {San;La}gre de Cristo Je{sús;Re}[TAB]{~;Mi}
+la{vó;La} mi pe{ca;Fa#m}do en la {cruz;Sim}[TAB]{~;Mi}
+{vi;Fa#m}[TAB]{da;Do#m} e{ter;Re}na me {da;La}, {un;Sim} día {re;La}gresa{rá;Sol}[TAB]{~;Mi}
+
+La {San;La}gre de Cristo Je{sús;Re}[TAB]{~;Mi}
+{lim;La}pia mi {vi;Fa#m}da y me {mues;Sim}tra su {luz;Mi}
+{Dios;Fa#m} es a{mor;Do#m}, no hay {prue;Re}ba ma{yor;La};
+la {san;Si#m}gre de {Cris;Mi}to Je{sús;La}.
+
+la {san;Si#m}gre de {Cris;Mi}to Je{sús;La}.
 ----
 Con la ofrenda de amor del cordero
 y su sangre vertida por mí, 
 me ha perdonado de toda maldad;
 Con ella me dio libertad.
 
-No existen cadenas atándome
+No existen cadenas atándome 
 por gracia de mi Salvador,
 el precio pagó por mi Salvación,
 su muerte me dio redención.

@@ -1,4 +1,27 @@
-PENDIENTE (ACORDES)
+// Comen{ce;Re}mos todos cantando,
+¿{quién;La} es el Rey de {glo;Re}ria? //
+
+// {El;Sol} rey de {glo;Re}ria {es;La} el Se{ñor;Re} //
+
+// Que lo {di;Re}gan las mujeres,
+¿{quién;La} es el Rey de {glo;Re}ria? //
+
+// {El;Sol} rey de {glo;Re}ria {es;La} el Se{ñor;Re} //
+
+// Que lo {di;Re}gan los varones,
+¿{quién;La} es el Rey de {glo;Re}ria? //
+
+// {El;Sol} rey de {glo;Re}ria {es;La} el Se{ñor;Re} //
+
+// Que lo {di;Re}gan los niños,
+¿{quién;La} es el Rey de {glo;Re}ria? //
+
+// {El;Sol} rey de {glo;Re}ria {es;La} el Se{ñor;Re} //
+
+// Termi{ne;Re}mos todos cantando,
+¿{quién;La} es el Rey de {glo;Re}ria? //
+
+// {El;Sol} rey de {glo;Re}ria {es;La} el Se{ñor;Re} //
 ----
 // Comencemos todos cantando,
 ¿quién es el Rey de gloria? //
