@@ -1,5 +1,5 @@
 INTRO
-{Sol;~} {Re;~} {Sim;~} {Mim;~} {La7;~} {Re;~}
+{~;Sol} {~;Re} {~;Sim} {~;Mim} {~;La7} {~;Re}
 
 {Ca;Re}da día con Cristo
 me llena de perfecta {paz;Mim}
@@ -7,7 +7,7 @@ me llena de perfecta {paz;Mim}
 
 {Él;Re} me salva y guarda, 
 y {sé;Re7} que pronto volve{rá;Sol}
-y vivir con {Cris;Re}[TAB]{Sim;~}to
+y vivir con {Cris;Re}[TAB]{~;Sim}to
 más {dul;Mim}ce cada dí{a;La} se{rá;Re}
 
 {An;Re}do con {Cris;Sol}to
