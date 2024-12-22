@@ -3,11 +3,11 @@ INTRO
 {~;La}[TAB]{~;Si}[TAB]{~;Mi}[TAB]{~;La}[TAB]{~;Mi}
 
 Un día como {hoy;Si}
-{~;La}[TAB]me puse a pen{sar;Mi}
+{~;La}me puse a pen{sar;Mi}
 queriendo enten{der;La}
 la sabidu{ría;Si} del día de a{yer;Mi}
 Un día como {hoy;Si}
-{~;La}[TAB]leyendo encon{tré;Mi}
+{~;La}leyendo encon{tré;Mi}
 que en Cristo lo {pue;La}do
 que me forta{le;Si}ce andando con {Él;Mi}[TAB]{~;La}[TAB]{~;Mi}
 
@@ -24,11 +24,11 @@ CORO:
 [TAB]y felici{dad;Mi}
 
 Un día como {hoy;Si}
-{~;La}[TAB]yo quiero can{tar;Mi}
+{~;La}yo quiero can{tar;Mi}
 diciéndole al {mun;La}do
 que solo la {paz;Si} en Cristo halla{rás;Mi}
 Un día como {hoy;Si}
-{~;La}[TAB]Él puede lo{grar;Mi}
+{~;La}Él puede lo{grar;Mi}
 que todos los {sue;La}ños
 y tus ilu{sio;Si}nes se hagan reali{dad;Mi}[TAB]{~;La}[TAB]{~;Mi}
 ----
