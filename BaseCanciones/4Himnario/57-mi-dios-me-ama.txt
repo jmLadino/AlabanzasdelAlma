@@ -1,4 +1,25 @@
-PENDIENTE (ACORDES)
+INTRO: 
+{~;Re}[TAB]{~;Sol}[TAB]{~;La}[TAB]{~;Re}
+
+1.
+{Mi;Re} Dios me ama, él {me ha;Sol} sal{va;Re}do;
+mi Dios me {a;La}ma, él {me a;La7}ma a {mí;Re}.
+
+CORO
+[TAB]Y lo re{pi;La}to:
+[TAB]Mi Dios me {a;Re}ma,
+[TAB]mi Dios me {a;La}ma,
+[TAB]él me ama a {mí;Re}.
+
+2
+{Cau;Re}tivo estuve en {el;Sol} pe{ca;Re}do;
+cautivo es{tu;La}ve, sin {Sal;La7}va{dor;Re}.
+3
+{En;Re}vió a Cristo pa{ra;Sol} li{brar;Re}me;
+envió a {Cris;La}to y {me;La7} li{bró;Re}.
+4
+{Me;Re} ha invitado por {su;Sol} Pa{la;Re}bra;
+me ha invi{ta;La}do con {tier;La7}no a{mor;Re}.
 ----
 1.
 Mi Dios me ama, él me ha salvado;
