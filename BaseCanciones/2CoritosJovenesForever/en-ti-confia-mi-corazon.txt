@@ -1,7 +1,12 @@
-//En {ti;Mi} confía mi {co;La}razón, 
+En {ti;Mi} confía mi {co;La}razón, 
 en {ti;Si} reposa mi {al;La}[TAB]{ma;Mi}
 {mi;Si} {ser;Do#m} descansa en {ti;Fa#}
-{pue;Si}do ser fe{liz;Si7} //
+puedo ser fe{liz;Si}[TAB]{~;Si7}
+
+En {ti;Mi} confía mi {co;La}razón, 
+en {ti;Si} reposa mi {al;La}[TAB]{ma;Mi}
+{mi;Si} {ser;Do#m} descansa en {ti;Fa#}
+puedo ser fe{liz;Si}
 
 {Por;Do}que {sé;Re} que estás o{bran;Mi}do
 {tu;Do} per{fec;Re}ta volun{tad;Mi}
@@ -11,9 +16,9 @@ en {ti;Si} reposa mi {al;La}[TAB]{ma;Mi}
 En {ti;Mi} confía mi {co;La}razón, 
 en {ti;Si} reposa mi {al;La}[TAB]{ma;Mi}
 {mi;Si} {ser;Do#m} descansa en {ti;Fa#}
-{pue;Si}do ser fe{liz;Si7}
+puedo ser fe{liz;Si}[TAB]{~;La}
 
-puedo {ser;La}[TAB]{fe;Si}[TAB]{liz;Mi}
+puedo {ser;Si} fe{liz;Mi}
 ----
 // En ti confía mi corazón, 
 en ti reposa mi alma
