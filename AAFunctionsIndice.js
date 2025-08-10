@@ -9,9 +9,9 @@ document.querySelectorAll('.letra').forEach(function (boton) {
   // Función robusta para móviles (incluye fix iOS)
   function cerrarTeclado() {
     // iOS a veces ignora blur inmediato; este truco ayuda
-    input.readOnly = true;          // truco corto para iOS
-    input.blur();                   // quita el foco => cierra teclado
-    setTimeout(() => input.readOnly = false, 50);
+    document.querySelector('#buscar').readOnly = true;          // truco corto para iOS
+    document.querySelector('#buscar').blur();                   // quita el foco => cierra teclado
+    setTimeout(() => document.querySelector('#buscar').readOnly = false, 50);
   }
 
 // Función para filtrar elementos por letra
