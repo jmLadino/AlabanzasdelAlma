@@ -19,7 +19,7 @@ Despierto y puedo {ver;La}
 Que te quedaste otra {vez;Re}
 
 {~;Sol}[TAB]Si el mundo está en tus {ma;Sim}nos
-Ya no teme{ré;Re}, ya no teme{ré;La}
+Ya no {te;La}me{ré;Re}, ya no teme{ré;La}
 Y en ti confia{ré;Sol}
 Si aún cuidas de las {a;Sim}ves
 Yo confia{ré;Re}, en ti confia{ré;La}
