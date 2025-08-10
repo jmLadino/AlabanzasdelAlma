@@ -6,6 +6,14 @@ document.querySelectorAll('.letra').forEach(function (boton) {
   });
 });
 
+  // Función robusta para móviles (incluye fix iOS)
+  function cerrarTeclado() {
+    // iOS a veces ignora blur inmediato; este truco ayuda
+    input.readOnly = true;          // truco corto para iOS
+    input.blur();                   // quita el foco => cierra teclado
+    setTimeout(() => input.readOnly = false, 50);
+  }
+
 // Función para filtrar elementos por letra
 function filtrarPorLetra(letra) {
   const elementos = document.querySelectorAll('.texto-centro');
@@ -102,7 +110,17 @@ document.querySelector('#buscar').addEventListener('keyup', function () {
       }
     });
   }
+
+  cerrarTeclado();
 });
+
+document.querySelector('#buscar').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();           // evita salto de línea/búsqueda
+      // da un tick para que termine el último 'input'
+      setTimeout(cerrarTeclado, 0);
+    }
+  });
 
 function normalizeText(text) {
   return text
