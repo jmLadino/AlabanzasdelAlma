@@ -110,8 +110,6 @@ document.querySelector('#buscar').addEventListener('keyup', function () {
       }
     });
   }
-
-  cerrarTeclado();
 });
 
 document.querySelector('#buscar').addEventListener('keydown', (e) => {
