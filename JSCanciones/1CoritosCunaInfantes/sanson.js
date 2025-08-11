@@ -48,7 +48,8 @@ San<span class="chord" data-tabsaurus="La"><span class="chord-tooltip"><img src=
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = ``;
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/hHZGwFC0-O0?si=VR_p8lCx1Rk1x7_T" title="Sansón" frameborder="0" allowfullscreen></iframe>
+`;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 
