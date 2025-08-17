@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Escucha Señor mi oración,<br />considera mis pensamientos<br />Atiende a la voz de mi clamor<br />Mi Rey y mi Dios<br />Porque a ti oraré<br />Oirás mi voz de mañana<br /></p><p class="InterlineadoLetra">Oh Dios de mañana<br />me presentaré<br />ante ti esperaré<br /></p><p class="InterlineadoLetra">Oh Dios de mañana<br />me presentaré<br />ante ti esperaré<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="CSSAutor"><a href="https://www.bible.com/es/bible/149/PSA.5.RVR1960" target="_blank">Salmo 5</a></p><p class="InterlineadoLetra">Escucha Señor mi oración,<br />considera mis pensamientos<br />Atiende a la voz de mi clamor<br />Mi Rey y mi Dios<br />Porque a ti oraré<br />Oirás mi voz de mañana<br /></p><p class="InterlineadoLetra">Oh Dios de mañana<br />me presentaré<br />ante ti esperaré<br /></p><p class="InterlineadoLetra">Oh Dios de mañana<br />me presentaré<br />ante ti esperaré<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -14,7 +14,7 @@
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
-                <br />
+<p class="CSSAutor">Salmo 5</p>
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(-1)">T-</button><span class="tooltip-content">Bajar Medio Tono</span></span>
@@ -53,7 +53,7 @@ ante <span class="chord" data-tabsaurus="Sol"><span class="chord-tooltip"><img s
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/uZJaRYN_kXU?si=18acqui76W0i3H1A" title="Salmo 5 - Escucha Señor mi oración" frameborder="0" allowfullscreen></iframe>
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/uZJaRYN_kXU?si=18acqui76W0i3H1A" title="Escucha Señor mi oración" frameborder="0" allowfullscreen></iframe>
 `;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;

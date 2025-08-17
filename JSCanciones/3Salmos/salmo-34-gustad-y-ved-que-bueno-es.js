@@ -1,4 +1,4 @@
-﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="InterlineadoLetra">Gustad y ved que bueno es Jehová<br />dichoso el hombre que confía en Él<br />temed a Jehová vosotros sus santos<br />pues nada falta a los que le temen<br /></p><p class="InterlineadoLetra">Gustad, gustad<br />y ved, y ved<br />que bueno es Jehová<br />dichoso el hombre que confía en Él<br />temed a Jehová vosotros sus santos<br />pues nada falta a los que le temen<br /></p><p class="InterlineadoLetra">Gustad y ved que bueno es Jehová<br />dichoso el hombre que confía en Él<br />dichoso el hombre que confía en Él<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
+﻿const contenidoHTML_Letra = `	<div class="image-container">		<span class="tooltip">			<img id="btnLetra" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">			<span class="tooltip-content">Letra</span>		</span>				<span class="tooltip">			<img id="btnGuitarra" src="https://jmladino.github.io/AlabanzasdelAlma/imgguitarra.png" alt="Guitarra" class="imagebutton">			<span class="tooltip-content">Guitarra</span>		</span>		<span class="tooltip">			<img id="btnUkelele" src="https://jmladino.github.io/AlabanzasdelAlma/imgukelele.png" alt="Ukelele" class="imagebutton">					<span class="tooltip-content">Ukelele</span>		</span>	</div>	<p class="CSSAutor"><a href="https://www.bible.com/es/bible/149/PSA.34.RVR1960" target="_blank">Salmo 34</a></p><p class="InterlineadoLetra">Gustad y ved que bueno es Jehová<br />dichoso el hombre que confía en Él<br />temed a Jehová vosotros sus santos<br />pues nada falta a los que le temen<br /></p><p class="InterlineadoLetra">Gustad, gustad<br />y ved, y ved<br />que bueno es Jehová<br />dichoso el hombre que confía en Él<br />temed a Jehová vosotros sus santos<br />pues nada falta a los que le temen<br /></p><p class="InterlineadoLetra">Gustad y ved que bueno es Jehová<br />dichoso el hombre que confía en Él<br />dichoso el hombre que confía en Él<br /></p>`;const DIV_LETRA = document.getElementById("DIVLetra");DIV_LETRA.innerHTML = contenidoHTML_Letra;const contenidoHTML_Acordes = `	<div class="image-container">
 		<span class="tooltip">
 			<img id="btnLetra2" src="https://jmladino.github.io/AlabanzasdelAlma/imgmicrofono.png" alt="Letra" class="imagebutton">
 			<span class="tooltip-content">Letra</span>
@@ -14,7 +14,7 @@
 			<span class="tooltip-content">Ukelele</span>
 		</span>
 	</div>	
-                <br />
+<p class="CSSAutor">Salmo 34</p>
                 <div id="DIV_Ribbon">
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(1)">T+</button><span class="tooltip-content">Subir Medio Tono</span></span>
                   <span class="tooltip"><button class="blue-button" onclick="transposeNotes(-1)">T-</button><span class="tooltip-content">Bajar Medio Tono</span></span>
@@ -54,7 +54,7 @@ di<span class="chord" data-tabsaurus="Re"><span class="chord-tooltip"><img src='
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/p1dRvkgEIOg?si=qh839VtU4Y1h3iEN" title="Salmo 34 - Gustad y Ved que bueno es Jehová" frameborder="0" allowfullscreen></iframe>
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/p1dRvkgEIOg?si=qh839VtU4Y1h3iEN" title="Gustad y Ved que bueno es Jehová" frameborder="0" allowfullscreen></iframe>
 `;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
