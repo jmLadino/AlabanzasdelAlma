@@ -17,7 +17,7 @@ Cristo {pron;Re}[TAB]{to;La}[TAB]{vol;Fa#m}[TAB]ve[TAB]{rá;La}.
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
 
 <span class="comentario">(Interludio)</span>
 {~;Fa#m}[TAB]{~;Mi}[TAB]{~;La}
@@ -37,19 +37,20 @@ Cristo {pron;Re}[TAB]{to;La}[TAB]{vol;Fa#m}[TAB]ve[TAB]{rá;La}.
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
 
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
 
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
 ----
-En mi corazón propongo hoy ser valiente y fiel a ti Señor,
+En mi corazón propongo hoy 
+ser valiente y fiel a ti Señor,
 Donde tu me envíes mostraré tu luz, tu luz.
 
 Si el camino al fuego he de enfrentar,
@@ -66,7 +67,7 @@ Firme en toda prueba, yo venceré.
 A ti me aferraré,
 nadie quitará mi fe.
 
-(interludio)
+<span class="comentario">(Interludio)</span>
 
 Mi oración será cumplir tu ley,
 aunque el mundo en mi contra esté.
