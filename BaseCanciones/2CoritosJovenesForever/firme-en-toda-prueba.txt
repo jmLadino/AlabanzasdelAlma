@@ -17,37 +17,37 @@ Cristo {pron;Re}[TAB]{to;La}[TAB]{vol;Fa#m}[TAB]ve[TAB]{rá;La}.
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Sim}[TAB]{mi;Fa#m}[TAB]{fe;La}.
 
 <span class="comentario">(Interludio)</span>
 {~;Fa#m}[TAB]{~;Mi}[TAB]{~;La}
 {~;Fa#m}[TAB]{~;Mi}[TAB]{~;La}
 {~;Fa#m}[TAB]{~;Mi}[TAB]{~;La}
-{~;Re}[TAB]{~;La}[TAB]{~;Fa#m}[TAB]{~;Fa#m}[TAB]{~;La}
+{~;Re}[TAB]{~;La}[TAB]{~;Sim}[TAB]{~;Fa#m}[TAB]{~;La}
 
 Mi ora{ción;Re} será cum{plir;La} tu ley,
 aunque el {mun;Re}do en mi contra es{té;La}.
-Vence{re;Re}mos siempre {con;Fa#m} tu gracia y {luz;La}, tú luz.
+Vence{re;Re}mos siempre {con;Fa#m} tu gracia y {luz;La}, {tu;Re}[TAB]{luz;La}.
 
 Plena {paz;Fa#m} encuentro en {ti;La}
 Dios, e{ter;Re}no amigo y {fiel;La}.
 Tu pro{me;Fa#m}sa firme es{tá;La}
-Cristo {pron;Re}[TAB]{to;La}[TAB]{vol;Fa#m}[TAB]ve[TAB]{rá;La}.
+Cristo {pron;Re}[TAB]{to;La}[TAB]{vol;Sim}[TAB]{ve;Fa#m}[TAB]{rá;La}.
 
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Sim}[TAB]{mi;Fa#m}[TAB]{fe;La}.
 
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Sim}[TAB]{mi;Fa#m}[TAB]{fe;La}.
 
 {Eres;Re} mi confianza, {eres;La} roca fiel
 {Fir;Re}me en toda prueba, {yo;La} venceré.
 {A;Re} ti me aferra{ré;Fa#m},
-nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Fa#m}[TAB]mi[TAB]{fe;La}.
+nadie {qui;Re}[TAB]{ta;La}[TAB]{rá;Sim}[TAB]{mi;Fa#m}[TAB]{fe;La}.
 ----
 En mi corazón propongo hoy 
 ser valiente y fiel a ti Señor,
