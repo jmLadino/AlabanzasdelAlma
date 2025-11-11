@@ -1,76 +1,48 @@
-Tono: D
-[Intro] D  A  E
-        D  A  E
 
-             D                   A      E
-El Cielo entristeció, el sol su luz apagó
-          D                   F#m      E
-El hijo amado de Dios su corazón entregó
-            D                   A
-Y el mundo no escuchó. Su Salvador rechazó
-       Bm      C#m         D         E    
-Devolvieron espinas por milagros y muerte 
-      A
-por amor
+INTRO
+{~;Re}[TAB]{~;La}[TAB]{~;Mi}
+{~;Re}[TAB]{~;La}[TAB]{~;Mi}
+                                           
+El cielo en{tris;Re}teció, el sol su {luz;La} apagó[TAB]{~;Mi}
+El hijo a{ma;Re}do de Dios su cora{zón;Fa#m} entregoooo{ó;Mi}
+Y el mundo {no;Re} escuchó. Su Salva{dor;La} rechazó[TAB]{~;Mi}
+Devol{vie;Sim}ron es{pi;Do#m}nas por mi{la;Re}gros y {muer;Mi}te 
+por a{mor;La}
 
-                G                D        
-Más Él herido fue por nuestro dolor y por 
-           A  A4    A
-nuestro pecado
-                 G                  D  
-Y en un último aliento al Padre clamó: 
-        A
-Perdónalos
-              E
-Triste, su corona de espinas llevó
-                    F#m              D
-Pero espera en el Cielo darte una mejor
-                   A
-De estrellas que brillen
-               E          D         A
-Y así nunca olvides que Cristo te amó
+Más Él herido {fue;Sol} por nuestro do{lor;Re} y por 
+nuestro pe{ca;La}do
+Y en un último a{lien;Sol}to al Padre cla{mó;Re}: 
+Perdóna{los;La}
 
-         D                  A
-Murió allí mi error y tuvo vida el perdón
-             D                       F#m  
-Y el tercer día llegó, cubriendo al mundo 
-    E4    E
-de luz
-         D                          A
-Allí su voz me encontró y un nuevo día 
-surgió
-         Bm       C#m            D         
-Pues llevó Él su vida hasta la muerte Y mi 
- E          A
-culpa enterró
+Triste, su co{ro;Mi}na de espinas llevó
+Pero espera en el {Cie;Fa#m}lo darte una me{jor;Re}
+De estrellas que {bri;La}llen
+Y así nunca ol{vi;Mi}des que {Cris;Re}to te a{mó;La}
 
-                G                D        
-Más Él herido fue por nuestro dolor y por 
-           A
-nuestro pecado
-                 G                  D  
-Y en un último aliento al Padre clamó: 
-        A
-Perdónalos
-              E
-Triste, su corona de espinas llevó
-                   F#m               D
-Pero espera en el Cielo darte una mejor
-                   A
-De estrellas que brillen
-               E                    F#m7
-Y así nunca olvides que Cristo te amó
+Murió a{llí;Re} mi error y tuvo {vi;La}da el perdón
+Y el tercer {día;Re} llegó, cubriendo al {mun;Fa#m}do de luuu{uz;Mi}
+Allí su {voz;Re} me encontró y un nuevo {día;La} surgió
+Pues lle{vó;Sim} Él su {vi;Do#m}da hasta la {muer;Re}te 
+Y mi {cul;Mi}pa ente{rró;La}
 
-D            A                  E        
-No, nunca olvides que nadie, jamás, como 
-  D         A
-Cristo te amó
+Más Él herido {fue;Sol} por nuestro do{lor;Re} y por 
+nuestro pe{ca;La}do
+Y en un último a{lien;Sol}to al Padre cla{mó;Re}: 
+Perdóna{los;La}
+
+Triste, su co{ro;Mi}na de espinas llevó
+Pero espera en el {Cie;Fa#m}lo darte una me{jor;Re}
+De estrellas que {bri;La}llen
+Y así nunca ol{vi;Mi}des que {Cris;Re}to te a{mó;Fa#m}
+
+{No;Re}, nunca ol{vi;La}des que nadie, ja{más;Mi}, como 
+{Cris;Re}to te a{mó;La}
 ----
-El Cielo entristeció, el sol su luz apagó
+El cielo entristeció, el sol su luz apagó
 El hijo amado de Dios su corazón entregó
 Y el mundo no escuchó. Su Salvador rechazó
-Devolvieron espinas por milagros y muerte 
-por amor
+Devolvieron espinas por milagros 
+y muerte por amor
 
 Más Él herido fue por nuestro dolor y por 
 nuestro pecado
