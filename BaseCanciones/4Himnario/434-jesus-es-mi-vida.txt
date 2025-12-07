@@ -1,4 +1,38 @@
-PENDIENTE (ACORDES)
+INTRO
+{~;Mi}[TAB]{~;La}[TAB]{~;Fa#m}[TAB]{~;Rem}
+{~;La}[TAB]{~;Mi7}[TAB]{~;La}[TAB]{~;Mi}
+
+Cuando el {cie;La}lo y sus es{tre;Mi}llas
+me hablan {del;Fa#m} a{mor;Rem} de {Dios;La};
+y las {flo;Fa#m}res, al a{brir;Re}se,
+buscan {el;Sim7} calor del {sol;Mi};
+pienso en {ese;Do#m} amor e{ter;Fa#m7}no
+que cui{da;Sol#m}do a {to;Do#m7}dos {da;Fa#m};
+me ins{pi;Re}ra cada {día;La}[TAB]{~;Fa#m7}
+para a{mar;Sim7}lo más y {más;Mi7}.[TAB]{~;Mi}
+
+CORO
+[TAB]Él es mi {Vi;La}da;{~;Do#m}[TAB]él es mi {Luz;Re};[TAB]{~;Fa#m}
+[TAB]mi gran A{mi;Sim7}go;{~;Mi7}[TAB]mi buen Je{sús;La}.[TAB]{~;Mi}
+[TAB]Na{da:;Mi7} mar{chi;La}tará ni cambiará
+[TAB]mi a{mor;Fa#m} por él.[TAB]{~;Rem}
+[TAB]Mi Dios y {mi;La} Señor es {to;Mi}do para {mí;La}.[TAB]{~;Mi}
+2
+Él co{no;La}ce, él es{cu;Mi}cha,
+y me {di;Fa#m}ce {qué;Rem} ha{cer;La}.
+Él com{par;Fa#m}te mis mo{men;Re}tos,
+sabe {có;Sim7}mos y por{qués;Mi}.
+Él me {guía;Do#m} a cada {pa;Fa#m7}so,
+me da {siem;Sol#m}pre {lo;Do#m} me{jor;Fa#m};
+y aunque a {ve;Re}ces no com{pren;La}do,[TAB]{~;Mi}
+me con{sue;Sim7}la con su a{mor;Mi7}.[TAB]{~;Mi}
+
+CORO
+[TAB]Él es mi {Vi;La}da;{~;Do#m}[TAB]él es mi {Luz;Re};[TAB]{~;Fa#m}
+[TAB]mi gran A{mi;Sim7}go;{~;Mi7}[TAB]mi buen Je{sús;La}.[TAB]{~;Mi}
+[TAB]Na{da:;Mi7} mar{chi;La}tará ni cambiará
+[TAB]mi a{mor;Fa#m} por él.[TAB]{~;Rem}
+[TAB]Mi Dios y {mi;La} Señor es {to;Sim7}do {pa;Mi}ra {mí;La}.
 ----
 Cuando el cielo y sus estrellas
 me hablan del amor de Dios;

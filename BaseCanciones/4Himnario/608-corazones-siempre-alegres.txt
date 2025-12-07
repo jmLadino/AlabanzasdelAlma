@@ -1,4 +1,31 @@
-PENDIENTE (ACORDES)
+INTRO:
+{~;Sol}[TAB]{~;Re}[TAB]{~;Sim}[TAB]{~;Mim}[TAB]{~;La}[TAB]{~;Re}
+1
+{Co;Re}razones siempre a{le;La}gres,
+rebosando {gra;Re}titud,
+somos los que a Dios a{ma;La}mos,
+redimida {ju;Sol}[TAB]{ven;La}[TAB]{tud;Re}[TAB]{~;Re7}.
+
+CORO
+[TAB]{Siem;Sol}pre alegres {va;Re}mos {to;Sim}dos,
+[TAB]{lle;Mim}nos {de;La} fe{li;Re}ci{dad;Re7};
+[TAB]{her;Sol}mosísimo es {el;Re} ca{mi;Sim}no,
+[TAB]{Mim}hacia la e{ter;La}ni{dad;Re}.
+2
+{Dios;Re} nos guía de la {ma;La}no;
+nos ampara {su;Re} poder;
+es su brazo pode{ro;La}so
+y nos quiere {de;Sol}[TAB]{fen;La}[TAB]{der;Re}[TAB]{~;Re7}.
+3
+{Si;Re} en la lucha desma{ya;La}mos
+o nos sitia {la;Re} maldad,
+con su gracia nos a{ni;La}ma,
+nos levanta {su;Sol}[TAB] {bon;La}[TAB]{dad;Re}.[TAB]{~;Re7}
+4
+{Con;Re} sus fuerzas lleva{re;La}mos
+muy gozosos {nues;Re}tra cruz;
+victoriosos canta{re;La}mos
+en la gloria {de;Sol}[TAB] {su;La}[TAB] {luz;Re}.[TAB]{~;Re7}
 ----
 1
 Corazones siempre alegres,

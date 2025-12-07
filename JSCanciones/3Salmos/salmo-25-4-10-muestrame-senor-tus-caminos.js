@@ -84,7 +84,7 @@ y no <span class="chord" data-tabsaurus="Lam"><span class="chord-tooltip"><img s
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/ft8Q-nI6QdY?si=OgI1EyyxeMSZ7lLw" title="Muéstrame Señor tus caminos " frameborder="0" allowfullscreen></iframe>
+const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/ft8Q-nI6QdY?si=OgI1EyyxeMSZ7lLw" title="Muéstrame Señor tus caminos" frameborder="0" allowfullscreen></iframe>
 `;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
