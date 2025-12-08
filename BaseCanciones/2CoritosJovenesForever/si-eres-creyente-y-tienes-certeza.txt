@@ -1,68 +1,79 @@
 Si eres cre{yen;Do}te y tienes certeza
 di a{mén;Sol} (amén)
 Si eres cre{yen;Sol}te y tienes certeza
+di a{mén;Do} (a{mén;Do7})
+Si eres cre{yen;Fa}te y tienes certeza, 
+toda la {vi;Do}da es una be{lle;Lam}za
+si eres cre{yen;Fa}te y tienes cer{te;Sol}za,
 di a{mén;Do} (amén)
-
-CORO
-[TAB]Si eres cre{yen;Fa}te y tienes certeza, 
-[TAB]toda la {vi;Do}da es una belleza
-[TAB]si eres cre{yen;Sol}te y tienes certeza,
-[TAB]di a{mén;Do} (amén)
 
 Si eres cre{yen;Do}te y tienes certeza
 bate las {pal;Sol}mas
 Si eres cre{yen;Sol}te y tienes certeza
+bate las {pal;Do}mas[TAB]{~;Do7}
+Si eres cre{yen;Fa}te y tienes certeza, 
+toda la {vi;Do}da es una be{lle;Lam}za
+si eres cre{yen;Fa}te y tienes cer{te;Sol}za,
 bate las {pal;Do}mas
-
-CORO
 
 Si eres cre{yen;Do}te y tienes certeza
 bate los {pies;Sol}
 Si eres cre{yen;Sol}te y tienes certeza
+bate los {pies;Do}[TAB]{~;Do7}
+Si eres cre{yen;Fa}te y tienes certeza, 
+toda la {vi;Do}da es una be{lle;Lam}za
+si eres cre{yen;Fa}te y tienes cer{te;Sol}za,
 bate los {pies;Do}
-
-CORO
 
 Si eres cre{yen;Do}te y tienes certeza
 bate los {tres;Sol} (amén, (palmas), (pies))
 Si eres cre{yen;Sol}te y tienes certeza
+bate los {tres;Do} (amén, (palmas), (pies))[TAB]{~;Do7}
+Si eres cre{yen;Fa}te y tienes certeza, 
+toda la {vi;Do}da es una be{lle;Lam}za
+si eres cre{yen;Fa}te y tienes cer{te;Sol}za,
 bate los {tres;Do} (amén, (palmas), (pies))
-
-CORO
 
 Si eres cre{yen;Do}te y tienes certeza
 bate al re{vés;Sol} ((pies), (palmas), amén)
 Si eres cre{yen;Sol}te y tienes certeza
+bate al re{vés;Do} ((pies), (palmas), amén)[TAB]{~;Do7}
+Si eres cre{yen;Fa}te y tienes certeza, 
+toda la {vi;Do}da es una be{lle;Lam}za
+si eres cre{yen;Fa}te y tienes cer{te;Sol}za,
 bate al re{vés;Do} ((pies), (palmas), amén)
-
-CORO
-
 ----
 // Si eres creyente y tienes certeza
-di amén (amén) //
-
-CORO
-[TAB]Si eres creyente y tienes certeza, 
-[TAB]toda la vida es una belleza
-[TAB]si eres cretente y tienes certeza,
-[TAB]di amén (amén)
+<b>di amén (amén)</b> //
+Si eres creyente y tienes certeza, 
+toda la vida es una belleza
+si eres creyente y tienes certeza,
+<b>di amén (amén)</b>
 
 // Si eres creyente y tienes certeza
-bate las palmas //
-
-CORO
-
-// Si eres creyente y tienes certeza
-bate los pies //
-
-CORO
+<b>bate las palmas</b> //
+Si eres creyente y tienes certeza, 
+toda la vida es una belleza
+si eres creyente y tienes certeza,
+<b>bate las palmas</b>
 
 // Si eres creyente y tienes certeza
-bate los 3 (amén, (palmas), (pies)) //
-
-CORO
+<b>bate los pies</b> //
+Si eres creyente y tienes certeza, 
+toda la vida es una belleza
+si eres creyente y tienes certeza,
+<b>bate los pies</b>
 
 // Si eres creyente y tienes certeza
-bate al revés ((pies), (palmas), amén) //
+<b>bate los 3 (amén, (palmas), (pies))</b> //
+Si eres creyente y tienes certeza, 
+toda la vida es una belleza
+si eres creyente y tienes certeza,
+<b>bate los 3 (amén, (palmas), (pies))</b>
 
-CORO
+// Si eres creyente y tienes certeza
+<b>bate al revés ((pies), (palmas), amén)</b> //
+Si eres creyente y tienes certeza, 
+toda la vida es una belleza
+si eres creyente y tienes certeza,
+<b>bate al revés ((pies), (palmas), amén)</b>

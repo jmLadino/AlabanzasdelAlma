@@ -1,11 +1,11 @@
 Te {a;Do}mo oh, Jehová
-forta{le:Fa}za {mía;Do},
+forta{le;Fa}za {mía;Do},
 Te {a;Do}mo oh, Jehová
-forta{le:Fa}za {mía;Do},
+forta{le;Fa}za {mía;Do},
 roca {mía;Fa} y {mi;Sol} liberta{dor;Do}
 mi cas{ti;Fa}llo y {mi;Sol} liberta{dor;Do}[TAB]{~;Do7}
 en {Él;Fa} {con;Sol}fia{ré;Mim7}[TAB]{~;Lam7}
-en {Él;Rem7} {con;Sol7}fia{ré;Do}[TAB]{~;Do7}
+en {Él;Rem7}[TAB]{con;Sol7}fia{ré;Do}[TAB]{~;Do7}
 en {Él;Fa} {con;Sol}fia{ré;Mim7}[TAB]{~;Lam7}
 en {Dios;Rem} mi {Sal;Sol}va{dor;Do}
 
@@ -16,7 +16,7 @@ espe{ran;Fa}za {mía;Do}
 mi a{mi;Fa}go y {mi;Sol} ayuda{dor;Do}
 mi re{fu;Fa}gio y {mi;Sol} ayuda{dor;Do}[TAB]{~;Do7}
 Je{sús;Fa} {me;Sol} guia{rá;Mim7},[TAB]{~;Lam7}
-Je{sús;Rem7} {me;Sol7} guia{rá;Do},[TAB]{~;Do7}
+Je{sús;Rem7}[TAB]{me;Sol7} guia{rá;Do},[TAB]{~;Do7}
 Je{sús;Fa} {me;Sol} guia{rá;Mim7}[TAB]{~;Lam7}
 mi {Dios;Rem} mi {Sal;Sol}va{dor;Do}
 
@@ -27,7 +27,7 @@ espe{ran;Fa}za {mía;Do}
 mi a{mi;Fa}go y {mi;Sol} ayuda{dor;Do}
 mi re{fu;Fa}gio y {mi;Sol} ayuda{dor;Do}[TAB]{~;Do7}
 Je{sús;Fa} {me;Sol} guia{rá;Mim7},[TAB]{~;Lam7}
-Je{sús;Rem7} {me;Sol7} guia{rá;Do},[TAB]{~;Do7}
+Je{sús;Rem7}[TAB]{me;Sol7} guia{rá;Do},[TAB]{~;Do7}
 Je{sús;Fa} {me;Sol} guia{rá;Mim7}[TAB]{~;Lam7}
 mi {Dios;Rem} mi {Sal;Sol}va{dor;Do}
 

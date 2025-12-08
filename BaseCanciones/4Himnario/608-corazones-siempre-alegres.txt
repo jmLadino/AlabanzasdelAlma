@@ -10,7 +10,7 @@ CORO
 [TAB]{Siem;Sol}pre alegres {va;Re}mos {to;Sim}dos,
 [TAB]{lle;Mim}nos {de;La} fe{li;Re}ci{dad;Re7};
 [TAB]{her;Sol}mosísimo es {el;Re} ca{mi;Sim}no,
-[TAB]{Mim}hacia la e{ter;La}ni{dad;Re}.
+[TAB]{ha;Mim}cia la e{ter;La}ni{dad;Re}.
 2
 {Dios;Re} nos guía de la {ma;La}no;
 nos ampara {su;Re} poder;
