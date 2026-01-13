@@ -1,4 +1,6 @@
+INTRO:
 {~;Do}
+
 En mis luchas con{mi;Fa}go es{tás;Do}
 Y {cuan;Fa}do {cai;Do}go no me {de;Sol}jarás
 {Tú;Do} amor me {gui;Fa}a{rá;Do}
@@ -51,7 +53,6 @@ Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Do}
-
 ----
 En mis luchas conmigo estás
 Y cuando caigo no me dejarás
