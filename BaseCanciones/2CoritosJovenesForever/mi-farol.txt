@@ -15,7 +15,7 @@ Yo, {yo;Fa} siento {paz;Do} en el {bra;Sol}vo {mar;Do}
 {Mi;Fa} fa{rol;Do}, {mi;Lam} fa{rol;Sol}
 {Bri;Fa}lla en la {no;Do}che, {yo;Lam} te segui{ré;Sol}
 {Mi;Fa} fa{rol;Do}, {mi;Lam} fa{rol;Sol}
-{~;Fa}Yo confío en {ti;Do}, {tú;Lam} me guia{rás;Sol}
+{~;Fa}Yo confío en {ti;Do},[TAB]{tú;Lam} me guia{rás;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
@@ -30,25 +30,25 @@ Yo, {yo;Fa} siento {paz;Do} en el {bra;Sol}vo {mar;Do}
 {Mi;Fa} fa{rol;Do}, {mi;Lam} fa{rol;Sol}
 {Bri;Fa}lla en la {no;Do}che, {yo;Lam} te segui{ré;Sol}
 {Mi;Fa} fa{rol;Do}, {mi;Lam} fa{rol;Sol}
-{~;Fa}Yo confío en {ti;Do}, {tú;Lam} me guia{rás;Sol}
+{~;Fa}Yo confío en {ti;Do},[TAB]{tú;Lam} me guia{rás;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Do}
 
-{Te;Fa} pe{di;Do}mos, {i;Lam}lu{mi;Sol}na
+{Te;Fa} pe{di;Do}mos, {i__;Lam}lu{mi;Sol}na
 {Guí;Fa}a{nos;Do} en {es;Lam}te {mar;Sol}
-{Te;Fa} pe{di;Do}mos, {i;Lam}lu{mi;Sol}na
+{Te;Fa} pe{di;Do}mos, {i__;Lam}lu{mi;Sol}na
 {Guí;Fa}a{nos;Do} en {es;Lam}te {mar;Sol}
-{Te;Fa} pe{di;Do}mos, {i;Lam}lu{mi;Sol}na
+{Te;Fa} pe{di;Do}mos, {i__;Lam}lu{mi;Sol}na
 {Guí;Fa}a{nos;Do} en {es;Lam}te {mar;Sol}
-{Te;Fa} pe{di;Do}mos, {i;Lam}lu{mi;Sol}na
+{Te;Fa} pe{di;Do}mos, {i__;Lam}lu{mi;Sol}na
 {Guí;Fa}a{nos;Do} en {es;Lam}te {mar;Sol}
 
 {Mi;Fa} fa{rol;Do}, {mi;Lam} fa{rol;Sol}
 {Bri;Fa}lla en la {no;Do}che, {yo;Lam} te segui{ré;Sol}
 {Mi;Fa} fa{rol;Do}, {mi;Lam} fa{rol;Sol}
-{~;Fa}Yo confío en {ti;Do}, {tú;Lam} me guia{rás;Sol}
+{~;Fa}Yo confío en {ti;Do},[TAB]{tú;Lam} me guia{rás;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
 Adonde {voy;Fa} uoo o{oo;Do} oo{oy;Sol}
