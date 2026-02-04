@@ -1,99 +1,59 @@
-Tono: E
-[Intro] E  B  C#m7  A
+INTRO:
+{~;Mi}[TAB]{~;Si}[TAB]{~;Do#m7}[TAB]{~;La}
 
-E                   B
- Claro que sigo cayendo
-                        C#m7
-No soy perfecta, ya ves
-                        A
-Tengo en el alma el deseo
-                        E
-De ser como él alguna vez
-                      B
-Más mi fe ya esta creciendo
-                       C#m7
-Y me hace gigantes vencer
-                       A
-Todo lo que ayer fue miedo
+{Cla;Mi}ro que sigo ca{yen;Si}do
+No soy perfecta, ya {ves;Do#m7}
+Tengo en el alma el de{seo;La}
+De ser como él alguna {vez;Mi}
+Más mi fe ya esta cre{cien;Si}do
+Y me hace gigantes ven{cer;Do#m7}
+Todo lo que ayer fue {mie;La}do
+Hoy me hace intentarlo otra {vez;Do#m7}
 
-Hoy me hace intentarlo otra vez
+Y hoy estoy conven{ci;La}do
+Yo no podría sin {él;Mi}
+Sin su mano en mi {hom;Si}bro diciendo:
+Todo está {bien;Do#m7}
+Si no tengo a mi {Cris;La}to
+Nada más quiero te{ner;Mi}
+Es mi norte en esta {vi;Si}da
+Sueño con verlo otra {vez;Mi}
 
-C#m7                   A
-    Y hoy estoy convencido
-                    E
-Yo no podría sin él
-                    B
-Sin su mano en mi hombro diciendo
-               C#m7
-Todo está bien
-                    A
-Si no tengo a mi Cristo
-                    E
-Nada más quiero tener
-                     B
-Es mi norte en esta vida
+<span class="comentario">(Interludio)</span>
+{~;Mi}[TAB]{~;Si}[TAB]{~;La}
+{~;Mi}[TAB]{~;Si}[TAB]{~;La}
 
-Sueño con verlo otra vez
+{~;Mi}Una oración en mi al{moha;Si}da
+Y una promesa fe{liz;Do#m7}
+Llenan mis noches de {cal;La}ma
+Cuando no puedo dor{mir;Mi}
+Le hice caso a la mon{ta;Si}ña
+Y hasta la cima me {fui;Do#m7}
+El cansancio se ha mar{cha;La}do
+Porque en sus brazos se{guí;Do#m7}
 
-( E  B4  A )
-( E  B4  A )
+Y hoy estoy conven{ci;La}do
+Yo no podría sin {él;Mi}
+Sin su mano en mi {hom;Si}bro diciendo
+Todo está {bien;Do#m7}
+Si no tengo a mi {Cris;La}to
+Nada más quiero te{ner;Mi}
+Es mi norte en esta {vi;Si}da
+Sueño con verlo otra {vez;Mi}
 
-E                       B
-  Una oración en mi almohada
-                   C#m7
-Y una promesa feliz
-                      A
-Llenan mis noches de calma
-                       E
-Cuando no puedo dormir
-                      B
-Le hice caso a la montaña
-                      C#m7
-Y hasta la cima me fui
-                        A
-El cansancio se ha marchado
+Y hoy estoy conven{ci;La}do
+Yo no podría sin {él;Mi}
+Sin su mano en mi {hom;Si}bro diciendo
+Todo está {bien;Do#m7}
+Si no tengo a mi {Cris;La}to
+Nada más quiero te{ner;Mi}
+Es mi norte en esta {vi;Si}da
+Sueño con verlo otra {vez;Mi}
 
-Porque en sus brazos seguí
+Uh {Uh;Si} Uh {Uh;Do#m7} Uh
 
-C#m7                   A
-    Y hoy estoy convencido
-                   E
-Yo no podría sin él
-                   B
-Sin su mano en mi hombro diciendo
-               C#m7
-Todo está bien
-                   A
-Si no tengo a mi Cristo
-                    E
-Nada más quiero tener
-                     B
-Es mi norte en esta vida
+Yo {sue;La}ño con verlo otra vez{~;Mi}
 
-Sueño con verlo otra vez
-
-C#m7                   A
-    Y hoy estoy convencido
-                  E
-Y no podría sin él
-                   B
-Sin su mano en mi hombro diciendo
-               C#m7
-Todo está bien
-                   A
-Si no tengo a mi Cristo
-                    E
-Nada más quiero tener
-                     B
-Es mi norte en esta vida
-
-Sueño con verlo otra vez
-
-  E  B  C#m7
-Uh Uh Uh Uh Uh
-
-     A                      E
-Yo sueño con verlo otra vez
 ----
 Claro que sigo cayendo
 No soy perfecta, ya ves
@@ -102,17 +62,18 @@ De ser como él alguna vez
 Más mi fe ya esta creciendo
 Y me hace gigantes vencer
 Todo lo que ayer fue miedo
-
 Hoy me hace intentarlo otra vez
 
 Y hoy estoy convencido
 Yo no podría sin él
-Sin su mano en mi hombro diciendo
+Sin su mano en mi hombro diciendo:
 Todo está bien
 Si no tengo a mi Cristo
 Nada más quiero tener
 Es mi norte en esta vida
 Sueño con verlo otra vez
+
+<span class="comentario">(Interludio)</span>
 
 Una oración en mi almohada
 Y una promesa feliz
@@ -121,7 +82,6 @@ Cuando no puedo dormir
 Le hice caso a la montaña
 Y hasta la cima me fui
 El cansancio se ha marchado
-
 Porque en sus brazos seguí
 
 Y hoy estoy convencido
@@ -131,17 +91,15 @@ Todo está bien
 Si no tengo a mi Cristo
 Nada más quiero tener
 Es mi norte en esta vida
-
 Sueño con verlo otra vez
 
 Y hoy estoy convencido
-Y no podría sin él
+Yo no podría sin él
 Sin su mano en mi hombro diciendo
 Todo está bien
 Si no tengo a mi Cristo
 Nada más quiero tener
 Es mi norte en esta vida
-
 Sueño con verlo otra vez
 
 Uh Uh Uh Uh Uh
