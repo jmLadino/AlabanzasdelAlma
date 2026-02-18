@@ -14,7 +14,7 @@ para a{mar;Sim}lo más y {más;Mi}.
 CORO
 [TAB]Él es mi {Vi;La}da;{~;Do#m}[TAB]él es mi {Luz;Re};[TAB]{~;Fa#m}
 [TAB]mi gran A{mi;Sim}go;{~;Mi}[TAB]mi buen Je{sús;La}.[TAB]{~;Mi}
-[TAB]Na{da;Mi} mar{chi;La}tará ni cambiará
+[TAB]Na{da;Mi} mar{chi;La}tará ni {cam;La7}biará
 [TAB]mi a{mor;Fa#m} por él.[TAB]{~;Rem}
 [TAB]Mi Dios y {mi;La} Señor es {to;Mi}do para {mí;La}.[TAB]{~;Mi}
 2
@@ -30,7 +30,7 @@ me con{sue;Sim}la con su a{mor;Mi}.
 CORO
 [TAB]Él es mi {Vi;La}da;{~;Do#m}[TAB]él es mi {Luz;Re};[TAB]{~;Fa#m}
 [TAB]mi gran A{mi;Sim}go;{~;Mi}[TAB]mi buen Je{sús;La}.[TAB]{~;Mi}
-[TAB]Na{da;Mi} mar{chi;La}tará ni cambiará
+[TAB]Na{da;Mi} mar{chi;La}tará ni {cam;La7}biará
 [TAB]mi a{mor;Fa#m} por él.[TAB]{~;Rem}
 [TAB]Mi Dios y {mi;La} Señor es {to;Sim}do {pa;Mi}ra {mí;La}.
 ----

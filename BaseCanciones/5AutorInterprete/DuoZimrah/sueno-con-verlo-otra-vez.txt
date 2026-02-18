@@ -1,19 +1,19 @@
 INTRO:
-{~;Mi}[TAB]{~;Si}[TAB]{~;Do#m7}[TAB]{~;La}
+{~;Mi}[TAB]{~;Si}[TAB]{~;Do#m}[TAB]{~;La}
 
 {Cla;Mi}ro que sigo ca{yen;Si}do
-No soy perfecta, ya {ves;Do#m7}
+No soy perfecta, ya {ves;Do#m}
 Tengo en el alma el de{seo;La}
 De ser como él alguna {vez;Mi}
 Más mi fe ya esta cre{cien;Si}do
-Y me hace gigantes ven{cer;Do#m7}
+Y me hace gigantes ven{cer;Do#m}
 Todo lo que ayer fue {mie;La}do
-Hoy me hace intentarlo otra {vez;Do#m7}
+Hoy me hace intentarlo otra {vez;Do#m}
 
 Y hoy estoy conven{ci;La}do
 Yo no podría sin {él;Mi}
 Sin su mano en mi {hom;Si}bro diciendo:
-Todo está {bien;Do#m7}
+Todo está {bien;Do#m}
 Si no tengo a mi {Cris;La}to
 Nada más quiero te{ner;Mi}
 Es mi norte en esta {vi;Si}da
@@ -24,18 +24,18 @@ Sueño con verlo otra {vez;Mi}
 {~;Mi}[TAB]{~;Si}[TAB]{~;La}
 
 {~;Mi}Una oración en mi al{moha;Si}da
-Y una promesa fe{liz;Do#m7}
+Y una promesa fe{liz;Do#m}
 Llenan mis noches de {cal;La}ma
 Cuando no puedo dor{mir;Mi}
 Le hice caso a la mon{ta;Si}ña
-Y hasta la cima me {fui;Do#m7}
+Y hasta la cima me {fui;Do#m}
 El cansancio se ha mar{cha;La}do
-Porque en sus brazos se{guí;Do#m7}
+Porque en sus brazos se{guí;Do#m}
 
 Y hoy estoy conven{ci;La}do
 Yo no podría sin {él;Mi}
 Sin su mano en mi {hom;Si}bro diciendo
-Todo está {bien;Do#m7}
+Todo está {bien;Do#m}
 Si no tengo a mi {Cris;La}to
 Nada más quiero te{ner;Mi}
 Es mi norte en esta {vi;Si}da
@@ -44,16 +44,15 @@ Sueño con verlo otra {vez;Mi}
 Y hoy estoy conven{ci;La}do
 Yo no podría sin {él;Mi}
 Sin su mano en mi {hom;Si}bro diciendo
-Todo está {bien;Do#m7}
+Todo está {bien;Do#m}
 Si no tengo a mi {Cris;La}to
 Nada más quiero te{ner;Mi}
 Es mi norte en esta {vi;Si}da
 Sueño con verlo otra {vez;Mi}
 
-Uh {Uh;Si} Uh {Uh;Do#m7} Uh
+Uh {Uh;Si} Uh {Uh;Do#m} Uh
 
 Yo {sue;La}ño con verlo otra vez{~;Mi}
-
 ----
 Claro que sigo cayendo
 No soy perfecta, ya ves
