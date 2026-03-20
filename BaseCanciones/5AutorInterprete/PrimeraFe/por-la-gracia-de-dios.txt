@@ -1,3 +1,5 @@
+<span class="comentario">(Cejillo en traste 1)</span>
+
 INTRO
 {~;Mi}[TAB]{~;Re}[TAB]{~;La}[TAB]{~;Mi} 
 {~;Fa#m}[TAB]{~;Re}[TAB]{~;Mi}[TAB]{~;La}
