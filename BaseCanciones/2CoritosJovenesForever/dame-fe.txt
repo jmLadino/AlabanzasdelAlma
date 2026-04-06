@@ -19,7 +19,7 @@ Dame {fe;Mi}
 para abrazar tus promesas[TAB]{~;La}
 para llegar a la meta
 y {no;Fa#m} dudar de ti otra {vez;Si}
-para {ver;La} que aun existen mi{la;Si}[TAB]groo{os;La}
+para {ver;La} que aun existen mi{la;Si}groo{os;La}
 {da;Si}me {fe;Mi}
 
 Quiero ver, quiero verte actuar[TAB]{~;La}
@@ -44,7 +44,7 @@ Dame {fe;Mi}
 para abrazar tus promesas[TAB]{~;La}
 para llegar a la meta
 y {no;Fa#m} dudar de ti otra {vez;Si}
-para {ver;La} que aun existen mi{la;Si}[TAB]groo{os;La}
+para {ver;La} que aun existen mi{la;Si}groo{os;La}
 {da;Si}me {fe;Mi}
 
 Para pelear la batalla[TAB]{~;La}
@@ -54,7 +54,7 @@ Dame fe[TAB]{~;Mi}
 para abrazar tus promesas[TAB]{~;La}
 para llegar a la meta
 y {no;Fa#m} dudar de ti otra {vez;Si}
-para {ver;La} que aun existen mi{la;Si}[TAB]groo{os;La}
+para {ver;La} que aun existen mi{la;Si}groo{os;La}
 {Da;Si}me {fe;Mi}
 quiero ver, quiero verte actuar[TAB]{~;La}
 quiero ver, quiero verte actuar[TAB]{~;Do#m}
