@@ -67,8 +67,7 @@ fue a prepa<span class="chord" data-tabsaurus="La"><span class="chord-tooltip"><
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/S_G2--CP73k?si=Ap0DyLHROKR6lYrD" title="333. Aunque en esta vida" frameborder="0" allowfullscreen></iframe>
-`;
+const contenidoHTML_Youtube = ``;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 

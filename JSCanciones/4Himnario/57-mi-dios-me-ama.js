@@ -61,8 +61,7 @@ me ha invi<span class="chord" data-tabsaurus="La"><span class="chord-tooltip"><i
 `;
 const DIV_Acordes = document.getElementById("DIVAcordes");
 DIV_Acordes.innerHTML = contenidoHTML_Acordes;
-const contenidoHTML_Youtube = `<iframe width="100%" height="315" src="https://www.youtube.com/embed/w7U3jCbs-Q8?si=qTjR5xRRJj7hwr9R" title="57. Mi Dios me ama" frameborder="0" allowfullscreen></iframe>
-`;
+const contenidoHTML_Youtube = ``;
 const DIV_Youtube = document.getElementById("DIVYoutube");
 DIV_Youtube.innerHTML = contenidoHTML_Youtube;
 
