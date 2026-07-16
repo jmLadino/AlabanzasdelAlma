@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#315f42">
+    <meta name="color-scheme" content="light dark">
+    <title>1. Cantad alegres al Señor | Alabanzas del Alma</title>
+
+    <!-- Hoja de estilos original del proyecto -->
+    <link rel="stylesheet" href="https://jmladino.github.io/AlabanzasdelAlma/AAStyles.css">
+
+    <!-- Mejoras visuales específicas de esta página -->
+    <style>
+        :root {
+            --aa-green-900: #234832;
+            --aa-green-800: #315f42;
+            --aa-green-700: #477758;
+            --aa-green-100: #e9f1eb;
+            --aa-surface: #ffffff;
+            --aa-surface-soft: #f5f7f5;
+            --aa-text: #172019;
+            --aa-muted: #667168;
+            --aa-border: #dce4de;
+            --aa-shadow: 0 10px 30px rgba(25, 55, 35, .10);
+            --aa-radius: 18px;
+            --aa-header-height: 64px;
+            --aa-bottom-height: 72px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            min-width: 320px;
+            background:
+                radial-gradient(circle at top, rgba(71, 119, 88, .11), transparent 26rem),
+                var(--aa-surface-soft);
+            color: var(--aa-text);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", sans-serif;
+            line-height: 1.5;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit;
+        }
+
+        button,
+        [role="button"] {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .app-shell {
+            min-height: 100dvh;
+            padding-bottom: calc(var(--aa-bottom-height) + env(safe-area-inset-bottom));
+        }
+
+        .app-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            min-height: var(--aa-header-height);
+            padding: env(safe-area-inset-top) 16px 0;
+            color: #fff;
+            background: linear-gradient(135deg, var(--aa-green-900), var(--aa-green-700));
+            box-shadow: 0 6px 20px rgba(21, 50, 31, .20);
+        }
+
+        .app-header__inner {
+            width: min(100%, 860px);
+            min-height: var(--aa-header-height);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 44px minmax(0, 1fr) 44px;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .app-header__title {
+            min-width: 0;
+            text-align: center;
+        }
+
+        .app-header__eyebrow {
+            display: block;
+            margin-bottom: 1px;
+            color: rgba(255, 255, 255, .74);
+            font-size: .72rem;
+            font-weight: 650;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+        }
+
+        .app-header h1 {
+            overflow: hidden;
+            margin: 0;
+            font-size: clamp(.98rem, 3.7vw, 1.18rem);
+            font-weight: 750;
+            line-height: 1.2;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .header-icon {
+            width: 44px;
+            height: 44px;
+            display: inline-grid;
+            place-items: center;
+            border: 0;
+            border-radius: 14px;
+            color: #fff;
+            background: rgba(255, 255, 255, .10);
+            cursor: pointer;
+        }
+
+        .header-icon:active {
+            transform: scale(.96);
+        }
+
+        .header-icon svg {
+            width: 23px;
+            height: 23px;
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+        }
+
+        .page-main {
+            width: min(100%, 860px);
+            margin: 0 auto;
+            padding: 14px 12px 24px;
+        }
+
+        .song-card {
+            overflow: visible;
+            border: 1px solid rgba(220, 228, 222, .88);
+            border-radius: var(--aa-radius);
+            background: var(--aa-surface);
+            box-shadow: var(--aa-shadow);
+        }
+
+        .song-meta {
+            padding: 17px 18px 14px;
+            border-bottom: 1px solid var(--aa-border);
+        }
+
+        .song-number {
+            display: inline-flex;
+            align-items: center;
+            min-height: 28px;
+            margin-bottom: 7px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            color: var(--aa-green-900);
+            background: var(--aa-green-100);
+            font-size: .78rem;
+            font-weight: 800;
+        }
+
+        .song-meta h2 {
+            margin: 0;
+            color: var(--aa-text);
+            font-size: clamp(1.25rem, 5.3vw, 1.75rem);
+            line-height: 1.18;
+        }
+
+        .song-meta p {
+            margin: 6px 0 0;
+            color: var(--aa-muted);
+            font-size: .91rem;
+        }
+
+        /* Conserva la estructura original requerida por los JS existentes. */
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .content {
+            width: 100% !important;
+            max-width: none !important;
+            margin: 0 !important;
+            padding: 12px clamp(14px, 4vw, 30px) 28px !important;
+        }
+
+        .content > .div,
+        #DIVYoutube {
+            min-width: 0;
+        }
+
+        /* Barra original: la vuelve desplazable y cómoda con el pulgar. */
+        .content > :first-child,
+        .content > .div:first-child {
+            scroll-margin-top: calc(var(--aa-header-height) + 16px);
+        }
+
+        .content button,
+        .content input[type="button"],
+        .content input[type="submit"] {
+            min-width: 46px;
+            min-height: 44px;
+            margin: 3px;
+            padding: 9px 13px;
+            border: 1px solid var(--aa-border);
+            border-radius: 12px;
+            color: var(--aa-text);
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(20, 40, 27, .06);
+            cursor: pointer;
+            touch-action: manipulation;
+            transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+        }
+
+        .content button:hover,
+        .content input[type="button"]:hover {
+            box-shadow: 0 5px 15px rgba(20, 40, 27, .11);
+        }
+
+        .content button:active,
+        .content input[type="button"]:active {
+            transform: scale(.97);
+        }
+
+        /* Contenedor agregado automáticamente alrededor de los controles superiores. */
+        .song-toolbar {
+            position: sticky;
+            top: calc(var(--aa-header-height) + env(safe-area-inset-top));
+            z-index: 900;
+            display: flex;
+            gap: 7px;
+            overflow-x: auto;
+            margin: -12px calc(clamp(14px, 4vw, 30px) * -1) 18px;
+            padding: 10px clamp(14px, 4vw, 30px);
+            border-bottom: 1px solid rgba(220, 228, 222, .94);
+            background: rgba(255, 255, 255, .94);
+            box-shadow: 0 5px 15px rgba(20, 40, 27, .06);
+            backdrop-filter: blur(16px);
+            scrollbar-width: none;
+        }
+
+        .song-toolbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .song-toolbar > * {
+            flex: 0 0 auto;
+        }
+
+        .song-toolbar button,
+        .song-toolbar input[type="button"] {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        .song-toolbar button:nth-child(-n+5),
+        .song-toolbar input[type="button"]:nth-child(-n+5) {
+            color: #fff;
+            border-color: var(--aa-green-700);
+            background: var(--aa-green-700);
+        }
+
+        /* Letra */
+        #DIVLetra {
+            font-size: clamp(1.25rem, 5.4vw, 2rem);
+            line-height: 1.62;
+            letter-spacing: -.015em;
+            overflow-wrap: anywhere;
+        }
+
+        #DIVLetra p {
+            margin-block: 0 1.35em;
+        }
+
+        #DIVLetra br {
+            line-height: 1.8;
+        }
+
+        /* Acordes incrustados o etiquetas generadas por los scripts. */
+        #DIVLetra span,
+        #DIVLetra a,
+        #DIVAcordes span,
+        #DIVAcordes a {
+            border-radius: 7px;
+        }
+
+        #DIVLetra a {
+            text-underline-offset: .13em;
+            text-decoration-thickness: .07em;
+        }
+
+        /* Vista general de acordes */
+        #DIVAcordes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+            gap: 12px;
+            font-size: 1rem;
+        }
+
+        #DIVAcordes > * {
+            min-width: 0;
+        }
+
+        #DIVAcordes img,
+        #DIVLetra img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Popup de acorde: evita que se salga de la pantalla. */
+        [class*="popup"],
+        [class*="Popup"],
+        [class*="popover"],
+        [class*="Popover"] {
+            max-width: min(92vw, 360px) !important;
+            max-height: 76dvh !important;
+            overflow: auto !important;
+            border: 1px solid var(--aa-border) !important;
+            border-radius: 16px !important;
+            box-shadow: 0 18px 45px rgba(15, 35, 22, .24) !important;
+        }
+
+        /* YouTube */
+        #DIVYoutube iframe,
+        #DIVYoutube video {
+            width: 100% !important;
+            max-width: 720px;
+            aspect-ratio: 16 / 9;
+            height: auto !important;
+            display: block;
+            margin: 0 auto;
+            border: 0;
+            border-radius: 15px;
+            background: #111;
+            box-shadow: var(--aa-shadow);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Navegación inferior para móvil. */
+        .bottom-nav {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1100;
+            min-height: calc(var(--aa-bottom-height) + env(safe-area-inset-bottom));
+            padding: 7px max(10px, env(safe-area-inset-right)) env(safe-area-inset-bottom)
+                     max(10px, env(safe-area-inset-left));
+            border-top: 1px solid rgba(220, 228, 222, .96);
+            background: rgba(255, 255, 255, .95);
+            box-shadow: 0 -8px 25px rgba(20, 40, 27, .10);
+            backdrop-filter: blur(18px);
+        }
+
+        .bottom-nav__inner {
+            width: min(100%, 560px);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+        }
+
+        .nav-button {
+            min-height: 56px;
+            display: grid;
+            place-items: center;
+            gap: 2px;
+            padding: 5px 8px;
+            border: 0;
+            border-radius: 14px;
+            color: var(--aa-muted);
+            background: transparent;
+            font-size: .76rem;
+            font-weight: 690;
+            cursor: pointer;
+        }
+
+        .nav-button svg {
+            width: 22px;
+            height: 22px;
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 1.9;
+        }
+
+        .nav-button.is-active {
+            color: var(--aa-green-900);
+            background: var(--aa-green-100);
+        }
+
+        .nav-button:focus-visible,
+        .header-icon:focus-visible,
+        .content button:focus-visible,
+        .content input[type="button"]:focus-visible {
+            outline: 3px solid rgba(71, 119, 88, .34);
+            outline-offset: 2px;
+        }
+
+        .toast {
+            position: fixed;
+            right: 16px;
+            bottom: calc(var(--aa-bottom-height) + 18px + env(safe-area-inset-bottom));
+            z-index: 1300;
+            max-width: calc(100vw - 32px);
+            padding: 11px 14px;
+            border-radius: 12px;
+            color: #fff;
+            background: #243329;
+            box-shadow: var(--aa-shadow);
+            font-size: .9rem;
+            opacity: 0;
+            transform: translateY(8px);
+            pointer-events: none;
+            transition: opacity .2s ease, transform .2s ease;
+        }
+
+        .toast.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (min-width: 760px) {
+            .page-main {
+                padding-top: 24px;
+            }
+
+            .song-card {
+                border-radius: 24px;
+            }
+
+            .content {
+                padding-bottom: 40px !important;
+            }
+
+            #DIVLetra {
+                max-width: 760px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --aa-surface: #172019;
+                --aa-surface-soft: #101611;
+                --aa-text: #f1f5f2;
+                --aa-muted: #aeb9b1;
+                --aa-border: #344039;
+                --aa-green-100: #263a2d;
+                --aa-shadow: 0 12px 34px rgba(0, 0, 0, .28);
+            }
+
+            body {
+                background: var(--aa-surface-soft);
+            }
+
+            .song-toolbar,
+            .bottom-nav {
+                background: rgba(23, 32, 25, .95);
+            }
+
+            .content button,
+            .content input[type="button"],
+            .content input[type="submit"] {
+                color: var(--aa-text);
+                background: #202a22;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <div class="app-header__inner">
+                <button class="header-icon" type="button" id="btnBack" aria-label="Volver">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m15 18-6-6 6-6"></path>
+                    </svg>
+                </button>
+
+                <div class="app-header__title">
+                    <span class="app-header__eyebrow">Himnario</span>
+                    <h1>Cantad alegres al Señor</h1>
+                </div>
+
+                <button class="header-icon" type="button" id="btnShare" aria-label="Compartir canción">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <path d="m8.6 10.5 6.8-4"></path>
+                        <path d="m8.6 13.5 6.8 4"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="page-main">
+            <article class="song-card">
+                <header class="song-meta">
+                    <span class="song-number">Himno 1</span>
+                    <h2>Cantad alegres al Señor</h2>
+                    <p>Letra, acordes y acompañamiento</p>
+                </header>
+
+                <!-- Se mantienen los mismos IDs para no romper tus scripts actuales. -->
+                <div class="container">
+                    <div class="content" id="songContent">
+                        <div id="DIVLetra" class="div"></div>
+                        <div id="DIVAcordes" class="div hidden"></div>
+                        <div id="DIVYoutube" class="hidden"></div>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <nav class="bottom-nav" aria-label="Secciones de la canción">
+            <div class="bottom-nav__inner">
+                <button class="nav-button is-active" type="button" data-view="DIVLetra" aria-current="page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M9 18V5l10-2v13"></path>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <circle cx="16" cy="16" r="3"></circle>
+                    </svg>
+                    <span>Letra</span>
+                </button>
+
+                <button class="nav-button" type="button" data-view="DIVAcordes">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m14.5 5.5 4 4"></path>
+                        <path d="M3 21c3 0 5-1 7-3L19 9a2.8 2.8 0 0 0-4-4l-9 9c-2 2-3 4-3 7Z"></path>
+                        <path d="M10 14c1 1 2 2 4 2"></path>
+                    </svg>
+                    <span>Acordes</span>
+                </button>
+
+                <button class="nav-button" type="button" data-view="DIVYoutube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="18" height="14" rx="3"></rect>
+                        <path d="m10 9 5 3-5 3Z"></path>
+                    </svg>
+                    <span>Video</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+
+    <!-- Scripts actuales del proyecto -->
+    <script src="https://jmladino.github.io/AlabanzasdelAlma/JSCanciones/4Himnario/1-cantad-alegres-al-senor.js"></script>
+    <script src="https://jmladino.github.io/AlabanzasdelAlma/tabsaurus.js"></script>
+    <script src="https://jmladino.github.io/AlabanzasdelAlma/AAFunctions.js"></script>
+
+    <!-- Comportamiento adicional de la interfaz moderna -->
+    <script>
+        (() => {
+            'use strict';
+
+            const views = ['DIVLetra', 'DIVAcordes', 'DIVYoutube'];
+            const navButtons = [...document.querySelectorAll('.nav-button[data-view]')];
+            const content = document.getElementById('songContent');
+            const toast = document.getElementById('toast');
+            let toastTimer;
+
+            function showToast(message) {
+                clearTimeout(toastTimer);
+                toast.textContent = message;
+                toast.classList.add('is-visible');
+                toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 2200);
+            }
+
+            function showView(viewId, updateHash = true) {
+                if (!views.includes(viewId)) return;
+
+                views.forEach(id => {
+                    const element = document.getElementById(id);
+                    if (!element) return;
+                    element.classList.toggle('hidden', id !== viewId);
+                    element.setAttribute('aria-hidden', id === viewId ? 'false' : 'true');
+                });
+
+                navButtons.forEach(button => {
+                    const active = button.dataset.view === viewId;
+                    button.classList.toggle('is-active', active);
+                    if (active) button.setAttribute('aria-current', 'page');
+                    else button.removeAttribute('aria-current');
+                });
+
+                if (updateHash) {
+                    const hash = viewId === 'DIVLetra' ? 'letra' : viewId === 'DIVAcordes' ? 'acordes' : 'video';
+                    history.replaceState(null, '', `#${hash}`);
+                }
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => showView(button.dataset.view));
+            });
+
+            document.getElementById('btnBack').addEventListener('click', () => {
+                if (history.length > 1) history.back();
+                else window.location.href = '../../index.html';
+            });
+
+            document.getElementById('btnShare').addEventListener('click', async () => {
+                const data = {
+                    title: 'Cantad alegres al Señor',
+                    text: 'Himno 1: Cantad alegres al Señor',
+                    url: window.location.href.split('#')[0]
+                };
+
+                try {
+                    if (navigator.share) {
+                        await navigator.share(data);
+                    } else if (navigator.clipboard) {
+                        await navigator.clipboard.writeText(data.url);
+                        showToast('Enlace copiado');
+                    } else {
+                        showToast('Copia la dirección desde el navegador');
+                    }
+                } catch (error) {
+                    if (error && error.name !== 'AbortError') showToast('No fue posible compartir');
+                }
+            });
+
+            /*
+             * Los controles T+, T-, T0, tono, acordes, A+ y A- son creados por
+             * los scripts existentes. Este observador los reúne en una barra
+             * horizontal sin depender de que aparezcan inmediatamente.
+             */
+            function modernizeToolbar() {
+                if (!content || content.querySelector('.song-toolbar')) return;
+
+                const candidates = [...content.children].filter(element => {
+                    if (views.includes(element.id)) return false;
+                    const hasControls = element.matches('button, input[type="button"]') ||
+                        element.querySelector('button, input[type="button"]');
+                    return hasControls;
+                });
+
+                if (!candidates.length) return;
+
+                const toolbar = document.createElement('div');
+                toolbar.className = 'song-toolbar';
+                toolbar.setAttribute('role', 'toolbar');
+                toolbar.setAttribute('aria-label', 'Controles de visualización y tono');
+
+                candidates.forEach(element => toolbar.appendChild(element));
+                content.prepend(toolbar);
+            }
+
+            const observer = new MutationObserver(modernizeToolbar);
+            observer.observe(content, { childList: true, subtree: false });
+
+            window.addEventListener('load', () => {
+                modernizeToolbar();
+
+                const initial = location.hash.toLowerCase();
+                if (initial === '#acordes') showView('DIVAcordes', false);
+                else if (initial === '#video' || initial === '#youtube') showView('DIVYoutube', false);
+                else showView('DIVLetra', false);
+            });
+        })();
+    </script>
+</body>
+</html>

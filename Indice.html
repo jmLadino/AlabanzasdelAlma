@@ -1,23 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Índice | Alabanzas del Alma</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Índice | Alabanzas - GPS</title>
+<style>
 /* —— SKIN encapsulado (solo afecta a .alba-menu) —— */
 .alba-menu { 
   /* Toma los colores del tema si existen */
   --alba-accent: var(--colorPrimary, var(--linkColor, #0aa));
   --alba-text: currentColor;
   --alba-muted: color-mix(in srgb, currentColor 60%, transparent);
-  --alba-border: color-mix(in srgb, currentColor 18%, transparent);
+  --alba-border: color-mix(in srgb, currentColor 18%, transparent); 
   --alba-surface: color-mix(in srgb, Canvas 92%, transparent);
   --alba-card: color-mix(in srgb, Canvas 98%, transparent);
   --alba-radius: 14px;
   --alba-shadow: 0 6px 18px rgba(0,0,0,.08);
   font: inherit; color: var(--alba-text);
-}
+} 
 
 .alba-menu .section {
   border: 1px solid var(--alba-border);
@@ -58,14 +59,14 @@
 }
 
 /* Tarjetas */
-.alba-menu .item, .alba-menu .itemHimnos {
+.alba-menu .item {
   background: var(--alba-card);
   border: 1px solid var(--alba-border);
   border-radius: 12px;
   box-shadow: var(--alba-shadow);
   transition: transform .12s ease, border-color .15s ease;
 }
-.alba-menu .item:hover, .alba-menu .itemHimnos:hover {
+.alba-menu .item:hover {
   transform: translateY(-2px);
   border-color: color-mix(in srgb, var(--alba-accent) 35%, var(--alba-border));
 }
@@ -130,15 +131,103 @@
   padding: 0 .15em; border-radius: 4px;
 }
 </style>
+<!-- Solo el CSS para la marca "Nuevo", scopeado a .alba-menu -->
+<style>
+.alba-menu{
+  --alba-accent: var(--colorPrimary, var(--linkColor, #0aa));
+  --alba-new: var(--alba-accent);
+  --alba-new-bg: color-mix(in srgb, var(--alba-new) 16%, transparent);
+  --alba-new-brd: color-mix(in srgb, var(--alba-new) 32%, transparent);
+  --alba-new-strong: color-mix(in srgb, var(--alba-new) 60%, white 0%);
+}
+.alba-menu .item{ position:relative }
 
-</head>
+/* badge base (se crea por JS) */
+.alba-menu .new-badge{ display:none; position:absolute; top:8px; right:8px; z-index:2; }
+
+/* Variante: pill (elegante y sutil) */
+.alba-menu[data-new-style="pill"] .item.is-new .new-badge--pill{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:4px 8px; border-radius:999px; font-size:.78rem; font-weight:700;
+  /*color: var(--alba-new);*/
+  color:#16ed48;
+  background: var(--alba-new-bg); border:1px solid var(--alba-new-brd);
+  box-shadow: 0 4px 10px color-mix(in srgb, var(--alba-new) 20%, transparent);
+}
+.alba-menu .new-ico{ display:inline-block; width:10px; height:10px; border-radius:999px; background: currentColor; }
+
+/* Variante: dot (minimal) */
+.alba-menu[data-new-style="dot"] .item.is-new .new-badge--dot{
+  display:inline-block; width:10px; height:10px; border-radius:999px;
+  background: var(--alba-new-strong);
+  box-shadow: 0 0 0 3px var(--alba-new-bg), 0 4px 10px var(--alba-new-bg);
+}
+
+/* Variante: ribbon (esquina) */
+.alba-menu[data-new-style="ribbon"] .item.is-new .new-badge--ribbon{
+  display:inline-block; position:absolute; top:0; right:0; transform: translate(14px,-14px) rotate(45deg);
+  background: var(--alba-new-strong); color:white; font-size:.7rem; font-weight:800; padding:4px 28px;
+}
+
+/* Variante: bar (barra lateral) */
+.alba-menu[data-new-style="bar"] .item.is-new{
+  box-shadow: inset 4px 0 0 var(--alba-new-strong);
+}
+</style>
+<style>
+/* Tags y filtros mejorados */
+.alba-menu .tag-filters {
+  display:flex; flex-wrap:wrap; gap:10px; margin: 8px 0 16px;
+}
+.alba-menu .tag-filter-btn {
+  cursor:pointer; box-shadow: var(--alba-shadow);
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: .84rem;
+  line-height: 1;
+  display:inline-flex; align-items:center; gap:8px;
+  color:#214032;
+  background: linear-gradient(135deg, #d9f3e4 0%, #bfe8cf 100%);
+}
+.alba-menu .tag-filter-btn:hover {
+  transform: translateY(-1px);
+}
+.alba-menu .tag-filter-btn.is-active {
+  color: #fff;
+  background: linear-gradient(135deg, #2f7d57 0%, #4F6F52 100%);
+}
+.alba-menu .tag-filter-btn .tag-count {
+  min-width: 22px;
+  height: 22px;
+  padding: 0 7px;
+  border-radius: 999px;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size: .72rem; font-weight: 800;
+  background: rgba(255,255,255,.78);
+  color: inherit;
+}
+.alba-menu .tag-filter-btn.is-active .tag-count {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+}
+</style>
+<style>
+.alba-menu .section-subfilters{
+  display:flex; flex-wrap:wrap; gap:10px;
+  padding: 12px 10px 0;
+}
+.alba-menu .section-subfilters:empty{ display:none; }
+/*.alba-menu .tag-filter-btn.subtag{
+  background: linear-gradient(135deg, #e8faf0 0%, #d3f3df 100%);
+}*/
+.alba-menu .section.hidden-section{ display:none !important; }
+</style></head>
 <body>
-
-  <div class="container">
-  
-  <div class="alba-menu">
-    <section class="hero" aria-label="Cabecera">
-
+<div class="container">
+<div class="alba-menu" data-new-style="pill">
+<section aria-label="Cabecera" class="hero">
+<!--
     <div style="text-align: center;">
         <img alt="" border="0" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhhfLyB99oylhQIIz1KaFCub5sq5aJQoRQ8ia37Y6QeWQ2I1XuFfx6nPW90AJwQMpBoyBN-PpoxTwVhSyXMvnZVWRFPmaEdZPMziCN9YZssClBlPz0_zPHH4BMHuUTmTMZJoWjU_IDMhRuQD9QjREAg4u5a-d5w4PsJoTqFzrz-xD6yCFWFl1qViOzb2B2g/s1600/IASDVerde.png" width="70" />
     </div>
@@ -148,352 +237,549 @@
         <br />
         <b><a href="https://www.facebook.com/AlabanzasDelAlma" target="_blank">www.facebook.com/AlabanzasDelAlma</a></b>
     </center>
-      
-      
-  
-
-    </section>
-
+       -->
+</section>
 <div class="search" role="search">
-  <input id="alba-buscar" type="search" placeholder="Buscar por número o título…" inputmode="search" enterkeyhint="done" autocomplete="off" />
-  <button class="clear-btn" id="alba-btnClear" aria-label="Limpiar búsqueda">Limpiar</button>
-</div>
+<input autocomplete="off" enterkeyhint="done" id="alba-buscar" inputmode="search" placeholder="Buscar por número o título…" type="search"/>
+<button aria-label="Limpiar búsqueda" class="clear-btn" id="alba-btnClear">Limpiar</button>
+</div><div aria-label="Filtrar por sección" class="tag-filters tag-filters-main" id="alba-tagFilters"></div>
 
-    <!-- Sección 1 -->
-    <details class="section" id="seccion1" open>
-      <summary class="section-header" id="Title_seccion1">
-        Coritos (Cuna / Infantes)
-        <span class="badge" data-count="seccion1">38</span>
-        <span class="chev">▸</span>
-      </summary>
-      <div class="section-content" data-indice="indice1">
-        <!-- 1 al 38 -->
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/adentro-afuera-arriba-abajo.html" rel="noopener"><span class="num">1</span><span class="title">Adentro, afuera, arriba, abajo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/al-son-del-cocodrilo.html" rel="noopener"><span class="num">2</span><span class="title">Al son del cocodrilo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/con-cristo-en-la-familia.html" rel="noopener"><span class="num">3</span><span class="title">Con Cristo en la familia</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/cristo-nos-pide-que-subamos-mas.html" rel="noopener"><span class="num">4</span><span class="title">Cristo nos pide que subamos más</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/cuidadito.html" rel="noopener"><span class="num">5</span><span class="title">Cuidadito</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/da-una-sonrisa.html" rel="noopener"><span class="num">6</span><span class="title">Da una sonrisa</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/dios-hizo-el-lindo-jardin.html" rel="noopener"><span class="num">7</span><span class="title">Dios hizo el lindo jardín</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/doce-discipulos-siguieron-jesus.html" rel="noopener"><span class="num">8</span><span class="title">Doce discípulos siguieron a Jesús</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/edifica-su-casita-la-fiel-hormiguita.html" rel="noopener"><span class="num">9</span><span class="title">Edifica su casita la fiel hormiguita</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/el-arca-de-noe.html" rel="noopener"><span class="num">10</span><span class="title">El arca de Noé</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/el-hombre-prudente.html" rel="noopener"><span class="num">11</span><span class="title">El hombre prudente</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/el-patito-juan.html" rel="noopener"><span class="num">12</span><span class="title">El patito Juan</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/en-el-arca-de-noe.html" rel="noopener"><span class="num">13</span><span class="title">En el arca de Noé</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/era-un-muchachito-de-nombre-david.html" rel="noopener"><span class="num">14</span><span class="title">Era un muchachito de nombre David</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/habia-un-hombrecito-chueco.html" rel="noopener"><span class="num">15</span><span class="title">Había un hombrecito chueco</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/jonas.html" rel="noopener"><span class="num">16</span><span class="title">Jonás</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/junto-al-arroyo-del-sauce-lloron.html" rel="noopener"><span class="num">17</span><span class="title">Junto al arroyo del sauce llorón</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/la-b-i-b-l-i-a.html" rel="noopener"><span class="num">18</span><span class="title">La B-I-B-L-I-A</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/la-historia-de-jonas.html" rel="noopener"><span class="num">19</span><span class="title">La Historia de Jonás</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/llego-la-hora-del-culto.html" rel="noopener"><span class="num">20</span><span class="title">Llegó la hora del culto</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/los-arboles-se-mecen.html" rel="noopener"><span class="num">21</span><span class="title">Los árboles se mecen</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/mi-vida-es-un-viaje.html" rel="noopener"><span class="num">22</span><span class="title">Mi vida es un viaje</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/moises-y-el-mar-rojo.html" rel="noopener"><span class="num">23</span><span class="title">Moisés y el Mar Rojo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/nuestro-padre-abraham.html" rel="noopener"><span class="num">24</span><span class="title">Nuestro Padre Abraham</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/pedro-santiago-y-juan-en-el-barquito.html" rel="noopener"><span class="num">25</span><span class="title">Pedro, Santiago y Juan en el barquito</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/pobre-eutico.html" rel="noopener"><span class="num">26</span><span class="title">Pobre Eutico</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/por-telefono.html" rel="noopener"><span class="num">27</span><span class="title">Por teléfono</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/que-cosas-lindas-que-dios-creo.html" rel="noopener"><span class="num">28</span><span class="title">Que cosas lindas que Dios creó</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/quien-es-el-rey-de-la-selva.html" rel="noopener"><span class="num">29</span><span class="title">¿Quién es el rey de la Selva?</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/quien-hizo-las-lindas-estrellas.html" rel="noopener"><span class="num">30</span><span class="title">¿Quién hizo las lindas estrellas?</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/sanson.html" rel="noopener"><span class="num">31</span><span class="title">Sansón</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/si-yo-fuera.html" rel="noopener"><span class="num">32</span><span class="title">Si yo fuera</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/si-cristo-me-ama.html" rel="noopener"><span class="num">33</span><span class="title">Sí, Cristo me ama</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/soldado-soy-de-jesus.html" rel="noopener"><span class="num">34</span><span class="title">Soldado soy de Jesús</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/tres-veces-oraba-daniel.html" rel="noopener"><span class="num">35</span><span class="title">Tres veces oraba</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/un-campesino-fue-cortar-lena.html" rel="noopener"><span class="num">36</span><span class="title">Un campesino fue a cortar leña</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/yo-no-quiero-ser-un-yoyo.html" rel="noopener"><span class="num">37</span><span class="title">Yo no quiero ser un yoyo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/zaqueo.html" rel="noopener"><span class="num">38</span><span class="title">Zaqueo</span><span class="go">↗</span></a></div>
-      </div>
-    </details>
+<!-- Sección 1 -->
+<details class="section" id="seccion1" open="">
+<summary class="section-header" id="Title_seccion1">
+	Alabanzas Cuna / Infantes
+	<span class="badge" data-count="seccion1">38</span>
+	<span class="chev">▸</span>
+</summary>
 
-    <!-- Sección 2 -->
-    <details class="section" id="seccion2">
-      <summary class="section-header" id="Title_seccion2">
-        Coritos (Jóvenes / Adultos)
-        <span class="badge" data-count="seccion2">0</span>
-        <span class="chev">▸</span>
-      </summary>
-      <div class="section-content" data-indice="indice2">
-        <!-- 39 al 119 según listado proporcionado -->
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/abre-tu-corazon.html" rel="noopener"><span class="num">39</span><span class="title">Abre tu corazón</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/acuerdate-de-tu-creador.html" rel="noopener"><span class="num">40</span><span class="title">Acuérdate de tu creador</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/alabare.html" rel="noopener"><span class="num">41</span><span class="title">Alabaré</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/alelu-alelu-aleluya.html" rel="noopener"><span class="num">42</span><span class="title">Alelu, alelu, aleluya</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/alto-escuchame.html" rel="noopener"><span class="num">43</span><span class="title">Alto escúchame</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/amemonos-de-corazon.html" rel="noopener"><span class="num">44</span><span class="title">Amémonos de corazón</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/01/amigo-tengo-que-me-ama.html" rel="noopener"><span class="num">45</span><span class="title">Amigo tengo que me ama</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/amor-amor.html" rel="noopener"><span class="num">46</span><span class="title">Amor, amor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/aquel-que-la-buena-obra-empezo.html" rel="noopener"><span class="num">47</span><span class="title">Aquel que la buena obra empezó</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/baja-dios-de-las-nubes.html" rel="noopener"><span class="num">48</span><span class="title">Baja a Dios de las nubes</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/barreras-rotas.html" rel="noopener"><span class="num">49</span><span class="title">Barreras rotas</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/cada-dia-con-cristo.html" rel="noopener"><span class="num">50</span><span class="title">Cada día con Cristo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/caminando-voy-para-canaan.html" rel="noopener"><span class="num">51</span><span class="title">Caminando voy para Canaán</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/canto-de-alegria.html" rel="noopener"><span class="num">52</span><span class="title">Canto de alegría</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/con-cristo-con-cristo.html" rel="noopener"><span class="num">53</span><span class="title">Con Cristo con Cristo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/construye-tu-casa-sobre-la-roca.html" rel="noopener"><span class="num">54</span><span class="title">Construye tu casa sobre la roca</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/cuando-el-pueblo-de-dios-ora.html" rel="noopener"><span class="num">55</span><span class="title">Cuando el pueblo de Dios ora</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/dad-gracias.html" rel="noopener"><span class="num">56</span><span class="title">Dad gracias</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/de-gloria-en-gloria.html" rel="noopener"><span class="num">57</span><span class="title">De gloria en gloria</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/demos-gracias.html" rel="noopener"><span class="num">58</span><span class="title">Demos gracias</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/dios-es-amor.html" rel="noopener"><span class="num">59</span><span class="title">Dios es amor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/dios-esta-aqui.html" rel="noopener"><span class="num">60</span><span class="title">Dios está aquí</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/dios-tu-nombre-exaltare.html" rel="noopener"><span class="num">61</span><span class="title">Dios tu nombre exaltaré</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/el-amor.html" rel="noopener"><span class="num">62</span><span class="title">El amor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/el-amor-de-dios-es-maravilloso.html" rel="noopener"><span class="num">63</span><span class="title">El amor de Dios es maravilloso</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/el-hombre-que-anduvo-en-galilea.html" rel="noopener"><span class="num">64</span><span class="title">El hombre que anduvo en Galilea</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/el-rey-de-gloria.html" rel="noopener"><span class="num">65</span><span class="title">El rey de gloria</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/en-el-gran-mar.html" rel="noopener"><span class="num">66</span><span class="title">En el gran mar</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/en-lo-alto-del-monte.html" rel="noopener"><span class="num">67</span><span class="title">En lo alto del monte</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/en-ti.html" rel="noopener"><span class="num">68</span><span class="title">En ti</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/es-exaltado-majestad-cuan-grande-es-el.html" rel="noopener"><span class="num">69</span><span class="title">Es Exaltado / Majestad / Cuán grande es Él</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/12/fe-en-fuego.html" rel="noopener"><span class="num">70</span><span class="title">Fe en fuego</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/fija-tus-ojos-en-cristo.html" rel="noopener"><span class="num">71</span><span class="title">Fija tus ojos en Cristo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/09/hoy-mas-que-nunca-senor.html" rel="noopener"><span class="num">73</span><span class="title">Hoy más que nunca Señor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/jesus-es-mi-pastor.html" rel="noopener"><span class="num">74</span><span class="title">Jesús es mi pastor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/jesus-mi-capitan.html" rel="noopener"><span class="num">75</span><span class="title">Jesús mi capitán</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/la-alegria.html" rel="noopener"><span class="num">76</span><span class="title">La alegría</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/05/la-esperanza-es-jesus.html" rel="noopener"><span class="num">77</span><span class="title">La esperanza es Jesús</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/la-sangre-de-cristo-jesus.html" rel="noopener"><span class="num">78</span><span class="title">La Sangre de Cristo Jesús</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/lado-lado.html" rel="noopener"><span class="num">79</span><span class="title">Lado a lado</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/maranatha.html" rel="noopener"><span class="num">80</span><span class="title">Maranatha</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/mas-vale-dar-que-recibir-amor.html" rel="noopener"><span class="num">81</span><span class="title">Más vale dar que recibir, amor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/mi-pensamiento.html" rel="noopener"><span class="num">82</span><span class="title">Mi pensamiento</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/mi-salvador-es-mi-amigo.html" rel="noopener"><span class="num">83</span><span class="title">Mi Salvador es mi amigo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/no-hay-en-el-mundo.html" rel="noopener"><span class="num">84</span><span class="title">No hay en el mundo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/no-me-importa-de-donde-tu-vengas.html" rel="noopener"><span class="num">85</span><span class="title">No me importa de donde tu vengas</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/paz-en-la-tormenta.html" rel="noopener"><span class="num">86</span><span class="title">Paz en la tormenta</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/pon-tus-manos.html" rel="noopener"><span class="num">87</span><span class="title">Pon tus manos</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/por-tu-gracia-y-amor.html" rel="noopener"><span class="num">88</span><span class="title">Por Tu Gracia y Amor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/puedo-confiar.html" rel="noopener"><span class="num">89</span><span class="title">Puedo Confiar</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/que-no-se-apague-el-fuego.html" rel="noopener"><span class="num">91</span><span class="title">Que no se apague el fuego</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/que-seria-de-mi.html" rel="noopener"><span class="num">92</span><span class="title">Qué sería de mí</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/quedate-senor.html" rel="noopener"><span class="num">93</span><span class="title">Quédate Señor</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/quiero-cantar-una-linda-cancion.html" rel="noopener"><span class="num">94</span><span class="title">Quiero cantar una linda canción</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/renuevame.html" rel="noopener"><span class="num">95</span><span class="title">Renuévame</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/santo-espiritu.html" rel="noopener"><span class="num">96</span><span class="title">Santo Espíritu</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/12/solo-cristo-jesus.html" rel="noopener"><span class="num">100</span><span class="title">Solo Cristo Jesús</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/tengo-paz.html" rel="noopener"><span class="num">101</span><span class="title">Tengo paz</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/tengo-paz-como-un-rio.html" rel="noopener"><span class="num">102</span><span class="title">Tengo paz como un río</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/tierra-bendita-y-divina.html" rel="noopener"><span class="num">103</span><span class="title">Tierra bendita y divina</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/tu-amas-cristo.html" rel="noopener"><span class="num">104</span><span class="title">¿Tú amas a Cristo?</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/tu-amor-por-mi.html" rel="noopener"><span class="num">105</span><span class="title">Tu amor por mi</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/un-amigo-de-verdad.html" rel="noopener"><span class="num">106</span><span class="title">Un amigo de verdad</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/un-palacio-tengo-alla.html" rel="noopener"><span class="num">107</span><span class="title">Un palacio tengo allá</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/valiosos-en-cristo.html" rel="noopener"><span class="num">108</span><span class="title">Valiosos en Cristo</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/volvera.html" rel="noopener"><span class="num">110</span><span class="title">Volverá</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/yo-pensaba.html" rel="noopener"><span class="num">111</span><span class="title">Yo pensaba</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/09/yo-tengo-paz.html" rel="noopener"><span class="num">112</span><span class="title">Yo tengo paz</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/01/contracorriente.html" rel="noopener"><span class="num">115</span><span class="title">Contracorriente</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/03/en-ti-confia-mi-corazon.html" rel="noopener"><span class="num">118</span><span class="title">En ti confía mi corazón</span><span class="go">↗</span></a></div>
-        <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/08/cristo-es-la-pena-de-horeb.html" rel="noopener"><span class="num">119</span><span class="title">Cristo es la peña de Horeb</span><span class="go">↗</span></a></div>
-      </div>
-    </details>
+	<div class="section-subfilters" data-section-filters="seccion1"></div>
+	<div class="section-content" data-indice="indice1">
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/adentro-afuera-arriba-abajo.html" rel="noopener"><span class="num">1</span><span class="title">Adentro, afuera, arriba, abajo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/al-son-del-cocodrilo.html" rel="noopener"><span class="num">2</span><span class="title">Al son del cocodrilo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/con-cristo-en-la-familia.html" rel="noopener"><span class="num">3</span><span class="title">Con Cristo en la familia</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/cristo-nos-pide-que-subamos-mas.html" rel="noopener"><span class="num">4</span><span class="title">Cristo nos pide que subamos más</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/cuidadito.html" rel="noopener"><span class="num">5</span><span class="title">Cuidadito</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/da-una-sonrisa.html" rel="noopener"><span class="num">6</span><span class="title">Da una sonrisa</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/dios-hizo-el-lindo-jardin.html" rel="noopener"><span class="num">7</span><span class="title">Dios hizo el lindo jardín</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/doce-discipulos-siguieron-jesus.html" rel="noopener"><span class="num">8</span><span class="title">Doce discípulos siguieron a Jesús</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/edifica-su-casita-la-fiel-hormiguita.html" rel="noopener"><span class="num">9</span><span class="title">Edifica su casita la fiel hormiguita</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/el-arca-de-noe.html" rel="noopener"><span class="num">10</span><span class="title">El arca de Noé</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/el-hombre-prudente.html" rel="noopener"><span class="num">11</span><span class="title">El hombre prudente</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/el-patito-juan.html" rel="noopener"><span class="num">12</span><span class="title">El patito Juan</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/en-el-arca-de-noe.html" rel="noopener"><span class="num">13</span><span class="title">En el arca de Noé</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/era-un-muchachito-de-nombre-david.html" rel="noopener"><span class="num">14</span><span class="title">Era un muchachito de nombre David</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/habia-un-hombrecito-chueco.html" rel="noopener"><span class="num">15</span><span class="title">Había un hombrecito chueco</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/jonas.html" rel="noopener"><span class="num">16</span><span class="title">Jonás</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/junto-al-arroyo-del-sauce-lloron.html" rel="noopener"><span class="num">17</span><span class="title">Junto al arroyo del sauce llorón</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/la-b-i-b-l-i-a.html" rel="noopener"><span class="num">18</span><span class="title">La B-I-B-L-I-A</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/la-historia-de-jonas.html" rel="noopener"><span class="num">19</span><span class="title">La Historia de Jonás</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/llego-la-hora-del-culto.html" rel="noopener"><span class="num">20</span><span class="title">Llegó la hora del culto</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/los-arboles-se-mecen.html" rel="noopener"><span class="num">21</span><span class="title">Los árboles se mecen</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/mi-vida-es-un-viaje.html" rel="noopener"><span class="num">22</span><span class="title">Mi vida es un viaje</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/moises-y-el-mar-rojo.html" rel="noopener"><span class="num">23</span><span class="title">Moisés y el Mar Rojo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/nuestro-padre-abraham.html" rel="noopener"><span class="num">24</span><span class="title">Nuestro Padre Abraham</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/pedro-santiago-y-juan-en-el-barquito.html" rel="noopener"><span class="num">25</span><span class="title">Pedro, Santiago y Juan en el barquito</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/pobre-eutico.html" rel="noopener"><span class="num">26</span><span class="title">Pobre Eutico</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/por-telefono.html" rel="noopener"><span class="num">27</span><span class="title">Por teléfono</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/que-cosas-lindas-que-dios-creo.html" rel="noopener"><span class="num">28</span><span class="title">Que cosas lindas que Dios creó</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/quien-es-el-rey-de-la-selva.html" rel="noopener"><span class="num">29</span><span class="title">¿Quién es el rey de la Selva?</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/quien-hizo-las-lindas-estrellas.html" rel="noopener"><span class="num">30</span><span class="title">¿Quién hizo las lindas estrellas?</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/sanson.html" rel="noopener"><span class="num">31</span><span class="title">Sansón</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/si-yo-fuera.html" rel="noopener"><span class="num">32</span><span class="title">Si yo fuera</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/si-cristo-me-ama.html" rel="noopener"><span class="num">33</span><span class="title">Sí, Cristo me ama</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/soldado-soy-de-jesus.html" rel="noopener"><span class="num">34</span><span class="title">Soldado soy de Jesús</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/tres-veces-oraba-daniel.html" rel="noopener"><span class="num">35</span><span class="title">Tres veces oraba</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/un-campesino-fue-cortar-lena.html" rel="noopener"><span class="num">36</span><span class="title">Un campesino fue a cortar leña</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/yo-no-quiero-ser-un-yoyo.html" rel="noopener"><span class="num">37</span><span class="title">Yo no quiero ser un yoyo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Infantes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/zaqueo.html" rel="noopener"><span class="num">38</span><span class="title">Zaqueo</span><span class="go">↗</span></a></div>
+	</div>
+</details>
 
-    <!-- Sección 3: Salmos -->
-    <details class="section" id="seccion3">
-      <summary class="section-header" id="Title_seccion3">
+<!-- Sección 2 -->
+<details class="section" id="seccion2" open="">
+<summary class="section-header" id="Title_seccion2">
+	Alabanzas Jóvenes / Adultos
+	<span class="badge" data-count="seccion2">38</span>
+	<span class="chev">▸</span>
+</summary>
+
+	<div class="section-subfilters" data-section-filters="seccion2"></div>
+	<div class="section-content" data-indice="indice2">
+
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/abre-tu-corazon.html" rel="noopener"><span class="num">39</span><span class="title">Abre tu corazón</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/acuerdate-de-tu-creador.html" rel="noopener"><span class="num">40</span><span class="title">Acuérdate de tu creador</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/alabare.html" rel="noopener"><span class="num">41</span><span class="title">Alabaré</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/alelu-alelu-aleluya.html" rel="noopener"><span class="num">42</span><span class="title">Alelu, alelu, aleluya</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/alto-escuchame.html" rel="noopener"><span class="num">43</span><span class="title">Alto escúchame</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/amemonos-de-corazon.html" rel="noopener"><span class="num">44</span><span class="title">Amémonos de corazón</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/01/amigo-tengo-que-me-ama.html" rel="noopener"><span class="num">45</span><span class="title">Amigo tengo que me ama</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/amor-amor.html" rel="noopener"><span class="num">46</span><span class="title">Amor, amor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/aquel-que-la-buena-obra-empezo.html" rel="noopener"><span class="num">47</span><span class="title">Aquel que la buena obra empezó</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/baja-dios-de-las-nubes.html" rel="noopener"><span class="num">48</span><span class="title">Baja a Dios de las nubes</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/barreras-rotas.html" rel="noopener"><span class="num">49</span><span class="title">Barreras rotas</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/cada-dia-con-cristo.html" rel="noopener"><span class="num">50</span><span class="title">Cada día con Cristo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/caminando-voy-para-canaan.html" rel="noopener"><span class="num">51</span><span class="title">Caminando voy para Canaán</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/canto-de-alegria.html" rel="noopener"><span class="num">52</span><span class="title">Canto de alegría</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/con-cristo-con-cristo.html" rel="noopener"><span class="num">53</span><span class="title">Con Cristo con Cristo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/construye-tu-casa-sobre-la-roca.html" rel="noopener"><span class="num">54</span><span class="title">Construye tu casa sobre la roca</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/cuando-el-pueblo-de-dios-ora.html" rel="noopener"><span class="num">55</span><span class="title">Cuando el pueblo de Dios ora</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/dad-gracias.html" rel="noopener"><span class="num">56</span><span class="title">Dad gracias</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/de-gloria-en-gloria.html" rel="noopener"><span class="num">57</span><span class="title">De gloria en gloria</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/demos-gracias.html" rel="noopener"><span class="num">58</span><span class="title">Demos gracias</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/dios-es-amor.html" rel="noopener"><span class="num">59</span><span class="title">Dios es amor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/dios-esta-aqui.html" rel="noopener"><span class="num">60</span><span class="title">Dios está aquí</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/dios-tu-nombre-exaltare.html" rel="noopener"><span class="num">61</span><span class="title">Dios tu nombre exaltaré</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/el-amor.html" rel="noopener"><span class="num">62</span><span class="title">El amor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/el-amor-de-dios-es-maravilloso.html" rel="noopener"><span class="num">63</span><span class="title">El amor de Dios es maravilloso</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/el-hombre-que-anduvo-en-galilea.html" rel="noopener"><span class="num">64</span><span class="title">El hombre que anduvo en Galilea</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/el-rey-de-gloria.html" rel="noopener"><span class="num">65</span><span class="title">El rey de gloria</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/en-el-gran-mar.html" rel="noopener"><span class="num">66</span><span class="title">En el gran mar</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/en-lo-alto-del-monte.html" rel="noopener"><span class="num">67</span><span class="title">En lo alto del monte</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/en-ti.html" rel="noopener"><span class="num">68</span><span class="title">En ti</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/es-exaltado-majestad-cuan-grande-es-el.html" rel="noopener"><span class="num">69</span><span class="title">Es Exaltado / Majestad / Cuán grande es Él</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/12/fe-en-fuego.html" rel="noopener"><span class="num">70</span><span class="title">Fe en fuego</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/fija-tus-ojos-en-cristo.html" rel="noopener"><span class="num">71</span><span class="title">Fija tus ojos en Cristo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/09/hoy-mas-que-nunca-senor.html" rel="noopener"><span class="num">73</span><span class="title">Hoy más que nunca Señor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/jesus-es-mi-pastor.html" rel="noopener"><span class="num">74</span><span class="title">Jesús es mi pastor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/jesus-mi-capitan.html" rel="noopener"><span class="num">75</span><span class="title">Jesús mi capitán</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/la-alegria.html" rel="noopener"><span class="num">76</span><span class="title">La alegría</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/05/la-esperanza-es-jesus.html" rel="noopener"><span class="num">77</span><span class="title">La esperanza es Jesús</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/la-sangre-de-cristo-jesus.html" rel="noopener"><span class="num">78</span><span class="title">La Sangre de Cristo Jesús</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/lado-lado.html" rel="noopener"><span class="num">79</span><span class="title">Lado a lado</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/maranatha.html" rel="noopener"><span class="num">80</span><span class="title">Maranatha</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/mas-vale-dar-que-recibir-amor.html" rel="noopener"><span class="num">81</span><span class="title">Más vale dar que recibir, amor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/mi-pensamiento.html" rel="noopener"><span class="num">82</span><span class="title">Mi pensamiento</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/mi-salvador-es-mi-amigo.html" rel="noopener"><span class="num">83</span><span class="title">Mi Salvador es mi amigo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/no-hay-en-el-mundo.html" rel="noopener"><span class="num">84</span><span class="title">No hay en el mundo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/no-me-importa-de-donde-tu-vengas.html" rel="noopener"><span class="num">85</span><span class="title">No me importa de donde tu vengas</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/paz-en-la-tormenta.html" rel="noopener"><span class="num">86</span><span class="title">Paz en la tormenta</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/pon-tus-manos.html" rel="noopener"><span class="num">87</span><span class="title">Pon tus manos</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/por-tu-gracia-y-amor.html" rel="noopener"><span class="num">88</span><span class="title">Por Tu Gracia y Amor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/puedo-confiar.html" rel="noopener"><span class="num">89</span><span class="title">Puedo Confiar</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/que-no-se-apague-el-fuego.html" rel="noopener"><span class="num">91</span><span class="title">Que no se apague el fuego</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/que-seria-de-mi.html" rel="noopener"><span class="num">92</span><span class="title">Qué sería de mí</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/quedate-senor.html" rel="noopener"><span class="num">93</span><span class="title">Quédate Señor</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/quiero-cantar-una-linda-cancion.html" rel="noopener"><span class="num">94</span><span class="title">Quiero cantar una linda canción</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/renuevame.html" rel="noopener"><span class="num">95</span><span class="title">Renuévame</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/santo-espiritu.html" rel="noopener"><span class="num">96</span><span class="title">Santo Espíritu</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes" data-added="2025-12-07"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/si-cristo-toca-tu-corazon.html" rel="noopener"><span class="num">97</span><span class="title">Si Cristo toca a tu corazón</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes" data-added="2025-12-07"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/si-eres-creyente-y-tienes-certeza.html" rel="noopener"><span class="num">98</span><span class="title">Si eres creyente y tienes certeza</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/12/solo-cristo-jesus.html" rel="noopener"><span class="num">100</span><span class="title">Solo Cristo Jesús</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/tengo-paz.html" rel="noopener"><span class="num">101</span><span class="title">Tengo paz</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/tengo-paz-como-un-rio.html" rel="noopener"><span class="num">102</span><span class="title">Tengo paz como un río</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/tierra-bendita-y-divina.html" rel="noopener"><span class="num">103</span><span class="title">Tierra bendita y divina</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/tu-amas-cristo.html" rel="noopener"><span class="num">104</span><span class="title">¿Tú amas a Cristo?</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/tu-amor-por-mi.html" rel="noopener"><span class="num">105</span><span class="title">Tu amor por mi</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/un-amigo-de-verdad.html" rel="noopener"><span class="num">106</span><span class="title">Un amigo de verdad</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/un-palacio-tengo-alla.html" rel="noopener"><span class="num">107</span><span class="title">Un palacio tengo allá</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/valiosos-en-cristo.html" rel="noopener"><span class="num">108</span><span class="title">Valiosos en Cristo</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/volvera.html" rel="noopener"><span class="num">110</span><span class="title">Volverá</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/yo-pensaba.html" rel="noopener"><span class="num">111</span><span class="title">Yo pensaba</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2024/09/yo-tengo-paz.html" rel="noopener"><span class="num">112</span><span class="title">Yo tengo paz</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2025/01/contracorriente.html" rel="noopener"><span class="num">115</span><span class="title">Contracorriente</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes" data-added="2025-08-22"><a class="link" href="https://alabanzasgps.blogspot.com/2025/03/todo-por-el.html" rel="noopener"><span class="num">116</span><span class="title">Todo por Él</span><span class="go">↗</span></a></div>
+      	<div class="item" data-tags="Jóvenes" data-added="2026-04-05"><a class="link" href="https://alabanzasgps.blogspot.com/2025/03/dame-fe.html" rel="noopener"><span class="num">117</span><span class="title">Dame Fe</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes"><a class="link" href="https://alabanzasgps.blogspot.com/2025/03/en-ti-confia-mi-corazon.html" rel="noopener"><span class="num">118</span><span class="title">En ti confía mi corazón</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes" data-added="2025-08-15"><a class="link" href="https://alabanzasgps.blogspot.com/2025/08/cristo-es-la-pena-de-horeb.html" rel="noopener"><span class="num">119</span><span class="title">Cristo es la peña de Horeb</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes" data-added="2025-09-02"><a class="link" href="https://alabanzasgps.blogspot.com/2025/09/regocijate-y-canta.html" rel="noopener"><span class="num">122</span><span class="title">Regocíjate y canta</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes" data-added="2025-09-07"><a class="link" href="https://alabanzasgps.blogspot.com/2025/09/10000-razones.html" rel="noopener"><span class="num">123</span><span class="title">10.000 Razones</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes" data-added="2025-10-26"><a class="link" href="https://alabanzasgps.blogspot.com/2025/10/firme-en-toda-prueba.html" rel="noopener"><span class="num">124</span><span class="title">Firme en Toda Prueba</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes" data-added="2026-01-13"><a class="link" href="https://alabanzasgps.blogspot.com/2026/01/mi-farol.html" rel="noopener"><span class="num">125</span><span class="title">Mi Farol</span><span class="go">↗</span></a></div>
+        <div class="item" data-tags="Jóvenes" data-added="2026-01-30"><a class="link" href="https://alabanzasgps.blogspot.com/2026/01/buscas.html" rel="noopener"><span class="num">126</span><span class="title">Buscas</span><span class="go">↗</span></a></div>
+		
+		<!-- Conjunto Guitano RECAB -->
+		<div class="item" data-tags="Jóvenes||Conjunto Guitano RECAB"><a class="link" href="https://alabanzasgps.blogspot.com/2024/06/en-este-dia.html" rel="noopener"><span class="num">♪</span><span class="title">En este día</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Conjunto Guitano RECAB"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/estan-tocando-la-puerta.html" rel="noopener"><span class="num">♪</span><span class="title">Están tocando a la puerta</span><span class="go">↗</span></a></div>		
+		<!-- Cuarteto Asaf -->
+		<div class="item" data-tags="Jóvenes||Cuarteto Asaf"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/el-es-senor-jehova.html" rel="noopener"><span class="num">♪</span><span class="title">Él es Señor Jehová</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Cuarteto Asaf"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/un-dia-a-la-vez.html" rel="noopener"><span class="num">♪</span><span class="title">Un día a la vez</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Cuarteto Asaf"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/voy-mi-hogar.html" rel="noopener"><span class="num">♪</span><span class="title">Voy a mi hogar</span><span class="go">↗</span></a></div>		
+		<!-- Duo Zimrah -->
+		<div class="item" data-tags="Jóvenes||Duo Zimrah" data-added="2026-02-18"><a class="link" href="https://alabanzasgps.blogspot.com/2026/02/bendice-alma-mia.html" rel="noopener"><span class="num">♪</span><span class="title">Bendice, Alma Mía</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/caminare-contigo.html" rel="noopener"><span class="num">♪</span><span class="title">Caminaré Contigo</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/companero-de-viaje.html" rel="noopener"><span class="num">♪</span><span class="title">Compañero de viaje</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah" data-added="2026-02-02"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/cuenta-conmigo.html" rel="noopener"><span class="num">♪</span><span class="title">Cuenta Conmigo</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/06/dejando-todo-atras.html" rel="noopener"><span class="num">♪</span><span class="title">Dejando todo atrás</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah" data-added="2025-11-11"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/herido-por-nuestro-dolor.html" rel="noopener"><span class="num">♪</span><span class="title">Herido por nuestro dolor</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/la-barca.html" rel="noopener"><span class="num">♪</span><span class="title">La Barca</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/marchando-voy.html" rel="noopener"><span class="num">♪</span><span class="title">Marchando voy</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/refugio-fiel.html" rel="noopener"><span class="num">♪</span><span class="title">Refugio fiel</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/salmo-23.html" rel="noopener"><span class="num">♪</span><span class="title">Salmo 23</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/solo-no-estoy.html" rel="noopener"><span class="num">♪</span><span class="title">Solo no estoy</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah" data-added="2026-02-04"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/sueno-con-verlo-otra-vez.html" rel="noopener"><span class="num">♪</span><span class="title">Sueño con verlo otra vez</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Duo Zimrah" data-added="2026-02-19"><a class="link" href="https://alabanzasgps.blogspot.com/2026/02/te-seguire.html" rel="noopener"><span class="num">♪</span><span class="title">Te Seguiré</span><span class="go">↗</span></a></div>		
+		<!-- Edith Aravena -->
+		<div class="item" data-tags="Jóvenes||Edith Aravena"><a class="link" href="https://alabanzasgps.blogspot.com/2024/09/prefiero-mi-cristo.html" rel="noopener"><span class="num">♪</span><span class="title">Prefiero a mi Cristo</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Edith Aravena"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/tienes-que-orar.html" rel="noopener"><span class="num">♪</span><span class="title">Tienes que orar</span><span class="go">↗</span></a></div>		
+		<!-- Primera Fe -->
+		<div class="item" data-tags="Jóvenes||Primera Fe"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/al-lado-de-jesus.html" rel="noopener"><span class="num">♪</span><span class="title">Al lado de Jesús</span><span class="go">↗</span></a></div>
+      	<div class="item" data-tags="Jóvenes||Primera Fe" data-added="2026-03-20"><a class="link" href="https://alabanzasgps.blogspot.com/2025/05/por-la-gracia-de-dios.html" rel="noopener"><span class="num">♪</span><span class="title">Por la gracia de Dios</span><span class="go">↗</span></a></div>
+		<div class="item" data-tags="Jóvenes||Primera Fe"><a class="link" href="https://alabanzasgps.blogspot.com/2025/05/solo-tu-senor.html" rel="noopener"><span class="num">♪</span><span class="title">Solo Tú, Señor</span><span class="go">↗</span></a></div>	
+	</div>
+</details>
+
+<!-- Sección 3 -->
+<!-- Sección 3: Salmos -->
+<details class="section" id="seccion3">
+<summary class="section-header" id="Title_seccion3">
         Salmos
         <span class="badge" data-count="seccion3">0</span>
-        <span class="chev">▸</span>
-      </summary>
-      <div class="section-content" data-indice="indice3">
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/01/salmo-5-escucha-senor-mi-oracion.html" rel="noopener"><span class="numSalmos">Sal 5</span><span class="title">Escucha Señor mi oración</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/12/salmo-5-oh-jehova.html" rel="noopener"><span class="numSalmos">Sal 5</span><span class="title">Oh Jehová de mañana oirás mi voz</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/12/salmo-19-la-ley-de-jehova.html" rel="noopener"><span class="numSalmos">Sal 19</span><span class="title">La Ley de Jehová</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/salmo-23-el-senor-es-mi-pastor.html" rel="noopener"><span class="numSalmos">Sal 23</span><span class="title">El Señor es mi pastor</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/12/salmo-25-4-10-muestrame-senor-tus-caminos.html" rel="noopener"><span class="numSalmos">Sal 25:4-10</span><span class="title">Muéstrame Señor tus caminos</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/12/salmo-34-gustad-y-ved-que-bueno-es.html" rel="noopener"><span class="numSalmos">Sal 34</span><span class="title">Gustad y Ved que bueno es Jehová</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/salmo-42-1-2-como-el-ciervo.html" rel="noopener"><span class="numSalmos">Sal 42:1-2</span><span class="title">Como el ciervo</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/salmo-117-alabad-jehova.html" rel="noopener"><span class="numSalmos">Sal 117</span><span class="title">Alabad a Jehová</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/salmo-121-alzare-mis-ojos-los-montes.html" rel="noopener"><span class="numSalmos">Sal 121</span><span class="title">Alzaré mis ojos a los montes</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/salmo-145-1-4-te-exaltare.html" rel="noopener"><span class="numSalmos">Sal 145:1-4</span><span class="title">Te exaltaré</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/salmo-147-alabad-jehova.html" rel="noopener"><span class="numSalmos">Sal 147</span><span class="title">Alabad a Jehová</span><span class="go">↗</span></a></div>
-      </div>
-    </details>
-
-    <!-- Sección 4: Himnario -->
-    <details class="section" id="seccion4">
-      <summary class="section-header" id="Title_seccion4">
-        Himnario
+<span class="chev">▸</span>
+</summary>
+<div class="section-subfilters" data-section-filters="seccion3"></div>
+<div class="section-content" data-indice="indice3">
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/01/salmo-5-escucha-senor-mi-oracion.html" rel="noopener"><span class="numSalmos">Sal 5</span><span class="title">Escucha Señor mi oración</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/12/salmo-5-oh-jehova.html" rel="noopener"><span class="numSalmos">Sal 5</span><span class="title">Oh Jehová de mañana oirás mi voz</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos" data-added="2025-12-07"><a class="link" href="https://alabanzasgps.blogspot.com/2025/12/salmo-8-te-amo-oh-jehova.html" rel="noopener"><span class="numSalmos">Sal 8</span><span class="title">Te amo oh Jehová</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/12/salmo-19-la-ley-de-jehova.html" rel="noopener"><span class="numSalmos">Sal 19</span><span class="title">La Ley de Jehová</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/salmo-23-el-senor-es-mi-pastor.html" rel="noopener"><span class="numSalmos">Sal 23</span><span class="title">El Señor es mi pastor</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/12/salmo-25-4-10-muestrame-senor-tus-caminos.html" rel="noopener"><span class="numSalmos">Sal 25:4-10</span><span class="title">Muéstrame Señor tus caminos</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/12/salmo-34-gustad-y-ved-que-bueno-es.html" rel="noopener"><span class="numSalmos">Sal 34</span><span class="title">Gustad y Ved que bueno es Jehová</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/salmo-42-1-2-como-el-ciervo.html" rel="noopener"><span class="numSalmos">Sal 42:1-2</span><span class="title">Como el ciervo</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/salmo-117-alabad-jehova.html" rel="noopener"><span class="numSalmos">Sal 117</span><span class="title">Alabad a Jehová</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/salmo-121-alzare-mis-ojos-los-montes.html" rel="noopener"><span class="numSalmos">Sal 121</span><span class="title">Alzaré mis ojos a los montes</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/salmo-145-1-4-te-exaltare.html" rel="noopener"><span class="numSalmos">Sal 145:1-4</span><span class="title">Te exaltaré</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Salmos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/03/salmo-147-alabad-jehova.html" rel="noopener"><span class="numSalmos">Sal 147</span><span class="title">Alabad a Jehová</span><span class="go">↗</span></a></div>
+</div>
+</details>
+<!-- Sección 4: Himnario -->
+<details class="section" id="seccion4">
+<summary class="section-header" id="Title_seccion4">
+        Himnos
         <span class="badge" data-count="seccion4">0</span>
-        <span class="chev">▸</span>
-      </summary>
-      <div class="section-content" data-indice="indice4">
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/1-cantad-alegres-al-senor.html" rel="noopener"><span class="num">1</span><span class="title">Cantad alegres al Señor</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/8-suenen-dulces-himnos.html" rel="noopener"><span class="num">8</span><span class="title">¡Suenen dulces himnos!</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/15-loamoste-oh-dios.html" rel="noopener"><span class="num">15</span><span class="title">Loámoste, ¡Oh Dios!</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/20-dios-el-padre-celestial.html" rel="noopener"><span class="num">20</span><span class="title">A Dios, el Padre celestial</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/12/29-del-culto-el-tiempo-llega.html" rel="noopener"><span class="num">29</span><span class="title">Del culto el tiempo llega</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/31-oh-senor-al-orar.html" rel="noopener"><span class="num">31</span><span class="title">¡Oh, Señor! al orar</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/40-shalom.html" rel="noopener"><span class="num">40</span><span class="title">SHALOM</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/57-mi-dios-me-ama.html" rel="noopener"><span class="num">57</span><span class="title">Mi Dios me ama</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/59-mirad-que-amor.html" rel="noopener"><span class="num">59</span><span class="title">Mirad que amor</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/77-sea-exaltado.html" rel="noopener"><span class="num">77</span><span class="title">Sea exaltado</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/09/226-buscad-primero.html" rel="noopener"><span class="num">226</span><span class="title">Buscad Primero</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/08/230-abre-tu-corazon.html" rel="noopener"><span class="num">230</span><span class="title">Abre tu corazón</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/269-prefiero-mi-cristo.html" rel="noopener"><span class="num">269</span><span class="title">Prefiero a mi Cristo</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/282-brilla-jesus.html" rel="noopener"><span class="num">282</span><span class="title">Brilla Jesús</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/02/327-jerusalen-mi-amado-hogar.html" rel="noopener"><span class="num">327</span><span class="title">Jerusalén, mi amado hogar</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/02/333-aunque-en-esta-vida.html" rel="noopener"><span class="num">333</span><span class="title">Aunque en esta vida</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/362-con-sin-igual-amor.html" rel="noopener"><span class="num">362</span><span class="title">Con sin igual amor</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/10/366-en-cristo-hallo-amigo.html" rel="noopener"><span class="num">366</span><span class="title">En Cristo hallo amigo</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/12/376-dulce-oracion.html" rel="noopener"><span class="num">376</span><span class="title">Dulce oración</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/12/378-oh-que-amigo-nos-es-cristo.html" rel="noopener"><span class="num">378</span><span class="title">¡Oh, qué amigo nos es Cristo!</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/12/379-habla-senor-mi-alma.html" rel="noopener"><span class="num">379</span><span class="title">Habla, Señor, a mi alma</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/524-traian-en-silencio-presentes-al.html" rel="noopener"><span class="num">524</span><span class="title">Traian en silencio presentes al Señor</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/557-que-estas-haciendo-por-cristo.html" rel="noopener"><span class="num">557</span><span class="title">¿Qué estás haciendo por Cristo?</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/559-no-te-de-temor.html" rel="noopener"><span class="num">559</span><span class="title">No te dé temor</span><span class="go">↗</span></a></div>
-        <div class="itemHimnos"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/560-cristo-esta-buscando-obreros.html" rel="noopener"><span class="num">560</span><span class="title">Cristo está buscando obreros</span><span class="go">↗</span></a></div>
-      </div>
-    </details>
-
-    <!-- Sección 5: Por Autor -->
-    <details class="section" id="seccion5">
-      <summary class="section-header" id="Title_seccion5">
-        Por Autor
-        <span class="badge" data-count="seccion5">0</span>
-        <span class="chev">▸</span>
-      </summary>
-      <div class="section-content" style="display:block; grid-template-columns:1fr;">
-        <details class="section" id="seccion_ConjuntoGuitanoRECAB">
-          <summary class="section-header" id="Title_seccion_ConjuntoGuitanoRECAB">
-            Conjunto Guitano RECAB
-            <span class="badge" data-count="seccion_ConjuntoGuitanoRECAB">0</span>
-            <span class="chev">▸</span>
-          </summary>
-          <div class="section-content" data-indice="indice_ConjuntoGuitanoRECAB">
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/06/en-este-dia.html" rel="noopener"><span class="num">♪</span><span class="title">En este día</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/estan-tocando-la-puerta.html" rel="noopener"><span class="num">♪</span><span class="title">Están tocando a la puerta</span><span class="go">↗</span></a></div>
-          </div>
-        </details>
-
-        <details class="section" id="seccion_CuartetoAsaf">
-          <summary class="section-header" id="Title_seccion_CuartetoAsaf">
-            Cuarteto Asaf
-            <span class="badge" data-count="seccion_CuartetoAsaf">0</span>
-            <span class="chev">▸</span>
-          </summary>
-          <div class="section-content" data-indice="indice_CuartetoAsaf">
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/el-es-senor-jehova.html" rel="noopener"><span class="num">♪</span><span class="title">Él es Señor Jehová</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/un-dia-a-la-vez.html" rel="noopener"><span class="num">♪</span><span class="title">Un día a la vez</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/voy-mi-hogar.html" rel="noopener"><span class="num">♪</span><span class="title">Voy a mi hogar</span><span class="go">↗</span></a></div>
-          </div>
-        </details>
-
-        <details class="section" id="seccion_DuoZimrah">
-          <summary class="section-header" id="Title_seccion_DuoZimrah">
-            Duo Zimrah
-            <span class="badge" data-count="seccion_DuoZimrah">0</span>
-            <span class="chev">▸</span>
-          </summary>
-          <div class="section-content" data-indice="indice_DuoZimrah">
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/caminare-contigo.html" rel="noopener"><span class="num">♪</span><span class="title">Caminaré Contigo</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/companero-de-viaje.html" rel="noopener"><span class="num">♪</span><span class="title">Compañero de viaje</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/06/dejando-todo-atras.html" rel="noopener"><span class="num">♪</span><span class="title">Dejando todo atrás</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/la-barca.html" rel="noopener"><span class="num">♪</span><span class="title">La Barca</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/04/marchando-voy.html" rel="noopener"><span class="num">♪</span><span class="title">Marchando voy</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/refugio-fiel.html" rel="noopener"><span class="num">♪</span><span class="title">Refugio fiel</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/05/salmo-23.html" rel="noopener"><span class="num">♪</span><span class="title">Salmo 23</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/03/solo-no-estoy.html" rel="noopener"><span class="num">♪</span><span class="title">Solo no estoy</span><span class="go">↗</span></a></div>
-          </div>
-        </details>
-
-        <details class="section" id="seccion_EdithAravena">
-          <summary class="section-header" id="Title_seccion_EdithAravena">
-            Edith Aravena
-            <span class="badge" data-count="seccion_EdithAravena">0</span>
-            <span class="chev">▸</span>
-          </summary>
-          <div class="section-content" data-indice="indice_EdithAravena">
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2024/09/prefiero-mi-cristo.html" rel="noopener"><span class="num">♪</span><span class="title">Prefiero a mi Cristo</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/11/tienes-que-orar.html" rel="noopener"><span class="num">♪</span><span class="title">Tienes que orar</span><span class="go">↗</span></a></div>
-          </div>
-        </details>
-
-        <details class="section" id="seccion_PrimeraFe">
-          <summary class="section-header" id="Title_seccion_PrimeraFe">
-            Primera Fe
-            <span class="badge" data-count="seccion_PrimeraFe">0</span>
-            <span class="chev">▸</span>
-          </summary>
-          <div class="section-content" data-indice="indice_PrimeraFe">
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2023/06/al-lado-de-jesus.html" rel="noopener"><span class="num">♪</span><span class="title">Al lado de Jesús</span><span class="go">↗</span></a></div>
-            <div class="item"><a class="link" href="https://alabanzasdelalma.blogspot.com/2025/05/solo-tu-senor.html" rel="noopener"><span class="num">♪</span><span class="title">Solo Tú, Señor</span><span class="go">↗</span></a></div>
-          </div>
-        </details>
-      </div>
-    </details>
-
-    <footer>
+<span class="chev">▸</span>
+</summary>
+<div class="section-subfilters" data-section-filters="seccion4"></div>
+<div class="section-content" data-indice="indice4">
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/1-cantad-alegres-al-senor.html" rel="noopener"><span class="num">1</span><span class="title">Cantad alegres al Señor</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/8-suenen-dulces-himnos.html" rel="noopener"><span class="num">8</span><span class="title">¡Suenen dulces himnos!</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/15-loamoste-oh-dios.html" rel="noopener"><span class="num">15</span><span class="title">Loámoste, ¡Oh Dios!</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/20-dios-el-padre-celestial.html" rel="noopener"><span class="num">20</span><span class="title">A Dios, el Padre celestial</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/12/29-del-culto-el-tiempo-llega.html" rel="noopener"><span class="num">29</span><span class="title">Del culto el tiempo llega</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/31-oh-senor-al-orar.html" rel="noopener"><span class="num">31</span><span class="title">¡Oh, Señor! al orar</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/40-shalom.html" rel="noopener"><span class="num">40</span><span class="title">SHALOM</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/57-mi-dios-me-ama.html" rel="noopener"><span class="num">57</span><span class="title">Mi Dios me ama</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/59-mirad-que-amor.html" rel="noopener"><span class="num">59</span><span class="title">Mirad que amor</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/77-sea-exaltado.html" rel="noopener"><span class="num">77</span><span class="title">Sea exaltado</span><span class="go">↗</span></a></div>
+    
+  <div class="item" data-tags="Himnos" data-added="2026-05-25"><a class="link" href="https://alabanzasgps.blogspot.com/2026/05/183-no-me-olvide-de-ti.html" rel="noopener"><span class="num">183</span><span class="title">No me olvidé de ti</span><span class="go">↗</span></a></div>
+	
+    <div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/09/226-buscad-primero.html" rel="noopener"><span class="num">226</span><span class="title">Buscad Primero</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2025/08/230-abre-tu-corazon.html" rel="noopener"><span class="num">230</span><span class="title">Abre tu corazón</span><span class="go">↗</span></a></div>
+	<div class="item"  data-tags="Himnos" data-added="2025-12-26"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/236-jesus-entrega-todo.html" rel="noopener"><span class="num">236</span><span class="title">A Jesús entrega todo</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/269-prefiero-mi-cristo.html" rel="noopener"><span class="num">269</span><span class="title">Prefiero a mi Cristo</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos" data-added="2025-12-07"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/281-he-decidido-seguir-cristo.html" rel="noopener"><span class="num">281</span><span class="title">He decidido Seguir a Cristo</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/282-brilla-jesus.html" rel="noopener"><span class="num">282</span><span class="title">Brilla Jesús</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2025/02/327-jerusalen-mi-amado-hogar.html" rel="noopener"><span class="num">327</span><span class="title">Jerusalén, mi amado hogar</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2025/02/333-aunque-en-esta-vida.html" rel="noopener"><span class="num">333</span><span class="title">Aunque en esta vida</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/06/362-con-sin-igual-amor.html" rel="noopener"><span class="num">362</span><span class="title">Con sin igual amor</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/10/366-en-cristo-hallo-amigo.html" rel="noopener"><span class="num">366</span><span class="title">En Cristo hallo amigo</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/12/376-dulce-oracion.html" rel="noopener"><span class="num">376</span><span class="title">Dulce oración</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/12/378-oh-que-amigo-nos-es-cristo.html" rel="noopener"><span class="num">378</span><span class="title">¡Oh, qué amigo nos es Cristo!</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/12/379-habla-senor-mi-alma.html" rel="noopener"><span class="num">379</span><span class="title">Habla, Señor, a mi alma</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos" data-added="2025-12-07"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/434-jesus-es-mi-vida.html" rel="noopener"><span class="num">434</span><span class="title">Jesús es mi vida</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/524-traian-en-silencio-presentes-al.html" rel="noopener"><span class="num">524</span><span class="title">Traian en silencio presentes al Señor</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/557-que-estas-haciendo-por-cristo.html" rel="noopener"><span class="num">557</span><span class="title">¿Qué estás haciendo por Cristo?</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2023/11/559-no-te-de-temor.html" rel="noopener"><span class="num">559</span><span class="title">No te dé temor</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos"><a class="link" href="https://alabanzasgps.blogspot.com/2024/04/560-cristo-esta-buscando-obreros.html" rel="noopener"><span class="num">560</span><span class="title">Cristo está buscando obreros</span><span class="go">↗</span></a></div>
+	<div class="item" data-tags="Himnos" data-added="2025-12-07"><a class="link" href="https://alabanzasgps.blogspot.com/2024/05/608-corazones-siempre-alegres.html" rel="noopener"><span class="num">608</span><span class="title">Corazones siempre alegres</span><span class="go">↗</span></a></div>
+</div>
+</details>
+<footer>
       Hecho con ❤ para Dios.
     </footer>
-  </div>
 </div>
-
-
+</div>
 <script>
 (function(){
   const root = document.querySelector('.alba-menu');
   if(!root) return;
+
   const $ = (s, el=root)=>el.querySelector(s);
   const $$ = (s, el=root)=>[...el.querySelectorAll(s)];
   const search = $('#alba-buscar');
   const clearBtn = $('#alba-btnClear');
+  const filtersWrap = $('#alba-tagFilters');
+
+  const MAIN_TAGS = ['Infantes', 'Jóvenes', 'Salmos', 'Himnos'];
+  let activeMainTag = '';
+  const activeSubTags = {};
 
   function clearHighlights(el){
     $$('mark', el).forEach(m=>m.replaceWith(document.createTextNode(m.textContent)));
   }
+
   function highlight(node, q){
-    const txt = node.data, i = txt.toLowerCase().indexOf(q.toLowerCase());
-    if(i<0) return;
+    const txt = node.data;
+    const i = txt.toLowerCase().indexOf(q.toLowerCase());
+    if(i < 0) return;
     const r = document.createRange();
-    r.setStart(node, i); r.setEnd(node, i+q.length);
-    const mk = document.createElement('mark'); r.surroundContents(mk);
+    r.setStart(node, i);
+    r.setEnd(node, i + q.length);
+    const mk = document.createElement('mark');
+    r.surroundContents(mk);
   }
-  function refreshCounts(){
+
+  function getItemTags(card){
+    return (card.dataset.tags || '')
+      .split('||')
+      .map(t => t.trim())
+      .filter(Boolean);
+  }
+
+  function getSectionMainTag(section){
+    const body = $('.section-content', section);
+    const firstItem = body ? $('.item', body) : null;
+    const tags = firstItem ? getItemTags(firstItem) : [];
+    return MAIN_TAGS.find(tag => tags.includes(tag)) || '';
+  }
+
+  function getFixedCounts(tags){
+    const counts = new Map();
+    tags.forEach(tag => counts.set(tag, 0));
+    $$('.item').forEach(card=>{
+      const itemTags = getItemTags(card);
+      tags.forEach(tag=>{
+        if(itemTags.includes(tag)){
+          counts.set(tag, (counts.get(tag) || 0) + 1);
+        }
+      });
+    });
+    return counts;
+  }
+
+  const mainCounts = getFixedCounts(MAIN_TAGS);
+
+  function buildMainFilters(){
+    if(!filtersWrap) return;
+    filtersWrap.innerHTML = '';
+    const makeBtn = (label, tag='') => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tag-filter-btn' + (tag === activeMainTag ? ' is-active' : '');
+      btn.dataset.tag = tag;
+      const count = tag ? (mainCounts.get(tag) || 0) : $$('.item').length;
+      btn.innerHTML = `<span>${label}</span><span class="tag-count">${count}</span>`;
+      btn.addEventListener('click', ()=>toggleMainTag(tag));
+      return btn;
+    };
+    filtersWrap.appendChild(makeBtn('Todos', ''));
+    MAIN_TAGS.forEach(tag => filtersWrap.appendChild(makeBtn(tag, tag)));
+  }
+
+  function buildSectionFilters(){
+    $$('.section').forEach(section=>{
+      const wrap = $('.section-subfilters', section);
+      if(!wrap) return;
+
+      const mainTag = getSectionMainTag(section);
+      const counts = new Map();
+
+      $$('.item', section).forEach(card=>{
+        getItemTags(card)
+          .filter(tag => tag && tag !== mainTag && !MAIN_TAGS.includes(tag))
+          .forEach(tag => counts.set(tag, (counts.get(tag) || 0) + 1));
+      });
+
+      const tags = [...counts.keys()].sort((a,b)=>a.localeCompare(b, 'es'));
+      wrap.innerHTML = '';
+
+      tags.forEach(tag=>{
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tag-filter-btn subtag';
+        btn.dataset.section = section.id;
+        btn.dataset.tag = tag;
+        btn.innerHTML = `<span>${tag}</span><span class="tag-count">${counts.get(tag) || 0}</span>`;
+        btn.addEventListener('click', ()=>toggleSubTag(section.id, mainTag, tag));
+        wrap.appendChild(btn);
+      });
+    });
+  }
+
+  function refreshButtons(){
+    $$('.tag-filter-btn', filtersWrap).forEach(btn=>{
+      btn.classList.toggle('is-active', (btn.dataset.tag || '') === activeMainTag);
+    });
+
+    $$('.section').forEach(section=>{
+      const activeSub = activeSubTags[section.id] || '';
+      $$('.section-subfilters .tag-filter-btn', section).forEach(btn=>{
+        btn.classList.toggle('is-active', (btn.dataset.tag || '') === activeSub);
+      });
+    });
+  }
+
+  function refreshSectionBadges(){
     $$('.section').forEach(sec=>{
       const body = $('.section-content', sec);
       const badge = sec.querySelector(`.badge[data-count="${sec.id}"]`);
       if(!body || !badge) return;
-      const visibles = $$('.item:not(.hidden), .itemHimnos:not(.hidden)', body).length;
-      const total = $$('.item, .itemHimnos', body).length;
-      badge.textContent = visibles + (visibles!==total ? ` / ${total}` : '');
+      const visibles = $$('.item:not(.hidden)', body).length;
+      const total = $$('.item', body).length;
+      badge.textContent = visibles + (visibles !== total ? ` / ${total}` : '');
     });
   }
+
   function filter(){
-    const term = (search?.value||'').trim();
-    $$('.section-content').forEach(body=>{
+    const term = (search?.value || '').trim().toLowerCase();
+
+    $$('.section').forEach(section=>{
+      const body = $('.section-content', section);
+      if(!body) return;
+
+      const mainTag = getSectionMainTag(section);
+      const activeSub = activeSubTags[section.id] || '';
+
       clearHighlights(body);
-      $$('.item, .itemHimnos', body).forEach(card=>{
-        const t = card.querySelector('.title')?.textContent.trim()||'';
-        const n = card.querySelector('.num')?.textContent.trim()||'';
-        const ok = !term || t.toLowerCase().includes(term.toLowerCase()) || n.toLowerCase().includes(term.toLowerCase());
+
+      $$('.item', body).forEach(card=>{
+        const title = card.querySelector('.title')?.textContent.trim() || '';
+        const num = card.querySelector('.num, .numSalmos')?.textContent.trim() || '';
+        const tags = getItemTags(card);
+        const tagText = tags.join(' ');
+        const matchesSearch = !term || title.toLowerCase().includes(term) || num.toLowerCase().includes(term) || tagText.toLowerCase().includes(term);
+        const matchesMain = !activeMainTag || tags.includes(activeMainTag);
+        const matchesSub = !activeSub || tags.includes(activeSub);
+        const ok = matchesSearch && matchesMain && matchesSub;
+
         card.classList.toggle('hidden', !ok);
+
         if(ok && term){
-          const tn = card.querySelector('.title')?.firstChild;
-          if(tn && tn.nodeType===Node.TEXT_NODE) highlight(tn, term);
+          const titleNode = card.querySelector('.title')?.firstChild;
+          if(titleNode && titleNode.nodeType === Node.TEXT_NODE){
+            highlight(titleNode, term);
+          }
         }
       });
-      // Abre/cierra automático
-      const hasVis = $$('.item:not(.hidden), .itemHimnos:not(.hidden)', body).length>0;
-      const details = body.closest('.section');
-      if(details) hasVis ? details.setAttribute('open','') : details.removeAttribute('open');
+
+      const visibleCount = $$('.item:not(.hidden)', body).length;
+      const sectionAllowed = !activeMainTag || activeMainTag === mainTag;
+      section.classList.toggle('hidden-section', !sectionAllowed || visibleCount === 0);
+
+      if(sectionAllowed && visibleCount > 0){
+        section.setAttribute('open', '');
+      } else {
+        section.removeAttribute('open');
+      }
     });
-    refreshCounts();
+
+    refreshButtons();
+    refreshSectionBadges();
+  }
+
+  function toggleMainTag(tag){
+    activeMainTag = activeMainTag === tag ? '' : (tag || '');
+    if(activeMainTag){
+      Object.keys(activeSubTags).forEach(sectionId=>{
+        const section = document.getElementById(sectionId);
+        if(section && getSectionMainTag(section) !== activeMainTag){
+          activeSubTags[sectionId] = '';
+        }
+      });
+    }
+    filter();
+  }
+
+  function toggleSubTag(sectionId, mainTag, tag){
+    activeMainTag = mainTag || '';
+    activeSubTags[sectionId] = activeSubTags[sectionId] === tag ? '' : tag;
+
+    Object.keys(activeSubTags).forEach(id=>{
+      if(id !== sectionId){
+        activeSubTags[id] = '';
+      }
+    });
+
+    filter();
   }
 
   search?.addEventListener('input', filter);
-  search?.addEventListener('keydown', e=>{ if(e.key==='Enter'){ e.preventDefault(); e.currentTarget.blur(); }});
-  clearBtn?.addEventListener('click', ()=>{ search.value=''; filter(); search.focus(); });
+  search?.addEventListener('keydown', e=>{
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      e.currentTarget.blur();
+    }
+  });
 
-  // Badge inicial
-  refreshCounts();
+  clearBtn?.addEventListener('click', ()=>{
+    activeMainTag = '';
+    Object.keys(activeSubTags).forEach(k => activeSubTags[k] = '');
+    if(search) search.value = '';
+    filter();
+    search?.focus();
+  });
+
+  buildMainFilters();
+  buildSectionFilters();
+  filter();
 })();
 </script>
+<!-- JS para auto-marcar "nuevo" (solo dentro de .alba-menu) -->
+<script>
+const pad = num => num.toString().padStart(2, '0');
 
+(function(){
+  const root = document.querySelector('.alba-menu');
+  if(!root) return;
 
+  const NEW_DAYS = 45;      // considera "nuevo" si fue agregado en los últimos 45 días
+  const VERY_NEW_DAYS = 7;  // (opcional) súper reciente
+
+  const now = new Date();
+  root.querySelectorAll('.item').forEach(el=>{
+    const forced = (el.dataset.new || '').toLowerCase() === 'true';
+    const dateStr = el.dataset.added;
+    let isNew = forced;
+
+    if (!isNew && dateStr){
+      const d = new Date(dateStr);
+      if(!isNaN(d)) {
+        const diffDays = (now - d) / 86400000;
+        isNew = diffDays >= 0 && diffDays <= NEW_DAYS;
+        if (isNew && diffDays <= VERY_NEW_DAYS) el.classList.add('is-very-new');
+        //if (isNew && !el.title) el.title = `NUEVO - Agregado el ${dateStr}`;
+		
+		debugger;
+		if (isNew && !el.title){
+			const day = pad(d.getDate());
+            const month = pad(d.getMonth() + 1); // getMonth() es base 0, por eso se suma 1
+            const year = d.getFullYear();
+		
+			const formattedDate = `${day}-${month}-${year}`;
+			
+			el.title = `NUEVO - Agregado el ${formattedDate}`;			
+		}
+      }
+    }
+
+    if (isNew){
+      el.classList.add('is-new');
+      if (!el.querySelector('.new-badge')){
+        const style = (root.getAttribute('data-new-style') || 'pill').toLowerCase();
+        const span = document.createElement('span');
+        span.className = 'new-badge';
+        if (style === 'pill'){
+          span.classList.add('new-badge--pill');
+          span.innerHTML = '<span class="new-ico" aria-hidden="true"></span>';
+        } else if (style === 'dot'){
+          span.classList.add('new-badge--dot');
+          span.setAttribute('aria-label','New');
+        } else if (style === 'ribbon'){
+          span.classList.add('new-badge--ribbon');
+          span.textContent = 'New';
+        } else if (style === 'bar'){
+          // bar usa solo la barra; badge no visible
+          span.style.display = 'none';
+        } else {
+          span.classList.add('new-badge--pill');
+          span.textContent = 'New';
+        }
+        el.appendChild(span);
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>
