@@ -80,7 +80,7 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 <section class="panel" id="lyricsPanel">
 <div class="lyrics-toolbar">
 <a class="reference" href="https://www.bible.com/es/bible/149/PSA.100.1-5.RVR1960" target="_blank" rel="noopener noreferrer">Salmo 100:1-5</a>
-<div class="controls" aria-label="Tamaño de la letra"><button class="control-btn" id="lyricsDown" aria-label="Disminuir tamaño de letra">A−</button><button class="control-btn" id="lyricsReset" aria-label="Restablecer tamaño de letra">A</button><button class="control-btn primary" id="lyricsUp" aria-label="Aumentar tamaño de letra">A+</button></div>
+<div class="controls" aria-label="Tamaño de la letra"><button class="control-btn" id="lyricsDown" aria-label="Disminuir tamaño de letra" title="Disminuir texto">A−</button><button class="control-btn primary" id="lyricsUp" aria-label="Aumentar tamaño de letra" title="Aumentar texto">A+</button></div>
 </div>
 <div class="lyrics">
 <div class="verse"><p class="verse-number">1.</p><p class="plain-line">Cantad alegres al Señor,</p><p class="plain-line">mortales todos por doquier,</p><p class="plain-line">servidle siempre con fervor,</p><p class="plain-line">obedecedle con placer.</p></div>
@@ -91,10 +91,10 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 
 <section class="panel hidden" id="chordsPanel">
 <div class="controls compact-controls" aria-label="Controles de acordes">
-<button class="control-btn primary" id="toneDown" aria-label="Bajar tono">T−</button><button class="control-btn" id="toneReset" aria-label="Restablecer tono">T0</button><button class="control-btn primary" id="toneUp" aria-label="Subir tono">T+</button>
-<div class="segment" aria-label="Tipo de cifrado"><button class="notation-btn active" data-notation="latin">Latino</button><button class="notation-btn" data-notation="english">Inglés</button></div>
+<button class="control-btn primary" id="toneDown" aria-label="Disminuir tonalidad" title="Bajar tonalidad">T−</button><button class="control-btn primary" id="toneUp" aria-label="Aumentar tonalidad" title="Subir tonalidad">T+</button>
+<div class="segment" aria-label="Tipo de cifrado"><button class="notation-btn active" data-notation="latin" title="Cifrado latino">Lat</button><button class="notation-btn" data-notation="english" title="Cifrado inglés">Ing</button></div>
 <div class="segment" aria-label="Instrumento"><button class="instrument-btn active" data-instrument="guitar">Guitarra</button><button class="instrument-btn" data-instrument="ukulele">Ukelele</button></div>
-<button class="control-btn" id="chordsDown" aria-label="Disminuir tamaño de acordes">A−</button><button class="control-btn primary" id="chordsUp" aria-label="Aumentar tamaño de acordes">A+</button>
+<button class="control-btn" id="chordsDown" aria-label="Disminuir tamaño de texto y acordes" title="Disminuir texto">A−</button><button class="control-btn primary" id="chordsUp" aria-label="Aumentar tamaño de texto y acordes" title="Aumentar texto">A+</button>
 </div>
 <a class="reference" href="https://www.bible.com/es/bible/149/PSA.100.1-5.RVR1960" target="_blank" rel="noopener noreferrer">Salmo 100:1-5</a>
 <div id="chordLyrics"></div>
@@ -102,7 +102,7 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 
 <section class="panel hidden" id="diagramsPanel">
 <div class="panel-head"><div><h2>Diagramas de acordes</h2><p>Posiciones sugeridas para los acordes usados en el himno.</p></div></div>
-<div class="controls"><div class="segment" aria-label="Instrumento para diagramas"><button class="diagram-instrument-btn active" data-instrument="guitar">Guitarra</button><button class="diagram-instrument-btn" data-instrument="ukulele">Ukelele</button></div><div class="segment" aria-label="Tipo de cifrado para diagramas"><button class="notation-btn active" data-notation="latin">Latino</button><button class="notation-btn" data-notation="english">Inglés</button></div></div>
+<div class="controls"><div class="segment" aria-label="Instrumento para diagramas"><button class="diagram-instrument-btn active" data-instrument="guitar" title="Diagramas de guitarra">Guitarra</button><button class="diagram-instrument-btn" data-instrument="ukulele" title="Diagramas de ukelele">Ukelele</button></div></div>
 <div class="chord-grid" id="chordGrid"></div>
 </section>
 
@@ -173,9 +173,8 @@ document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.addEventListen
 document.querySelectorAll('.notation-btn').forEach(b=>b.addEventListener('click',()=>setNotation(b.dataset.notation)));
 document.getElementById('toneUp').onclick=()=>{semitones++;renderChordLyrics();renderGrid()};
 document.getElementById('toneDown').onclick=()=>{semitones--;renderChordLyrics();renderGrid()};
-document.getElementById('toneReset').onclick=()=>{semitones=0;renderChordLyrics();renderGrid()};
 function updateSizes(){document.documentElement.style.setProperty('--lyric-size',`calc(clamp(1.34rem,5.6vw,1.7rem) + ${lyricStep*.12}rem)`);document.documentElement.style.setProperty('--chord-size',`calc(clamp(1.22rem,5.2vw,1.58rem) + ${chordStep*.11}rem)`)}
-document.getElementById('lyricsUp').onclick=()=>{lyricStep=Math.min(5,lyricStep+1);updateSizes()};document.getElementById('lyricsDown').onclick=()=>{lyricStep=Math.max(-3,lyricStep-1);updateSizes()};document.getElementById('lyricsReset').onclick=()=>{lyricStep=0;updateSizes()};
+document.getElementById('lyricsUp').onclick=()=>{lyricStep=Math.min(5,lyricStep+1);updateSizes()};document.getElementById('lyricsDown').onclick=()=>{lyricStep=Math.max(-3,lyricStep-1);updateSizes()};
 document.getElementById('chordsUp').onclick=()=>{chordStep=Math.min(5,chordStep+1);updateSizes()};document.getElementById('chordsDown').onclick=()=>{chordStep=Math.max(-3,chordStep-1);updateSizes()};
 document.getElementById('shareBtn').onclick=async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else await navigator.clipboard.writeText(location.href)}catch(e){}};
 renderChordLyrics();renderGrid();updateSizes();
