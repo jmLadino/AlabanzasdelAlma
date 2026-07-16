@@ -8,131 +8,169 @@
 <style>
 :root{
   color-scheme:light;
-  --green-950:#173523;--green-900:#214c32;--green-800:#2f6a49;--green-700:#3f805c;
-  --green-600:#55946f;--green-200:#cfe2d4;--green-100:#eaf3ed;--green-50:#f5faf6;
-  --bg:#eef3ef;--surface:#fff;--surface-2:#f6f8f6;--text:#172019;--muted:#657168;
-  --border:#d8e1da;--shadow:0 14px 38px rgba(26,64,40,.13);--radius:22px;
-  --header-h:70px;--bottom-h:74px;--song-font:clamp(1.35rem,6vw,2rem);
+  --green-900:#183f29;--green-800:#285f40;--green-700:#3f7d58;--green-600:#629477;
+  --green-200:#cfe1d5;--green-100:#eaf3ed;--green-50:#f5f9f6;
+  --bg:#f1f5f2;--surface:#fff;--surface-2:#f8faf8;--text:#172019;--muted:#657168;
+  --border:#d9e2dc;--shadow:0 12px 34px rgba(25,61,39,.11);--radius:22px;
+  --header-h:68px;--bottom-h:72px;--lyric-size:1.45rem;--chord-size:1.35rem;
 }
-*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;min-width:320px;background:linear-gradient(180deg,#e8f0ea 0,#f7f9f7 280px);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-button{font:inherit}.hidden{display:none!important}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--bg)}
+body{margin:0;min-width:320px;background:linear-gradient(180deg,#e7f0e9 0,#f5f8f6 260px);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,a{font:inherit}.hidden{display:none!important}
 .app{min-height:100dvh;padding-bottom:calc(var(--bottom-h) + env(safe-area-inset-bottom))}
-.topbar{position:sticky;top:0;z-index:30;color:#fff;background:linear-gradient(135deg,var(--green-900),var(--green-700));box-shadow:0 5px 20px rgba(14,48,28,.2);padding-top:env(safe-area-inset-top)}
-.topbar-inner{height:var(--header-h);max-width:920px;margin:auto;display:grid;grid-template-columns:48px 1fr 48px;gap:8px;align-items:center;padding:0 12px}
-.icon-btn{width:46px;height:46px;border:0;border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.13);color:#fff;cursor:pointer}.icon-btn:active{transform:scale(.96)}
-.icon-btn svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
-.title{text-align:center;min-width:0}.title small{display:block;font-weight:800;font-size:.68rem;letter-spacing:.13em;opacity:.75}.title h1{font-size:clamp(1rem,4vw,1.2rem);line-height:1.2;margin:2px 0 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-main{width:min(100%,920px);margin:auto;padding:14px 10px 28px}
+.topbar{position:sticky;top:0;z-index:50;padding-top:env(safe-area-inset-top);color:#fff;background:linear-gradient(135deg,var(--green-900),var(--green-700));box-shadow:0 4px 18px rgba(20,55,34,.2)}
+.topbar-inner{height:var(--header-h);max-width:900px;margin:auto;padding:0 12px;display:grid;grid-template-columns:46px minmax(0,1fr) 46px;gap:8px;align-items:center}
+.icon-btn{width:44px;height:44px;border:0;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.14);color:#fff;cursor:pointer}
+.icon-btn:active,.control-btn:active,.nav-btn:active,.segment button:active{transform:scale(.97)}
+.icon-btn svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}
+.title{text-align:center;min-width:0}.title small{display:block;font-size:.66rem;font-weight:850;letter-spacing:.14em;opacity:.75}.title h1{margin:2px 0 0;font-size:clamp(1rem,4vw,1.18rem);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 .song-card{overflow:hidden;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-.hero{padding:18px 18px 15px;border-bottom:1px solid var(--border)}
+.hero{padding:20px clamp(16px,4vw,28px) 18px;border-bottom:1px solid var(--border)}
 .badge{display:inline-flex;padding:5px 10px;border-radius:999px;background:var(--green-100);color:var(--green-900);font-size:.76rem;font-weight:850}
-.hero h2{margin:9px 0 3px;font-size:clamp(1.45rem,6vw,2rem);line-height:1.13}.hero p{margin:0;color:var(--muted);font-size:.92rem}
-.toolbar-wrap{position:sticky;top:calc(var(--header-h) + env(safe-area-inset-top));z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(14px)}
-.toolbar{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:10px 12px;scrollbar-width:none}.toolbar::-webkit-scrollbar{display:none}
-.tool{flex:0 0 auto;min-height:44px;border:1px solid var(--border);border-radius:13px;padding:0 13px;background:var(--surface);color:var(--text);font-weight:750;box-shadow:0 2px 8px rgba(20,50,30,.06);cursor:pointer}.tool.primary{background:var(--green-800);border-color:var(--green-800);color:#fff}.tool[aria-pressed="true"]{background:var(--green-100);border-color:var(--green-600);color:var(--green-950)}
-.content{padding:18px clamp(14px,4vw,32px) 34px}
-.reference{margin:0 0 20px;color:var(--green-800);font-size:1rem;font-weight:800;text-decoration:underline;text-underline-offset:4px}
-.verse{margin:0 0 28px}.verse:last-child{margin-bottom:4px}.verse-number{margin:0 0 13px;font-size:1.14rem;font-weight:800}
-.song-line{display:flex;flex-wrap:wrap;align-items:flex-end;gap:.15em .28em;margin:0 0 .28em;font-size:var(--song-font);line-height:1.42;letter-spacing:-.018em}
-.word{position:relative;display:inline-flex;align-items:flex-end;min-height:1.55em;padding-top:.62em;white-space:nowrap}
-.word.chorded{color:var(--green-900);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
-.chord{position:absolute;top:0;left:0;padding:.08em .34em;border-radius:.35em;background:var(--green-600);color:#fff;font-size:.47em;font-weight:850;line-height:1.35;text-decoration:none;box-shadow:0 2px 5px rgba(20,55,32,.15);cursor:pointer}
-body.hide-chords .chord{display:none}body.hide-chords .word{padding-top:0;min-height:auto}.plain{color:var(--text)}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:40;padding-bottom:env(safe-area-inset-bottom);background:rgba(255,255,255,.97);border-top:1px solid var(--border);box-shadow:0 -7px 25px rgba(20,50,30,.1);backdrop-filter:blur(16px)}
-.bottom-inner{height:var(--bottom-h);max-width:920px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);padding:7px 8px}
-.nav-btn{border:0;border-radius:15px;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:.76rem;font-weight:750;cursor:pointer}.nav-btn svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.nav-btn.active{background:var(--green-100);color:var(--green-800)}
-.panel-title{margin:0 0 15px;font-size:1.35rem}.chord-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
-.chord-card{border:1px solid var(--border);border-radius:18px;background:var(--surface-2);padding:12px;display:grid;grid-template-columns:70px 1fr;align-items:center;gap:10px;cursor:pointer}.chord-card h3{margin:0 0 2px;font-size:1rem}.chord-card p{margin:0;color:var(--muted);font-size:.78rem}.chord-card svg{width:70px;height:92px}
-.video-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:var(--surface-2)}.video-placeholder{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,#234b33,#6f9a7d);color:white}.video-placeholder button{width:66px;height:66px;border:0;border-radius:50%;background:rgba(255,255,255,.92);color:var(--green-900);font-size:1.5rem;cursor:pointer}.video-info{padding:15px}.video-info h3{margin:0 0 4px}.video-info p{margin:0;color:var(--muted)}
-.drawer-backdrop{position:fixed;inset:0;z-index:70;background:rgba(9,23,14,.45);display:grid;align-items:end;opacity:0;pointer-events:none;transition:.2s}.drawer-backdrop.open{opacity:1;pointer-events:auto}
-.drawer{width:min(100%,520px);max-height:88dvh;margin:auto;background:var(--surface);border-radius:24px 24px 0 0;padding:10px 18px calc(22px + env(safe-area-inset-bottom));transform:translateY(25px);transition:.2s;overflow:auto}.open .drawer{transform:none}.handle{width:42px;height:5px;border-radius:999px;background:var(--border);margin:1px auto 14px}
-.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.drawer-head h3{margin:0;font-size:1.35rem}.close{width:42px;height:42px;border:0;border-radius:13px;background:var(--surface-2);font-size:1.3rem;cursor:pointer}
-.diagram-large{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin-top:18px}.diagram-large svg{width:150px;height:190px}.diagram-large p{color:var(--muted);line-height:1.6}.diagram-large strong{display:block;color:var(--text);font-size:1.05rem;margin-bottom:5px}
-@media(max-width:560px){main{padding:10px 0 20px}.song-card{border-left:0;border-right:0;border-radius:0;box-shadow:none}.hero{padding:16px 15px 13px}.content{padding:16px 16px 28px}.song-line{gap:.12em .21em}.diagram-large{grid-template-columns:1fr;text-align:center}.diagram-large svg{margin:auto}.chord-grid{grid-template-columns:1fr 1fr}.chord-card{grid-template-columns:1fr;text-align:center}.chord-card svg{margin:auto}}
-@media(max-width:390px){:root{--song-font:1.42rem}.toolbar{gap:6px;padding-inline:8px}.tool{padding-inline:11px}.content{padding-inline:13px}.chord-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:760px){main{padding-top:22px}.song-card{border-radius:26px}.content{padding-top:24px}}
+.hero h2{margin:9px 0 5px;font-size:clamp(1.5rem,6vw,2rem);line-height:1.14}.hero p{margin:0;color:var(--muted)}
+.panel{padding:20px clamp(15px,4vw,30px) 34px}
+.panel-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:17px}.panel-head h2{margin:0;font-size:1.32rem}.panel-head p{margin:4px 0 0;color:var(--muted);font-size:.9rem}
+.controls{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:0 0 14px;margin-bottom:17px;border-bottom:1px solid var(--border);scrollbar-width:none}.controls::-webkit-scrollbar{display:none}
+.control-btn{flex:0 0 auto;min-width:46px;min-height:44px;border:1px solid var(--border);border-radius:13px;padding:0 13px;background:#fff;color:var(--text);font-weight:800;cursor:pointer;box-shadow:0 2px 8px rgba(20,50,30,.05)}
+.control-btn.primary{background:var(--green-800);border-color:var(--green-800);color:#fff}.control-btn.wide{min-width:auto}
+.tone-status{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;padding:0 13px;border-radius:13px;background:var(--green-100);color:var(--green-900);font-weight:850;white-space:nowrap}
+.segment{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;flex:0 0 auto;padding:4px;border-radius:14px;background:var(--green-100)}
+.segment button{min-height:36px;border:0;border-radius:10px;padding:0 13px;background:transparent;color:var(--green-900);font-weight:800;cursor:pointer;white-space:nowrap}.segment button.active{background:#fff;box-shadow:0 2px 8px rgba(24,63,41,.12)}
+.reference{display:inline-block;margin:0 0 22px;color:var(--green-800);font-weight:850;text-decoration-thickness:2px;text-underline-offset:4px}
+.lyrics .verse{margin-bottom:29px}.lyrics .verse:last-child{margin-bottom:0}.verse-number{margin:0 0 9px;font-size:1rem;font-weight:850;color:var(--green-900)}
+.plain-line{margin:.18em 0;font-size:var(--lyric-size);line-height:1.48;letter-spacing:-.012em}
+.chord-line{display:flex;flex-wrap:wrap;align-items:flex-end;gap:.14em .28em;margin:.08em 0;font-size:var(--chord-size);line-height:1.48;letter-spacing:-.015em}
+.word{position:relative;display:inline-flex;align-items:flex-end;min-height:1.65em;padding-top:.68em;white-space:nowrap}.word.plain{padding-top:.68em}
+.word.marked{color:var(--green-900);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.chord-tag{position:absolute;top:0;left:0;padding:.09em .34em;border-radius:.36em;background:var(--green-600);color:#fff;font-size:.46em;font-weight:900;line-height:1.35;text-decoration:none;box-shadow:0 2px 5px rgba(20,55,32,.14)}
+.instrument-note{margin:-4px 0 18px;padding:10px 12px;border-radius:13px;background:var(--green-50);color:var(--muted);font-size:.88rem}
+.chord-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
+.chord-card{border:1px solid var(--border);border-radius:18px;background:var(--surface-2);padding:13px;display:grid;grid-template-columns:76px 1fr;align-items:center;gap:11px;text-align:left;color:var(--text)}
+.chord-card svg{width:76px;height:98px}.chord-card h3{margin:0 0 3px;font-size:1rem}.chord-card p{margin:0;color:var(--muted);font-size:.79rem}
+.video-frame{position:relative;overflow:hidden;width:100%;aspect-ratio:16/9;border-radius:18px;background:#0f1712;box-shadow:0 9px 28px rgba(20,45,29,.13)}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:60;padding-bottom:env(safe-area-inset-bottom);background:rgba(255,255,255,.98);border-top:1px solid var(--border);box-shadow:0 -6px 22px rgba(20,50,30,.1)}
+.bottom-inner{height:var(--bottom-h);max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:6px 7px}
+.nav-btn{min-width:0;border:0;border-radius:14px;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 2px;font-size:.68rem;font-weight:800;cursor:pointer}
+.nav-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.nav-btn.active{background:var(--green-100);color:var(--green-800)}
+@media(max-width:560px){main{padding:0}.song-card{border:0;border-radius:0;box-shadow:none}.hero{padding-top:17px}.panel{padding:17px 14px 27px}.panel-head{margin-bottom:14px}.controls{margin-inline:-14px;padding-inline:14px}.plain-line{line-height:1.5}.chord-line{gap:.1em .21em}.chord-grid{grid-template-columns:1fr 1fr}.chord-card{grid-template-columns:1fr;text-align:center;padding:11px 8px}.chord-card svg{margin:auto}}
+@media(max-width:390px){:root{--lyric-size:1.34rem;--chord-size:1.25rem}.panel{padding-inline:12px}.controls{margin-inline:-12px;padding-inline:12px}.control-btn{padding-inline:11px}.segment button{padding-inline:10px}.bottom-inner{padding-inline:4px}.nav-btn{font-size:.63rem}.nav-btn svg{width:21px;height:21px}}
+@media(min-width:760px){main{padding-top:24px}.song-card{border-radius:26px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
 <div class="app">
-<header class="topbar">
- <div class="topbar-inner">
-  <button class="icon-btn" aria-label="Volver" onclick="history.length>1?history.back():null"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
-  <div class="title"><small>HIMNARIO</small><h1>Cantad alegres al Señor</h1></div>
-  <button class="icon-btn" aria-label="Compartir" id="shareBtn"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg></button>
- </div>
-</header>
-<main>
- <article class="song-card">
-  <section class="hero"><span class="badge">Himno 1</span><h2>Cantad alegres al Señor</h2><p>Letra, acordes y acompañamiento</p></section>
-  <div class="toolbar-wrap">
-   <div class="toolbar" aria-label="Controles de la canción">
-    <button class="tool primary" id="toneUp">T+</button><button class="tool primary" id="toneDown">T−</button><button class="tool" id="toneReset">T0</button><button class="tool" id="toneLabel">Do / C</button><button class="tool" id="toggleChords" aria-pressed="true">Acordes</button><button class="tool" id="fontUp">A+</button><button class="tool" id="fontDown">A−</button>
-   </div>
-  </div>
-  <section class="content" id="lyricsPanel">
-   <p class="reference">Salmo 100:1-5</p>
-   <div class="verse"><p class="verse-number">1.</p>
-    <p class="song-line"><span class="word chorded" data-chord="D">Cantad<span class="chord">Re</span></span><span class="word chorded" data-chord="F#m">alegres<span class="chord">Fa#m</span></span><span class="word chorded" data-chord="D">al<span class="chord">Re</span></span><span class="word plain">Señor,</span></p>
-    <p class="song-line"><span class="word chorded" data-chord="D">mortales<span class="chord">Re</span></span><span class="word chorded" data-chord="G">todos<span class="chord">Sol</span></span><span class="word chorded" data-chord="Bm">por<span class="chord">Mim</span></span><span class="word plain">doquier,</span></p>
-    <p class="song-line"><span class="word chorded" data-chord="D">servidle<span class="chord">Re</span></span><span class="word plain">siempre</span><span class="word chorded" data-chord="G">con<span class="chord">Sol</span></span><span class="word chorded" data-chord="A">fervor,<span class="chord">La</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="F#m">obedecedle<span class="chord">Fa#m</span></span><span class="word chorded" data-chord="G">con<span class="chord">Sol</span></span><span class="word chorded" data-chord="A">placer.<span class="chord">La</span></span></p>
-   </div>
-   <div class="verse"><p class="verse-number">2.</p>
-    <p class="song-line"><span class="word chorded" data-chord="D">Con<span class="chord">Re</span></span><span class="word plain">gratitud</span><span class="word chorded" data-chord="F#m">canción<span class="chord">Fa#m</span></span><span class="word chorded" data-chord="D">alzad<span class="chord">Re</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="D">al<span class="chord">Re</span></span><span class="word plain">Hacedor</span><span class="word plain">que</span><span class="word chorded" data-chord="G">el ser<span class="chord">Sol</span></span><span class="word chorded" data-chord="Bm">os dio;<span class="chord">Mim</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="D">al<span class="chord">Re</span></span><span class="word plain">Dios excelso</span><span class="word chorded" data-chord="G">venerad,<span class="chord">Sol</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="F#m">que<span class="chord">Fa#m</span></span><span class="word plain">como</span><span class="word chorded" data-chord="G">Padre<span class="chord">Sol</span></span><span class="word chorded" data-chord="A">nos<span class="chord">La</span></span><span class="word chorded" data-chord="D">amó.<span class="chord">Re</span></span></p>
-   </div>
-   <div class="verse"><p class="verse-number">3.</p>
-    <p class="song-line"><span class="word chorded" data-chord="D">Su<span class="chord">Re</span></span><span class="word plain">pueblo</span><span class="word chorded" data-chord="F#m">somos<span class="chord">Fa#m</span></span><span class="word chorded" data-chord="D">salvará<span class="chord">Re</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="D">a<span class="chord">Re</span></span><span class="word plain">los que</span><span class="word chorded" data-chord="G">busquen<span class="chord">Sol</span></span><span class="word chorded" data-chord="Bm">al<span class="chord">Mim</span></span><span class="word chorded" data-chord="A">Señor<span class="chord">La</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="D">ninguno<span class="chord">Re</span></span><span class="word plain">de ellos</span><span class="word chorded" data-chord="G">dejará<span class="chord">Sol</span></span></p>
-    <p class="song-line"><span class="word chorded" data-chord="F#m">él<span class="chord">Fa#m</span></span><span class="word plain">los</span><span class="word chorded" data-chord="G">ampara<span class="chord">Sol</span></span><span class="word chorded" data-chord="A">con<span class="chord">La</span></span><span class="word plain">su</span><span class="word chorded" data-chord="D">amor.<span class="chord">Re</span></span></p>
-   </div>
-  </section>
-  <section class="content hidden" id="chordsPanel"><h2 class="panel-title">Acordes para ukelele</h2><div class="chord-grid" id="chordGrid"></div></section>
-  <section class="content hidden" id="videoPanel"><h2 class="panel-title">Acompañamiento</h2><div class="video-card"><div class="video-placeholder"><button aria-label="Reproducir">▶</button></div><div class="video-info"><h3>Cantad alegres al Señor</h3><p>Espacio reservado para el video o pista de acompañamiento.</p></div></div></section>
- </article>
-</main>
+<header class="topbar"><div class="topbar-inner">
+<button class="icon-btn" aria-label="Volver" onclick="history.length>1?history.back():null"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+<div class="title"><small>HIMNARIO</small><h1>Cantad alegres al Señor</h1></div>
+<button class="icon-btn" id="shareBtn" aria-label="Compartir"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg></button>
+</div></header>
+<main><article class="song-card">
+<section class="hero"><span class="badge">Himno 1</span><h2>Cantad alegres al Señor</h2><p>Letra, acordes, diagramas y video</p></section>
+
+<section class="panel" id="lyricsPanel">
+<div class="panel-head"><div><h2>Letra</h2><p>Texto limpio para lectura y canto.</p></div></div>
+<div class="controls" aria-label="Tamaño de la letra"><button class="control-btn" id="lyricsDown">A−</button><button class="control-btn" id="lyricsReset">A</button><button class="control-btn primary" id="lyricsUp">A+</button></div>
+<a class="reference" href="https://www.bible.com/es/bible/149/PSA.100.1-5.RVR1960" target="_blank" rel="noopener noreferrer">Salmo 100:1-5</a>
+<div class="lyrics">
+<div class="verse"><p class="verse-number">1.</p><p class="plain-line">Cantad alegres al Señor,</p><p class="plain-line">mortales todos por doquier,</p><p class="plain-line">servidle siempre con fervor,</p><p class="plain-line">obedecedle con placer.</p></div>
+<div class="verse"><p class="verse-number">2.</p><p class="plain-line">Con gratitud canción alzad</p><p class="plain-line">al Hacedor que el ser os dio;</p><p class="plain-line">al Dios excelso venerad,</p><p class="plain-line">que como Padre nos amó.</p></div>
+<div class="verse"><p class="verse-number">3.</p><p class="plain-line">Su pueblo somos salvará</p><p class="plain-line">a los que busquen al Señor;</p><p class="plain-line">ninguno de ellos dejará,</p><p class="plain-line">él los ampara con su amor.</p></div>
+</div>
+</section>
+
+<section class="panel hidden" id="chordsPanel">
+<div class="panel-head"><div><h2>Letra con acordes</h2><p>Las sílabas subrayadas indican cuándo ejecutar cada acorde.</p></div></div>
+<div class="controls" aria-label="Controles de acordes">
+<button class="control-btn primary" id="toneDown">T−</button><button class="control-btn" id="toneReset">T0</button><button class="control-btn primary" id="toneUp">T+</button><span class="tone-status" id="toneStatus">Tono: Re / D</span>
+<div class="segment" aria-label="Instrumento"><button class="instrument-btn active" data-instrument="guitar">Guitarra</button><button class="instrument-btn" data-instrument="ukulele">Ukelele</button></div>
+<button class="control-btn" id="chordsDown">A−</button><button class="control-btn primary" id="chordsUp">A+</button>
+</div>
+<p class="instrument-note" id="instrumentNote">Acordes mostrados para guitarra. La posición de los acordes en la letra no cambia al seleccionar otro instrumento.</p>
+<a class="reference" href="https://www.bible.com/es/bible/149/PSA.100.1-5.RVR1960" target="_blank" rel="noopener noreferrer">Salmo 100:1-5</a>
+<div id="chordLyrics"></div>
+</section>
+
+<section class="panel hidden" id="diagramsPanel">
+<div class="panel-head"><div><h2>Diagramas de acordes</h2><p>Posiciones sugeridas para los acordes usados en el himno.</p></div></div>
+<div class="controls"><div class="segment" aria-label="Instrumento para diagramas"><button class="diagram-instrument-btn active" data-instrument="guitar">Guitarra</button><button class="diagram-instrument-btn" data-instrument="ukulele">Ukelele</button></div><span class="tone-status" id="diagramToneStatus">Tono: Re / D</span></div>
+<div class="chord-grid" id="chordGrid"></div>
+</section>
+
+<section class="panel hidden" id="videoPanel">
+<div class="panel-head"><div><h2>Video</h2><p>Acompañamiento para cantar el himno.</p></div></div>
+<div class="video-frame"><iframe src="https://www.youtube.com/embed/V7xHDU7-eF8?si=UTqH33vmxxzNv3sQ" title="Cantad alegres al Señor" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+</section>
+</article></main>
+
 <nav class="bottom-nav"><div class="bottom-inner">
- <button class="nav-btn active" data-panel="lyricsPanel"><svg viewBox="0 0 24 24"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg><span>Letra</span></button>
- <button class="nav-btn" data-panel="chordsPanel"><svg viewBox="0 0 24 24"><path d="M7 20c1.5-2 1.7-4.2.6-6.5L14.5 6a2 2 0 0 1 3 2.6l-7.2 7.2C8.4 17.3 7 18.7 7 20Z"/><path d="m14 7 3 3M5 20h4"/></svg><span>Acordes</span></button>
- <button class="nav-btn" data-panel="videoPanel"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3Z"/></svg><span>Video</span></button>
+<button class="nav-btn active" data-panel="lyricsPanel"><svg viewBox="0 0 24 24"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg><span>Letra</span></button>
+<button class="nav-btn" data-panel="chordsPanel"><svg viewBox="0 0 24 24"><path d="M7 20c1.5-2 1.7-4.2.6-6.5L14.5 6a2 2 0 0 1 3 2.6l-7.2 7.2C8.4 17.3 7 18.7 7 20Z"/><path d="m14 7 3 3M5 20h4"/></svg><span>Acordes</span></button>
+<button class="nav-btn" data-panel="diagramsPanel"><svg viewBox="0 0 24 24"><path d="M5 3v18M10 3v18M15 3v18M20 3v18M3 7h19M3 12h19M3 17h19"/><circle cx="10" cy="9.5" r="1.7" fill="currentColor" stroke="none"/><circle cx="15" cy="14.5" r="1.7" fill="currentColor" stroke="none"/></svg><span>Diagramas</span></button>
+<button class="nav-btn" data-panel="videoPanel"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3Z"/></svg><span>Video</span></button>
 </div></nav>
 </div>
-<div class="drawer-backdrop" id="drawer"><section class="drawer" role="dialog" aria-modal="true"><div class="handle"></div><div class="drawer-head"><h3 id="drawerTitle">Re · D</h3><button class="close" id="closeDrawer">×</button></div><div class="diagram-large"><div id="drawerDiagram"></div><p><strong id="drawerName">Re mayor</strong>Toca las cuerdas indicadas en el diagrama. Los números muestran una digitación sugerida para ukelele.</p></div></section></div>
 <script>
-const NOTES_SHARP=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
-const ES={'C':'Do','C#':'Do#','D':'Re','D#':'Re#','E':'Mi','F':'Fa','F#':'Fa#','G':'Sol','G#':'Sol#','A':'La','A#':'La#','B':'Si'};
-const CHORDS={
- D:{frets:[2,2,2,0],fingers:[1,2,3,0]},
- 'F#m':{frets:[2,1,2,0],fingers:[2,1,3,0]},
- G:{frets:[0,2,3,2],fingers:[0,1,3,2]},
- Bm:{frets:[4,2,2,2],fingers:[3,1,1,1]},
- A:{frets:[2,1,0,0],fingers:[2,1,0,0]}
+const NOTES=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+const ES={C:'Do','C#':'Do#',D:'Re','D#':'Re#',E:'Mi',F:'Fa','F#':'Fa#',G:'Sol','G#':'Sol#',A:'La','A#':'La#',B:'Si'};
+const baseChords=['D','F#m','G','Bm','A'];
+const verses=[
+ {n:'1.',lines:[
+  [{t:'Cantad',c:'D'},{t:'alegres',c:'F#m'},{t:'al',c:'D'},{t:'Señor,',c:'A'}],
+  [{t:'mortales',c:'D'},{t:'todos',c:'G'},{t:'por',c:'Bm'},{t:'doquier,'}],
+  [{t:'servidle',c:'D'},{t:'siempre'},{t:'con',c:'G'},{t:'fervor,',c:'A'}],
+  [{t:'obedecedle',c:'F#m'},{t:'con',c:'G'},{t:'placer.',c:'A'}]
+ ]},
+ {n:'2.',lines:[
+  [{t:'Con',c:'D'},{t:'gratitud'},{t:'canción',c:'F#m'},{t:'alzad',c:'D'}],
+  [{t:'al',c:'D'},{t:'Hacedor'},{t:'que'},{t:'el ser',c:'G'},{t:'os dio;',c:'Bm'}],
+  [{t:'al',c:'D'},{t:'Dios excelso'},{t:'venerad,',c:'G'}],
+  [{t:'que',c:'F#m'},{t:'como'},{t:'Padre',c:'G'},{t:'nos',c:'A'},{t:'amó.',c:'D'}]
+ ]},
+ {n:'3.',lines:[
+  [{t:'Su',c:'D'},{t:'pueblo'},{t:'somos',c:'F#m'},{t:'salvará',c:'D'}],
+  [{t:'a',c:'D'},{t:'los que'},{t:'busquen',c:'G'},{t:'al',c:'Bm'},{t:'Señor',c:'A'}],
+  [{t:'ninguno',c:'D'},{t:'de ellos'},{t:'dejará',c:'G'}],
+  [{t:'él',c:'F#m'},{t:'los'},{t:'ampara',c:'G'},{t:'con',c:'A'},{t:'su'},{t:'amor.',c:'D'}]
+ ]}
+];
+const SHAPES={
+ guitar:{
+  C:[-1,3,2,0,1,0],Cm:[-1,3,5,5,4,3],'C#':[-1,4,6,6,6,4],'C#m':[-1,4,6,6,5,4],D:[-1,-1,0,2,3,2],Dm:[-1,-1,0,2,3,1],'D#':[-1,-1,1,3,4,3],'D#m':[-1,-1,1,3,4,2],E:[0,2,2,1,0,0],Em:[0,2,2,0,0,0],F:[1,3,3,2,1,1],Fm:[1,3,3,1,1,1],'F#':[2,4,4,3,2,2],'F#m':[2,4,4,2,2,2],G:[3,2,0,0,0,3],Gm:[3,5,5,3,3,3],'G#':[4,6,6,5,4,4],'G#m':[4,6,6,4,4,4],A:[-1,0,2,2,2,0],Am:[-1,0,2,2,1,0],'A#':[-1,1,3,3,3,1],'A#m':[-1,1,3,3,2,1],B:[-1,2,4,4,4,2],Bm:[-1,2,4,4,3,2]
+ },
+ ukulele:{
+  C:[0,0,0,3],Cm:[0,3,3,3],'C#':[1,1,1,4],'C#m':[1,1,0,4],D:[2,2,2,0],Dm:[2,2,1,0],'D#':[0,3,3,1],'D#m':[3,3,2,1],E:[1,4,0,2],Em:[0,4,3,2],F:[2,0,1,0],Fm:[1,0,1,3],'F#':[3,1,2,1],'F#m':[2,1,2,0],G:[0,2,3,2],Gm:[0,2,3,1],'G#':[5,3,4,3],'G#m':[4,3,4,2],A:[2,1,0,0],Am:[2,0,0,0],'A#':[3,2,1,1],'A#m':[3,1,1,1],B:[4,3,2,2],Bm:[4,2,2,2]
+ }
 };
-let semitones=0,fontSize=0;
-function parseChord(c){const m=c.match(/^([A-G])(#?)(.*)$/);return m?{root:m[1]+m[2],suffix:m[3]}:null}
-function transpose(c,n){const p=parseChord(c);if(!p)return c;let i=NOTES_SHARP.indexOf(p.root);return NOTES_SHARP[(i+n+120)%12]+p.suffix}
-function label(c){const p=parseChord(c);return p?ES[p.root]+(p.suffix==='m'?'m':''):c}
-function updateChords(){document.querySelectorAll('[data-chord]').forEach(el=>{const c=transpose(el.dataset.chord,semitones);el.querySelector('.chord').textContent=label(c)});const root=transpose('C',semitones);document.getElementById('toneLabel').textContent=ES[root]+' / '+root;renderGrid()}
-function diagram(chord,large=false){const base=CHORDS[chord]||CHORDS[Object.keys(CHORDS).find(k=>transpose(k,semitones)===chord)]||{frets:[0,0,0,0],fingers:[0,0,0,0]};const w=large?150:70,h=large?190:92;let s=`<svg viewBox="0 0 100 130" role="img" aria-label="Diagrama de ${label(chord)}">`;
- s+=`<g stroke="currentColor" fill="none" stroke-linecap="round"><path stroke-width="4" d="M20 25H80"/>`;
- for(let y=25;y<=105;y+=20)s+=`<path stroke-width="1.6" d="M20 ${y}H80"/>`;for(let x=20;x<=80;x+=20)s+=`<path stroke-width="1.6" d="M${x} 25V105"/>`;
- s+=`</g>`;base.frets.forEach((f,i)=>{const x=20+i*20;if(f===0)s+=`<circle cx="${x}" cy="14" r="4" fill="none" stroke="currentColor" stroke-width="2"/>`;else{const y=25+(Math.min(f,4)-.5)*20;s+=`<circle cx="${x}" cy="${y}" r="7" fill="currentColor"/><text x="${x}" y="${y+3.5}" text-anchor="middle" font-size="9" fill="white" font-weight="700">${base.fingers[i]||''}</text>`}});return s+'</svg>'}
-function renderGrid(){const grid=document.getElementById('chordGrid');grid.innerHTML='';Object.keys(CHORDS).forEach(original=>{const c=transpose(original,semitones);const card=document.createElement('button');card.className='chord-card';card.innerHTML=diagram(original)+`<span><h3>${label(c)} <small>(${c})</small></h3><p>Ukelele</p></span>`;card.onclick=()=>openChord(original,c);grid.append(card)})}
-function openChord(original,current){document.getElementById('drawerTitle').textContent=label(current)+' · '+current;document.getElementById('drawerName').textContent=label(current)+(current.endsWith('m')?' menor':' mayor');document.getElementById('drawerDiagram').innerHTML=diagram(original,true);document.getElementById('drawer').classList.add('open')}
-document.querySelectorAll('.chord').forEach(ch=>ch.onclick=e=>{e.stopPropagation();const el=ch.closest('[data-chord]');openChord(el.dataset.chord,transpose(el.dataset.chord,semitones))});
-document.getElementById('toneUp').onclick=()=>{semitones++;updateChords()};document.getElementById('toneDown').onclick=()=>{semitones--;updateChords()};document.getElementById('toneReset').onclick=()=>{semitones=0;updateChords()};
-document.getElementById('fontUp').onclick=()=>{fontSize=Math.min(5,fontSize+1);document.documentElement.style.setProperty('--song-font',`calc(clamp(1.35rem,6vw,2rem) + ${fontSize*.12}rem)`)};document.getElementById('fontDown').onclick=()=>{fontSize=Math.max(-3,fontSize-1);document.documentElement.style.setProperty('--song-font',`calc(clamp(1.35rem,6vw,2rem) + ${fontSize*.12}rem)`)};
-document.getElementById('toggleChords').onclick=function(){const hidden=document.body.classList.toggle('hide-chords');this.setAttribute('aria-pressed',String(!hidden))};
-document.querySelectorAll('.nav-btn').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');['lyricsPanel','chordsPanel','videoPanel'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==btn.dataset.panel));window.scrollTo({top:0,behavior:'smooth'})});
-document.getElementById('closeDrawer').onclick=()=>document.getElementById('drawer').classList.remove('open');document.getElementById('drawer').onclick=e=>{if(e.target.id==='drawer')e.currentTarget.classList.remove('open')};
-document.getElementById('shareBtn').onclick=async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else await navigator.clipboard.writeText(location.href)}catch{}};
-renderGrid();updateChords();
+let semitones=0, instrument='guitar', diagramInstrument='guitar', lyricStep=0, chordStep=0;
+function parseChord(c){const m=c.match(/^([A-G])(#?)(m?)$/);return m?{root:m[1]+m[2],minor:m[3]}:null}
+function transpose(c,n){const p=parseChord(c);if(!p)return c;const i=NOTES.indexOf(p.root);return NOTES[(i+n+120)%12]+p.minor}
+function spanish(c){const p=parseChord(c);return p?ES[p.root]+(p.minor?'m':''):c}
+function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const tag=document.createElement('span');tag.className='chord-tag';tag.textContent=spanish(transpose(item.c,semitones));span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
+ const tonic=transpose('D',semitones);document.getElementById('toneStatus').textContent=`Tono: ${spanish(tonic)} / ${tonic}`;document.getElementById('diagramToneStatus').textContent=`Tono: ${spanish(tonic)} / ${tonic}`;
+}
+function diagramSvg(chord,type){const frets=SHAPES[type][chord]||[];const strings=type==='guitar'?6:4,w=100,h=132,left=16,right=84,top=30,bottom=110;const xs=Array.from({length:strings},(_,i)=>left+i*(right-left)/(strings-1));let min=Math.min(...frets.filter(f=>f>0));let max=Math.max(...frets.filter(f=>f>0));let start=max>4?Math.max(1,min):1;let s=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Diagrama de ${spanish(chord)} para ${type==='guitar'?'guitarra':'ukelele'}"><g stroke="currentColor" fill="none" stroke-linecap="round">`;
+ for(let y=top;y<=bottom;y+=20)s+=`<path stroke-width="${y===top&&start===1?4:1.4}" d="M${left} ${y}H${right}"/>`;xs.forEach(x=>s+=`<path stroke-width="1.4" d="M${x} ${top}V${bottom}"/>`);s+='</g>';
+ if(start>1)s+=`<text x="5" y="47" font-size="10" fill="currentColor">${start}</text>`;
+ frets.forEach((f,i)=>{const x=xs[i];if(f===0)s+=`<circle cx="${x}" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="2"/>`;else if(f<0)s+=`<path d="M${x-4} 12l8 8m0-8-8 8" stroke="currentColor" stroke-width="2"/>`;else{const shown=f-start+1;const y=top+(shown-.5)*20;s+=`<circle cx="${x}" cy="${y}" r="6.5" fill="currentColor"/>`}});return s+'</svg>'}
+function renderGrid(){const grid=document.getElementById('chordGrid');grid.innerHTML='';baseChords.forEach(base=>{const c=transpose(base,semitones);const card=document.createElement('div');card.className='chord-card';card.innerHTML=diagramSvg(c,diagramInstrument)+`<div><h3>${spanish(c)} <small>(${c})</small></h3><p>${diagramInstrument==='guitar'?'Guitarra':'Ukelele'}</p></div>`;grid.append(card)})}
+function setInstrument(type){instrument=type;document.querySelectorAll('.instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));document.getElementById('instrumentNote').textContent=`Acordes mostrados para ${type==='guitar'?'guitarra':'ukelele'}. La posición de los acordes en la letra no cambia al seleccionar otro instrumento.`}
+function setDiagramInstrument(type){diagramInstrument=type;document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));renderGrid()}
+function setPanel(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>setPanel(b.dataset.panel)));
+document.querySelectorAll('.instrument-btn').forEach(b=>b.addEventListener('click',()=>setInstrument(b.dataset.instrument)));
+document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.addEventListener('click',()=>setDiagramInstrument(b.dataset.instrument)));
+document.getElementById('toneUp').onclick=()=>{semitones++;renderChordLyrics();renderGrid()};
+document.getElementById('toneDown').onclick=()=>{semitones--;renderChordLyrics();renderGrid()};
+document.getElementById('toneReset').onclick=()=>{semitones=0;renderChordLyrics();renderGrid()};
+function updateSizes(){document.documentElement.style.setProperty('--lyric-size',`calc(clamp(1.34rem,5.6vw,1.7rem) + ${lyricStep*.12}rem)`);document.documentElement.style.setProperty('--chord-size',`calc(clamp(1.22rem,5.2vw,1.58rem) + ${chordStep*.11}rem)`)}
+document.getElementById('lyricsUp').onclick=()=>{lyricStep=Math.min(5,lyricStep+1);updateSizes()};document.getElementById('lyricsDown').onclick=()=>{lyricStep=Math.max(-3,lyricStep-1);updateSizes()};document.getElementById('lyricsReset').onclick=()=>{lyricStep=0;updateSizes()};
+document.getElementById('chordsUp').onclick=()=>{chordStep=Math.min(5,chordStep+1);updateSizes()};document.getElementById('chordsDown').onclick=()=>{chordStep=Math.max(-3,chordStep-1);updateSizes()};
+document.getElementById('shareBtn').onclick=async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else await navigator.clipboard.writeText(location.href)}catch(e){}};
+renderChordLyrics();renderGrid();updateSizes();
 </script>
 </body>
 </html>
