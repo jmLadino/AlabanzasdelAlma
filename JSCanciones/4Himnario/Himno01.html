@@ -38,7 +38,12 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 .tone-status{flex:0 0 auto;display:inline-flex;align-items:center;min-height:44px;padding:0 13px;border-radius:13px;background:var(--green-100);color:var(--green-900);font-weight:850;white-space:nowrap}
 .segment{display:inline-grid;grid-auto-flow:column;grid-auto-columns:1fr;flex:0 0 auto;padding:4px;border-radius:14px;background:var(--green-100)}
 .segment button{min-height:36px;border:0;border-radius:10px;padding:0 13px;background:transparent;color:var(--green-900);font-weight:800;cursor:pointer;white-space:nowrap}.segment button.active{background:#fff;box-shadow:0 2px 8px rgba(24,63,41,.12)}
-.reference{display:inline-block;margin:0 0 22px;color:var(--green-800);font-weight:850;text-decoration-thickness:2px;text-underline-offset:4px}
+.reference{display:inline-block;margin:0;color:var(--green-800);font-weight:850;text-decoration-thickness:2px;text-underline-offset:4px}
+.lyrics-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.lyrics-toolbar .controls{margin:0;padding:0;border:0;overflow:visible}
+.lyrics-toolbar .reference{flex:0 1 auto}
+.compact-controls{margin-bottom:22px}
+.segment-label{display:none}
 .lyrics .verse{margin-bottom:29px}.lyrics .verse:last-child{margin-bottom:0}.verse-number{margin:0 0 9px;font-size:1rem;font-weight:850;color:var(--green-900)}
 .plain-line{margin:.18em 0;font-size:var(--lyric-size);line-height:1.48;letter-spacing:-.012em}
 .chord-line{display:flex;flex-wrap:wrap;align-items:flex-end;gap:.14em .28em;margin:.08em 0;font-size:var(--chord-size);line-height:1.48;letter-spacing:-.015em}
@@ -56,6 +61,7 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 .nav-btn{min-width:0;border:0;border-radius:14px;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 2px;font-size:.68rem;font-weight:800;cursor:pointer}
 .nav-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.nav-btn.active{background:var(--green-100);color:var(--green-800)}
 @media(max-width:560px){main{padding:0}.song-card{border:0;border-radius:0;box-shadow:none}.hero{padding-top:17px}.panel{padding:17px 14px 27px}.panel-head{margin-bottom:14px}.controls{margin-inline:-14px;padding-inline:14px}.plain-line{line-height:1.5}.chord-line{gap:.1em .21em}.chord-grid{grid-template-columns:1fr 1fr}.chord-card{grid-template-columns:1fr;text-align:center;padding:11px 8px}.chord-card svg{margin:auto}}
+@media(max-width:430px){.lyrics-toolbar{align-items:center}.lyrics-toolbar .controls{gap:6px}.lyrics-toolbar .control-btn{min-width:44px;padding-inline:10px}}
 @media(max-width:390px){:root{--lyric-size:1.34rem;--chord-size:1.25rem}.panel{padding-inline:12px}.controls{margin-inline:-12px;padding-inline:12px}.control-btn{padding-inline:11px}.segment button{padding-inline:10px}.bottom-inner{padding-inline:4px}.nav-btn{font-size:.63rem}.nav-btn svg{width:21px;height:21px}}
 @media(min-width:760px){main{padding-top:24px}.song-card{border-radius:26px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
@@ -69,12 +75,13 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 <button class="icon-btn" id="shareBtn" aria-label="Compartir"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg></button>
 </div></header>
 <main><article class="song-card">
-<section class="hero"><span class="badge">Himno 1</span><h2>Cantad alegres al Señor</h2><p>Letra, acordes, diagramas y video</p></section>
+<section class="hero"><span class="badge">Himno 1</span><h2>Cantad alegres al Señor</h2></section>
 
 <section class="panel" id="lyricsPanel">
-<div class="panel-head"><div><h2>Letra</h2><p>Texto limpio para lectura y canto.</p></div></div>
-<div class="controls" aria-label="Tamaño de la letra"><button class="control-btn" id="lyricsDown">A−</button><button class="control-btn" id="lyricsReset">A</button><button class="control-btn primary" id="lyricsUp">A+</button></div>
+<div class="lyrics-toolbar">
 <a class="reference" href="https://www.bible.com/es/bible/149/PSA.100.1-5.RVR1960" target="_blank" rel="noopener noreferrer">Salmo 100:1-5</a>
+<div class="controls" aria-label="Tamaño de la letra"><button class="control-btn" id="lyricsDown" aria-label="Disminuir tamaño de letra">A−</button><button class="control-btn" id="lyricsReset" aria-label="Restablecer tamaño de letra">A</button><button class="control-btn primary" id="lyricsUp" aria-label="Aumentar tamaño de letra">A+</button></div>
+</div>
 <div class="lyrics">
 <div class="verse"><p class="verse-number">1.</p><p class="plain-line">Cantad alegres al Señor,</p><p class="plain-line">mortales todos por doquier,</p><p class="plain-line">servidle siempre con fervor,</p><p class="plain-line">obedecedle con placer.</p></div>
 <div class="verse"><p class="verse-number">2.</p><p class="plain-line">Con gratitud canción alzad</p><p class="plain-line">al Hacedor que el ser os dio;</p><p class="plain-line">al Dios excelso venerad,</p><p class="plain-line">que como Padre nos amó.</p></div>
@@ -83,20 +90,19 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 </section>
 
 <section class="panel hidden" id="chordsPanel">
-<div class="panel-head"><div><h2>Letra con acordes</h2><p>Las sílabas subrayadas indican cuándo ejecutar cada acorde.</p></div></div>
-<div class="controls" aria-label="Controles de acordes">
-<button class="control-btn primary" id="toneDown">T−</button><button class="control-btn" id="toneReset">T0</button><button class="control-btn primary" id="toneUp">T+</button><span class="tone-status" id="toneStatus">Tono: Re / D</span>
+<div class="controls compact-controls" aria-label="Controles de acordes">
+<button class="control-btn primary" id="toneDown" aria-label="Bajar tono">T−</button><button class="control-btn" id="toneReset" aria-label="Restablecer tono">T0</button><button class="control-btn primary" id="toneUp" aria-label="Subir tono">T+</button>
+<div class="segment" aria-label="Tipo de cifrado"><button class="notation-btn active" data-notation="latin">Latino</button><button class="notation-btn" data-notation="english">Inglés</button></div>
 <div class="segment" aria-label="Instrumento"><button class="instrument-btn active" data-instrument="guitar">Guitarra</button><button class="instrument-btn" data-instrument="ukulele">Ukelele</button></div>
-<button class="control-btn" id="chordsDown">A−</button><button class="control-btn primary" id="chordsUp">A+</button>
+<button class="control-btn" id="chordsDown" aria-label="Disminuir tamaño de acordes">A−</button><button class="control-btn primary" id="chordsUp" aria-label="Aumentar tamaño de acordes">A+</button>
 </div>
-<p class="instrument-note" id="instrumentNote">Acordes mostrados para guitarra. La posición de los acordes en la letra no cambia al seleccionar otro instrumento.</p>
 <a class="reference" href="https://www.bible.com/es/bible/149/PSA.100.1-5.RVR1960" target="_blank" rel="noopener noreferrer">Salmo 100:1-5</a>
 <div id="chordLyrics"></div>
 </section>
 
 <section class="panel hidden" id="diagramsPanel">
 <div class="panel-head"><div><h2>Diagramas de acordes</h2><p>Posiciones sugeridas para los acordes usados en el himno.</p></div></div>
-<div class="controls"><div class="segment" aria-label="Instrumento para diagramas"><button class="diagram-instrument-btn active" data-instrument="guitar">Guitarra</button><button class="diagram-instrument-btn" data-instrument="ukulele">Ukelele</button></div><span class="tone-status" id="diagramToneStatus">Tono: Re / D</span></div>
+<div class="controls"><div class="segment" aria-label="Instrumento para diagramas"><button class="diagram-instrument-btn active" data-instrument="guitar">Guitarra</button><button class="diagram-instrument-btn" data-instrument="ukulele">Ukelele</button></div><div class="segment" aria-label="Tipo de cifrado para diagramas"><button class="notation-btn active" data-notation="latin">Latino</button><button class="notation-btn" data-notation="english">Inglés</button></div></div>
 <div class="chord-grid" id="chordGrid"></div>
 </section>
 
@@ -145,24 +151,26 @@ const SHAPES={
   C:[0,0,0,3],Cm:[0,3,3,3],'C#':[1,1,1,4],'C#m':[1,1,0,4],D:[2,2,2,0],Dm:[2,2,1,0],'D#':[0,3,3,1],'D#m':[3,3,2,1],E:[1,4,0,2],Em:[0,4,3,2],F:[2,0,1,0],Fm:[1,0,1,3],'F#':[3,1,2,1],'F#m':[2,1,2,0],G:[0,2,3,2],Gm:[0,2,3,1],'G#':[5,3,4,3],'G#m':[4,3,4,2],A:[2,1,0,0],Am:[2,0,0,0],'A#':[3,2,1,1],'A#m':[3,1,1,1],B:[4,3,2,2],Bm:[4,2,2,2]
  }
 };
-let semitones=0, instrument='guitar', diagramInstrument='guitar', lyricStep=0, chordStep=0;
+let semitones=0, instrument='guitar', diagramInstrument='guitar', notation='latin', lyricStep=0, chordStep=0;
 function parseChord(c){const m=c.match(/^([A-G])(#?)(m?)$/);return m?{root:m[1]+m[2],minor:m[3]}:null}
 function transpose(c,n){const p=parseChord(c);if(!p)return c;const i=NOTES.indexOf(p.root);return NOTES[(i+n+120)%12]+p.minor}
 function spanish(c){const p=parseChord(c);return p?ES[p.root]+(p.minor?'m':''):c}
-function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const tag=document.createElement('span');tag.className='chord-tag';tag.textContent=spanish(transpose(item.c,semitones));span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
- const tonic=transpose('D',semitones);document.getElementById('toneStatus').textContent=`Tono: ${spanish(tonic)} / ${tonic}`;document.getElementById('diagramToneStatus').textContent=`Tono: ${spanish(tonic)} / ${tonic}`;
+function chordLabel(c){return notation==='latin'?spanish(c):c}
+function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const tag=document.createElement('span');tag.className='chord-tag';tag.textContent=chordLabel(transpose(item.c,semitones));span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
 }
-function diagramSvg(chord,type){const frets=SHAPES[type][chord]||[];const strings=type==='guitar'?6:4,w=100,h=132,left=16,right=84,top=30,bottom=110;const xs=Array.from({length:strings},(_,i)=>left+i*(right-left)/(strings-1));let min=Math.min(...frets.filter(f=>f>0));let max=Math.max(...frets.filter(f=>f>0));let start=max>4?Math.max(1,min):1;let s=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Diagrama de ${spanish(chord)} para ${type==='guitar'?'guitarra':'ukelele'}"><g stroke="currentColor" fill="none" stroke-linecap="round">`;
+function diagramSvg(chord,type){const frets=SHAPES[type][chord]||[];const strings=type==='guitar'?6:4,w=100,h=132,left=16,right=84,top=30,bottom=110;const xs=Array.from({length:strings},(_,i)=>left+i*(right-left)/(strings-1));let min=Math.min(...frets.filter(f=>f>0));let max=Math.max(...frets.filter(f=>f>0));let start=max>4?Math.max(1,min):1;let s=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Diagrama de ${chordLabel(chord)} para ${type==='guitar'?'guitarra':'ukelele'}"><g stroke="currentColor" fill="none" stroke-linecap="round">`;
  for(let y=top;y<=bottom;y+=20)s+=`<path stroke-width="${y===top&&start===1?4:1.4}" d="M${left} ${y}H${right}"/>`;xs.forEach(x=>s+=`<path stroke-width="1.4" d="M${x} ${top}V${bottom}"/>`);s+='</g>';
  if(start>1)s+=`<text x="5" y="47" font-size="10" fill="currentColor">${start}</text>`;
  frets.forEach((f,i)=>{const x=xs[i];if(f===0)s+=`<circle cx="${x}" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="2"/>`;else if(f<0)s+=`<path d="M${x-4} 12l8 8m0-8-8 8" stroke="currentColor" stroke-width="2"/>`;else{const shown=f-start+1;const y=top+(shown-.5)*20;s+=`<circle cx="${x}" cy="${y}" r="6.5" fill="currentColor"/>`}});return s+'</svg>'}
-function renderGrid(){const grid=document.getElementById('chordGrid');grid.innerHTML='';baseChords.forEach(base=>{const c=transpose(base,semitones);const card=document.createElement('div');card.className='chord-card';card.innerHTML=diagramSvg(c,diagramInstrument)+`<div><h3>${spanish(c)} <small>(${c})</small></h3><p>${diagramInstrument==='guitar'?'Guitarra':'Ukelele'}</p></div>`;grid.append(card)})}
-function setInstrument(type){instrument=type;document.querySelectorAll('.instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));document.getElementById('instrumentNote').textContent=`Acordes mostrados para ${type==='guitar'?'guitarra':'ukelele'}. La posición de los acordes en la letra no cambia al seleccionar otro instrumento.`}
+function renderGrid(){const grid=document.getElementById('chordGrid');grid.innerHTML='';baseChords.forEach(base=>{const c=transpose(base,semitones);const card=document.createElement('div');card.className='chord-card';card.innerHTML=diagramSvg(c,diagramInstrument)+`<div><h3>${chordLabel(c)}${notation==='latin'?` <small>(${c})</small>`:''}</h3><p>${diagramInstrument==='guitar'?'Guitarra':'Ukelele'}</p></div>`;grid.append(card)})}
+function setInstrument(type){instrument=type;document.querySelectorAll('.instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));diagramInstrument=type;document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));renderGrid()}
 function setDiagramInstrument(type){diagramInstrument=type;document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));renderGrid()}
+function setNotation(type){notation=type;document.querySelectorAll('.notation-btn').forEach(b=>b.classList.toggle('active',b.dataset.notation===type));renderChordLyrics();renderGrid()}
 function setPanel(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>setPanel(b.dataset.panel)));
 document.querySelectorAll('.instrument-btn').forEach(b=>b.addEventListener('click',()=>setInstrument(b.dataset.instrument)));
 document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.addEventListener('click',()=>setDiagramInstrument(b.dataset.instrument)));
+document.querySelectorAll('.notation-btn').forEach(b=>b.addEventListener('click',()=>setNotation(b.dataset.notation)));
 document.getElementById('toneUp').onclick=()=>{semitones++;renderChordLyrics();renderGrid()};
 document.getElementById('toneDown').onclick=()=>{semitones--;renderChordLyrics();renderGrid()};
 document.getElementById('toneReset').onclick=()=>{semitones=0;renderChordLyrics();renderGrid()};
