@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#2f6a49">
-<title>1. Cantad alegres al Señor</title>
+<title>1. Cantad alegres al Señor — acordes con cejillas</title>
 <style>
 :root{
   color-scheme:light;
@@ -54,6 +54,7 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 .chord-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
 .chord-card{border:1px solid var(--border);border-radius:18px;background:var(--surface-2);padding:13px;display:grid;grid-template-columns:76px 1fr;align-items:center;gap:11px;text-align:left;color:var(--text)}
 .chord-card svg{width:76px;height:98px}.chord-card h3{margin:0 0 3px;font-size:1rem}.chord-card p{margin:0;color:var(--muted);font-size:.79rem}
+.data-credit{margin:18px 0 0;color:var(--muted);font-size:.72rem;text-align:center}
 .video-frame{position:relative;overflow:hidden;width:100%;aspect-ratio:16/9;border-radius:18px;background:#0f1712;box-shadow:0 9px 28px rgba(20,45,29,.13)}
 .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:60;padding-bottom:env(safe-area-inset-bottom);background:rgba(255,255,255,.98);border-top:1px solid var(--border);box-shadow:0 -6px 22px rgba(20,50,30,.1)}
@@ -161,12 +162,64 @@ const verses=[
   [{t:'él',c:'F#m'},{t:'los'},{t:'ampara',c:'G'},{t:'con',c:'A'},{t:'su'},{t:'amor.',c:'D'}]
  ]}
 ];
-const SHAPES={
+/*
+  Formato de datos inspirado en chords-db (MIT):
+  https://github.com/tombatossals/chords-db
+  Esta prueba integra una selección local y autocontenida de posiciones preferidas.
+  Cada posición declara trastes, dedos y cejillas para que el SVG sea musicalmente descriptivo.
+*/
+const CHORD_DB={
  guitar:{
-  C:[-1,3,2,0,1,0],Cm:[-1,3,5,5,4,3],'C#':[-1,4,6,6,6,4],'C#m':[-1,4,6,6,5,4],D:[-1,-1,0,2,3,2],Dm:[-1,-1,0,2,3,1],'D#':[-1,-1,1,3,4,3],'D#m':[-1,-1,1,3,4,2],E:[0,2,2,1,0,0],Em:[0,2,2,0,0,0],F:[1,3,3,2,1,1],Fm:[1,3,3,1,1,1],'F#':[2,4,4,3,2,2],'F#m':[2,4,4,2,2,2],G:[3,2,0,0,0,3],Gm:[3,5,5,3,3,3],'G#':[4,6,6,5,4,4],'G#m':[4,6,6,4,4,4],A:[-1,0,2,2,2,0],Am:[-1,0,2,2,1,0],'A#':[-1,1,3,3,3,1],'A#m':[-1,1,3,3,2,1],B:[-1,2,4,4,4,2],Bm:[-1,2,4,4,3,2]
+  C:{frets:[-1,3,2,0,1,0],fingers:[0,3,2,0,1,0],barres:[]},
+  Cm:{frets:[-1,3,5,5,4,3],fingers:[0,1,3,4,2,1],barres:[{fret:3,from:1,to:5,finger:1}]},
+  'C#':{frets:[-1,4,6,6,6,4],fingers:[0,1,3,3,3,1],barres:[{fret:4,from:1,to:5,finger:1},{fret:6,from:2,to:4,finger:3}]},
+  'C#m':{frets:[-1,4,6,6,5,4],fingers:[0,1,3,4,2,1],barres:[{fret:4,from:1,to:5,finger:1}]},
+  D:{frets:[-1,-1,0,2,3,2],fingers:[0,0,0,1,3,2],barres:[]},
+  Dm:{frets:[-1,-1,0,2,3,1],fingers:[0,0,0,2,3,1],barres:[]},
+  'D#':{frets:[-1,-1,1,3,4,3],fingers:[0,0,1,2,4,3],barres:[]},
+  'D#m':{frets:[-1,-1,1,3,4,2],fingers:[0,0,1,3,4,2],barres:[]},
+  E:{frets:[0,2,2,1,0,0],fingers:[0,2,3,1,0,0],barres:[]},
+  Em:{frets:[0,2,2,0,0,0],fingers:[0,2,3,0,0,0],barres:[]},
+  F:{frets:[1,3,3,2,1,1],fingers:[1,3,4,2,1,1],barres:[{fret:1,from:0,to:5,finger:1}]},
+  Fm:{frets:[1,3,3,1,1,1],fingers:[1,3,4,1,1,1],barres:[{fret:1,from:0,to:5,finger:1}]},
+  'F#':{frets:[2,4,4,3,2,2],fingers:[1,3,4,2,1,1],barres:[{fret:2,from:0,to:5,finger:1}]},
+  'F#m':{frets:[2,4,4,2,2,2],fingers:[1,3,4,1,1,1],barres:[{fret:2,from:0,to:5,finger:1}]},
+  G:{frets:[3,2,0,0,0,3],fingers:[2,1,0,0,0,3],barres:[]},
+  Gm:{frets:[3,5,5,3,3,3],fingers:[1,3,4,1,1,1],barres:[{fret:3,from:0,to:5,finger:1}]},
+  'G#':{frets:[4,6,6,5,4,4],fingers:[1,3,4,2,1,1],barres:[{fret:4,from:0,to:5,finger:1}]},
+  'G#m':{frets:[4,6,6,4,4,4],fingers:[1,3,4,1,1,1],barres:[{fret:4,from:0,to:5,finger:1}]},
+  A:{frets:[-1,0,2,2,2,0],fingers:[0,0,1,2,3,0],barres:[]},
+  Am:{frets:[-1,0,2,2,1,0],fingers:[0,0,2,3,1,0],barres:[]},
+  'A#':{frets:[-1,1,3,3,3,1],fingers:[0,1,3,3,3,1],barres:[{fret:1,from:1,to:5,finger:1},{fret:3,from:2,to:4,finger:3}]},
+  'A#m':{frets:[-1,1,3,3,2,1],fingers:[0,1,3,4,2,1],barres:[{fret:1,from:1,to:5,finger:1}]},
+  B:{frets:[-1,2,4,4,4,2],fingers:[0,1,3,3,3,1],barres:[{fret:2,from:1,to:5,finger:1},{fret:4,from:2,to:4,finger:3}]},
+  Bm:{frets:[-1,2,4,4,3,2],fingers:[0,1,3,4,2,1],barres:[{fret:2,from:1,to:5,finger:1}]}
  },
  ukulele:{
-  C:[0,0,0,3],Cm:[0,3,3,3],'C#':[1,1,1,4],'C#m':[1,1,0,4],D:[2,2,2,0],Dm:[2,2,1,0],'D#':[0,3,3,1],'D#m':[3,3,2,1],E:[1,4,0,2],Em:[0,4,3,2],F:[2,0,1,0],Fm:[1,0,1,3],'F#':[3,1,2,1],'F#m':[2,1,2,0],G:[0,2,3,2],Gm:[0,2,3,1],'G#':[5,3,4,3],'G#m':[4,3,4,2],A:[2,1,0,0],Am:[2,0,0,0],'A#':[3,2,1,1],'A#m':[3,1,1,1],B:[4,3,2,2],Bm:[4,2,2,2]
+  C:{frets:[0,0,0,3],fingers:[0,0,0,3],barres:[]},
+  Cm:{frets:[0,3,3,3],fingers:[0,1,1,1],barres:[{fret:3,from:1,to:3,finger:1}]},
+  'C#':{frets:[1,1,1,4],fingers:[1,1,1,4],barres:[{fret:1,from:0,to:2,finger:1}]},
+  'C#m':{frets:[1,1,0,4],fingers:[1,1,0,4],barres:[{fret:1,from:0,to:1,finger:1}]},
+  D:{frets:[2,2,2,0],fingers:[1,2,3,0],barres:[]},
+  Dm:{frets:[2,2,1,0],fingers:[2,3,1,0],barres:[]},
+  'D#':{frets:[0,3,3,1],fingers:[0,2,3,1],barres:[]},
+  'D#m':{frets:[3,3,2,1],fingers:[3,4,2,1],barres:[]},
+  E:{frets:[1,4,0,2],fingers:[1,4,0,2],barres:[]},
+  Em:{frets:[0,4,3,2],fingers:[0,3,2,1],barres:[]},
+  F:{frets:[2,0,1,0],fingers:[2,0,1,0],barres:[]},
+  Fm:{frets:[1,0,1,3],fingers:[1,0,2,4],barres:[]},
+  'F#':{frets:[3,1,2,1],fingers:[3,1,2,1],barres:[{fret:1,from:1,to:3,finger:1}]},
+  'F#m':{frets:[2,1,2,0],fingers:[2,1,3,0],barres:[]},
+  G:{frets:[0,2,3,2],fingers:[0,1,3,2],barres:[]},
+  Gm:{frets:[0,2,3,1],fingers:[0,2,3,1],barres:[]},
+  'G#':{frets:[5,3,4,3],fingers:[3,1,2,1],barres:[{fret:3,from:1,to:3,finger:1}]},
+  'G#m':{frets:[4,3,4,2],fingers:[3,2,4,1],barres:[]},
+  A:{frets:[2,1,0,0],fingers:[2,1,0,0],barres:[]},
+  Am:{frets:[2,0,0,0],fingers:[2,0,0,0],barres:[]},
+  'A#':{frets:[3,2,1,1],fingers:[3,2,1,1],barres:[{fret:1,from:2,to:3,finger:1}]},
+  'A#m':{frets:[3,1,1,1],fingers:[3,1,1,1],barres:[{fret:1,from:1,to:3,finger:1}]},
+  B:{frets:[4,3,2,2],fingers:[3,2,1,1],barres:[{fret:2,from:2,to:3,finger:1}]},
+  Bm:{frets:[4,2,2,2],fingers:[3,1,1,1],barres:[{fret:2,from:1,to:3,finger:1}]}
  }
 };
 let semitones=0, instrument='guitar', diagramInstrument='guitar', notation='latin', lyricStep=0, chordStep=0;
@@ -177,10 +230,25 @@ function spanish(c){const p=parseChord(c);return p?ES[p.root]+(p.minor?'m':''):c
 function chordLabel(c){return notation==='latin'?spanish(c):c}
 function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const currentChord=transpose(item.c,semitones);const tag=document.createElement('button');tag.type='button';tag.className='chord-tag';tag.textContent=chordLabel(currentChord);tag.dataset.baseChord=item.c;tag.setAttribute('aria-label',`Ver diagrama de ${chordLabel(currentChord)}`);if(isTouchInput){tag.addEventListener('pointerdown',showChordPopoverOnTouch)}else{tag.addEventListener('mouseenter',showChordPopover);tag.addEventListener('mouseleave',schedulePopoverClose);tag.addEventListener('focus',showChordPopover);tag.addEventListener('blur',schedulePopoverClose);tag.addEventListener('click',toggleChordPopover)}span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
 }
-function diagramSvg(chord,type){const frets=SHAPES[type][chord]||[];const strings=type==='guitar'?6:4,w=100,h=132,left=16,right=84,top=30,bottom=110;const xs=Array.from({length:strings},(_,i)=>left+i*(right-left)/(strings-1));let min=Math.min(...frets.filter(f=>f>0));let max=Math.max(...frets.filter(f=>f>0));let start=max>4?Math.max(1,min):1;let s=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Diagrama de ${chordLabel(chord)} para ${type==='guitar'?'guitarra':'ukelele'}"><g stroke="currentColor" fill="none" stroke-linecap="round">`;
- for(let y=top;y<=bottom;y+=20)s+=`<path stroke-width="${y===top&&start===1?4:1.4}" d="M${left} ${y}H${right}"/>`;xs.forEach(x=>s+=`<path stroke-width="1.4" d="M${x} ${top}V${bottom}"/>`);s+='</g>';
- if(start>1)s+=`<text x="5" y="47" font-size="10" fill="currentColor">${start}</text>`;
- frets.forEach((f,i)=>{const x=xs[i];if(f===0)s+=`<circle cx="${x}" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="2"/>`;else if(f<0)s+=`<path d="M${x-4} 12l8 8m0-8-8 8" stroke="currentColor" stroke-width="2"/>`;else{const shown=f-start+1;const y=top+(shown-.5)*20;s+=`<circle cx="${x}" cy="${y}" r="6.5" fill="currentColor"/>`}});return s+'</svg>'}
+function diagramSvg(chord,type){
+ const shape=CHORD_DB[type]?.[chord];
+ const strings=type==='guitar'?6:4,w=120,h=158,left=22,right=98,top=38,fretGap=23,bottom=top+fretGap*4;
+ if(!shape)return `<svg viewBox="0 0 ${w} ${h}" role="img"><text x="60" y="78" text-anchor="middle" font-size="12" fill="currentColor">Sin diagrama</text></svg>`;
+ const frets=shape.frets,fingers=shape.fingers||[],barres=shape.barres||[];
+ const xs=Array.from({length:strings},(_,i)=>left+i*(right-left)/(strings-1));
+ const positive=frets.filter(f=>f>0),min=Math.min(...positive),max=Math.max(...positive);
+ const start=max>4?Math.max(1,min):1;
+ const barreAt=(stringIndex,fret)=>barres.some(b=>b.fret===fret&&stringIndex>=Math.min(b.from,b.to)&&stringIndex<=Math.max(b.from,b.to));
+ let svg=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Diagrama de ${chordLabel(chord)} para ${type==='guitar'?'guitarra':'ukelele'}">`;
+ svg+=`<g stroke="currentColor" fill="none" stroke-linecap="round">`;
+ for(let row=0;row<=4;row++){const y=top+row*fretGap;svg+=`<path stroke-width="${row===0&&start===1?5:1.6}" d="M${left} ${y}H${right}"/>`;}
+ xs.forEach(x=>svg+=`<path stroke-width="1.6" d="M${x} ${top}V${bottom}"/>`);svg+='</g>';
+ if(start>1)svg+=`<text x="8" y="${top+fretGap*.72}" font-size="12" font-weight="700" fill="currentColor">${start}</text>`;
+ frets.forEach((f,i)=>{const x=xs[i];if(f===0)svg+=`<circle cx="${x}" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/>`;else if(f<0)svg+=`<path d="M${x-5} 15l10 10m0-10-10 10" stroke="currentColor" stroke-width="2.4"/>`;});
+ barres.forEach(b=>{const shown=b.fret-start+1;if(shown<1||shown>4)return;const y=top+(shown-.5)*fretGap,x1=xs[Math.min(b.from,b.to)],x2=xs[Math.max(b.from,b.to)];svg+=`<line x1="${x1}" y1="${y}" x2="${x2}" y2="${y}" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>`;if(b.finger)svg+=`<text x="${(x1+x2)/2}" y="${y+4}" text-anchor="middle" font-size="10" font-weight="900" fill="#fff">${b.finger}</text>`;});
+ frets.forEach((f,i)=>{if(f<=0||barreAt(i,f))return;const shown=f-start+1;if(shown<1||shown>4)return;const x=xs[i],y=top+(shown-.5)*fretGap;svg+=`<circle cx="${x}" cy="${y}" r="8" fill="currentColor"/>`;if(fingers[i])svg+=`<text x="${x}" y="${y+3.5}" text-anchor="middle" font-size="9.5" font-weight="900" fill="#fff">${fingers[i]}</text>`;});
+ svg+='</svg>';return svg;
+}
 
 const chordPopover=document.getElementById('chordPopover');
 const popoverChord=document.getElementById('popoverChord');
