@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#2f6a49">
-<title>1. Cantad alegres al Señor — acordes con cejillas</title>
+<title>1. Cantad alegres al Señor — demostración del parser</title>
 <style>
 :root{
   color-scheme:light;
@@ -46,9 +46,9 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 .segment-label{display:none}
 .lyrics .verse{margin-bottom:29px}.lyrics .verse:last-child{margin-bottom:0}.verse-number{margin:0 0 9px;font-size:1rem;font-weight:850;color:var(--green-900)}
 .plain-line{margin:.18em 0;font-size:var(--lyric-size);line-height:1.48;letter-spacing:-.012em}
-.chord-line{display:flex;flex-wrap:wrap;align-items:flex-end;gap:.14em .28em;margin:.08em 0;font-size:var(--chord-size);line-height:1.48;letter-spacing:-.015em}
-.word{position:relative;display:inline-flex;align-items:flex-end;min-height:1.65em;padding-top:.68em;white-space:nowrap}.word.plain{padding-top:.68em}
-.word.marked{color:var(--green-900);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.chord-line{display:block;margin:.12em 0;font-size:var(--chord-size);line-height:1.62;letter-spacing:-.015em;white-space:pre-wrap;overflow-wrap:break-word}
+.word{position:relative;display:inline;min-height:1.65em}.word.plain{color:var(--text)}
+.word.marked{display:inline-block;padding-top:.72em;color:var(--green-900);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;white-space:pre}
 .chord-tag{position:absolute;top:0;left:0;padding:.09em .34em;border-radius:.36em;background:var(--green-600);color:#fff;font-size:.46em;font-weight:900;line-height:1.35;text-decoration:none;box-shadow:0 2px 5px rgba(20,55,32,.14)}
 .instrument-note{margin:-4px 0 18px;padding:10px 12px;border-radius:13px;background:var(--green-50);color:var(--muted);font-size:.88rem}
 .chord-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
@@ -144,22 +144,22 @@ const ES={C:'Do','C#':'Do#',D:'Re','D#':'Re#',E:'Mi',F:'Fa','F#':'Fa#',G:'Sol','
 const baseChords=['D','F#m','G','Bm','A'];
 const verses=[
  {n:'1.',lines:[
-  [{t:'Cantad',c:'D'},{t:'alegres',c:'F#m'},{t:'al',c:'D'},{t:'Señor,',c:'A'}],
-  [{t:'mortales',c:'D'},{t:'todos',c:'G'},{t:'por',c:'Bm'},{t:'doquier,'}],
-  [{t:'servidle',c:'D'},{t:'siempre'},{t:'con',c:'G'},{t:'fervor,',c:'A'}],
-  [{t:'obedecedle',c:'F#m'},{t:'con',c:'G'},{t:'placer.',c:'A'}]
+  [{t:'Can',c:'D'},{t:'tad a'},{t:'le',c:'F#m'},{t:'gres '},{t:'al',c:'D'},{t:' Se'},{t:'ñor',c:'A'},{t:','}],
+  [{t:'mor',c:'D'},{t:'tales '},{t:'to',c:'G'},{t:'dos '},{t:'por',c:'Em'},{t:' do'},{t:'quier',c:'A'},{t:';'}],
+  [{t:'ser',c:'D'},{t:'vidle siempre '},{t:'con',c:'G'},{t:' fer'},{t:'vor',c:'A'},{t:','}],
+  [{t:'o',c:'F#m'},{t:'bede'},{t:'ced',c:'G'},{t:'le '},{t:'con',c:'A'},{t:' pla'},{t:'cer',c:'D'},{t:'.'}]
  ]},
  {n:'2.',lines:[
-  [{t:'Con',c:'D'},{t:'gratitud'},{t:'canción',c:'F#m'},{t:'alzad',c:'D'}],
-  [{t:'al',c:'D'},{t:'Hacedor'},{t:'que'},{t:'el ser',c:'G'},{t:'os dio;',c:'Bm'}],
-  [{t:'al',c:'D'},{t:'Dios excelso'},{t:'venerad,',c:'G'}],
-  [{t:'que',c:'F#m'},{t:'como'},{t:'Padre',c:'G'},{t:'nos',c:'A'},{t:'amó.',c:'D'}]
+  [{t:'Con',c:'D'},{t:' grati'},{t:'tud',c:'F#m'},{t:' can'},{t:'ción',c:'D'},{t:' al'},{t:'zad',c:'A'}],
+  [{t:'al',c:'D'},{t:' Hace'},{t:'dor',c:'G'},{t:' que el '},{t:'ser',c:'Em'},{t:' os '},{t:'dio',c:'A'},{t:';'}],
+  [{t:'al',c:'D'},{t:' Dios excelso '},{t:'ve',c:'G'},{t:'ne'},{t:'rad',c:'A'},{t:','}],
+  [{t:'que',c:'F#m'},{t:' como '},{t:'Pa',c:'G'},{t:'dre '},{t:'nos',c:'A'},{t:' a'},{t:'mó',c:'D'},{t:'.'}]
  ]},
  {n:'3.',lines:[
-  [{t:'Su',c:'D'},{t:'pueblo'},{t:'somos',c:'F#m'},{t:'salvará',c:'D'}],
-  [{t:'a',c:'D'},{t:'los que'},{t:'busquen',c:'G'},{t:'al',c:'Bm'},{t:'Señor',c:'A'}],
-  [{t:'ninguno',c:'D'},{t:'de ellos'},{t:'dejará',c:'G'}],
-  [{t:'él',c:'F#m'},{t:'los'},{t:'ampara',c:'G'},{t:'con',c:'A'},{t:'su'},{t:'amor.',c:'D'}]
+  [{t:'Su',c:'D'},{t:' pueblo '},{t:'so',c:'F#m'},{t:'mos '},{t:'sal',c:'D'},{t:'va'},{t:'rá',c:'A'}],
+  [{t:'a',c:'D'},{t:' los que '},{t:'bus',c:'G'},{t:'quen '},{t:'al',c:'Em'},{t:' Se'},{t:'ñor',c:'A'},{t:';'}],
+  [{t:'nin',c:'D'},{t:'guno de ellos '},{t:'de',c:'G'},{t:'ja'},{t:'rá',c:'A'},{t:';'}],
+  [{t:'él',c:'F#m'},{t:' los am'},{t:'pa',c:'G'},{t:'ra '},{t:'con',c:'A'},{t:' su a'},{t:'mor',c:'D'},{t:'.'}]
  ]}
 ];
 /*
@@ -228,7 +228,7 @@ function parseChord(c){const m=c.match(/^([A-G])(#?)(m?)$/);return m?{root:m[1]+
 function transpose(c,n){const p=parseChord(c);if(!p)return c;const i=NOTES.indexOf(p.root);return NOTES[(i+n+120)%12]+p.minor}
 function spanish(c){const p=parseChord(c);return p?ES[p.root]+(p.minor?'m':''):c}
 function chordLabel(c){return notation==='latin'?spanish(c):c}
-function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const currentChord=transpose(item.c,semitones);const tag=document.createElement('button');tag.type='button';tag.className='chord-tag';tag.textContent=chordLabel(currentChord);tag.dataset.baseChord=item.c;tag.setAttribute('aria-label',`Ver diagrama de ${chordLabel(currentChord)}`);if(isTouchInput){tag.addEventListener('pointerdown',showChordPopoverOnTouch)}else{tag.addEventListener('mouseenter',showChordPopover);tag.addEventListener('mouseleave',schedulePopoverClose);tag.addEventListener('focus',showChordPopover);tag.addEventListener('blur',schedulePopoverClose);tag.addEventListener('click',toggleChordPopover)}span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
+function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.append(document.createTextNode(item.t));if(item.c){const currentChord=transpose(item.c,semitones);const tag=document.createElement('button');tag.type='button';tag.className='chord-tag';tag.textContent=chordLabel(currentChord);tag.dataset.baseChord=item.c;tag.setAttribute('aria-label',`Ver diagrama de ${chordLabel(currentChord)}`);if(isTouchInput){tag.addEventListener('pointerdown',showChordPopoverOnTouch)}else{tag.addEventListener('mouseenter',showChordPopover);tag.addEventListener('mouseleave',schedulePopoverClose);tag.addEventListener('focus',showChordPopover);tag.addEventListener('blur',schedulePopoverClose);tag.addEventListener('click',toggleChordPopover)}span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
 }
 function diagramSvg(chord,type){
  const shape=CHORD_DB[type]?.[chord];
