@@ -60,6 +60,19 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 .bottom-inner{height:var(--bottom-h);max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:6px 7px}
 .nav-btn{min-width:0;border:0;border-radius:14px;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:4px 2px;font-size:.68rem;font-weight:800;cursor:pointer}
 .nav-btn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}.nav-btn.active{background:var(--green-100);color:var(--green-800)}
+
+.chord-tag{cursor:pointer;border:0;font-family:inherit}
+.chord-tag:focus-visible{outline:3px solid rgba(63,125,88,.35);outline-offset:3px}
+.chord-popover{position:fixed;z-index:1000;width:194px;padding:13px 13px 12px;border:1px solid #d1d8d3;border-radius:8px;background:#fff;color:#252b27;box-shadow:0 10px 28px rgba(18,40,25,.24);opacity:0;visibility:hidden;transform:translateY(5px) scale(.98);transform-origin:top center;transition:opacity .14s ease,transform .14s ease,visibility .14s;pointer-events:none}
+.chord-popover.open{opacity:1;visibility:visible;transform:translateY(0) scale(1);pointer-events:auto}
+.chord-popover-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:3px}
+.chord-popover strong{font-size:1rem;color:var(--green-900)}
+.chord-popover .instrument-name{font-size:.72rem;color:var(--muted);font-weight:750}
+.chord-popover svg{display:block;width:112px;height:142px;margin:0 auto;color:#333}
+.chord-popover::before{content:"";position:absolute;top:-7px;left:var(--arrow-x,50%);width:12px;height:12px;background:#fff;border-left:1px solid #d1d8d3;border-top:1px solid #d1d8d3;transform:translateX(-50%) rotate(45deg)}
+.chord-popover.above::before{top:auto;bottom:-7px;border:0;border-right:1px solid #d1d8d3;border-bottom:1px solid #d1d8d3}
+@media(max-width:560px){.chord-popover{width:178px;padding:11px}.chord-popover svg{width:102px;height:130px}}
+
 @media(max-width:560px){main{padding:0}.song-card{border:0;border-radius:0;box-shadow:none}.hero{padding-top:17px}.panel{padding:17px 14px 27px}.panel-head{margin-bottom:14px}.controls{margin-inline:-14px;padding-inline:14px}.plain-line{line-height:1.5}.chord-line{gap:.1em .21em}.chord-grid{grid-template-columns:1fr 1fr}.chord-card{grid-template-columns:1fr;text-align:center;padding:11px 8px}.chord-card svg{margin:auto}}
 @media(max-width:430px){.lyrics-toolbar{align-items:center}.lyrics-toolbar .controls{gap:6px}.lyrics-toolbar .control-btn{min-width:44px;padding-inline:10px}}
 @media(max-width:390px){:root{--lyric-size:1.34rem;--chord-size:1.25rem}.panel{padding-inline:12px}.controls{margin-inline:-12px;padding-inline:12px}.control-btn{padding-inline:11px}.segment button{padding-inline:10px}.bottom-inner{padding-inline:4px}.nav-btn{font-size:.63rem}.nav-btn svg{width:21px;height:21px}}
@@ -112,6 +125,11 @@ main{width:min(100%,900px);margin:auto;padding:18px 12px 28px}
 </section>
 </article></main>
 
+<div class="chord-popover" id="chordPopover" role="tooltip" aria-hidden="true">
+  <div class="chord-popover-head"><strong id="popoverChord"></strong><span class="instrument-name" id="popoverInstrument"></span></div>
+  <div id="popoverDiagram"></div>
+</div>
+
 <nav class="bottom-nav"><div class="bottom-inner">
 <button class="nav-btn active" data-panel="lyricsPanel"><svg viewBox="0 0 24 24"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg><span>Letra</span></button>
 <button class="nav-btn" data-panel="chordsPanel"><svg viewBox="0 0 24 24"><path d="M7 20c1.5-2 1.7-4.2.6-6.5L14.5 6a2 2 0 0 1 3 2.6l-7.2 7.2C8.4 17.3 7 18.7 7 20Z"/><path d="m14 7 3 3M5 20h4"/></svg><span>Acordes</span></button>
@@ -156,23 +174,56 @@ function parseChord(c){const m=c.match(/^([A-G])(#?)(m?)$/);return m?{root:m[1]+
 function transpose(c,n){const p=parseChord(c);if(!p)return c;const i=NOTES.indexOf(p.root);return NOTES[(i+n+120)%12]+p.minor}
 function spanish(c){const p=parseChord(c);return p?ES[p.root]+(p.minor?'m':''):c}
 function chordLabel(c){return notation==='latin'?spanish(c):c}
-function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const tag=document.createElement('span');tag.className='chord-tag';tag.textContent=chordLabel(transpose(item.c,semitones));span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
+function renderChordLyrics(){const host=document.getElementById('chordLyrics');host.innerHTML='';verses.forEach(v=>{const block=document.createElement('div');block.className='verse';block.innerHTML=`<p class="verse-number">${v.n}</p>`;v.lines.forEach(line=>{const p=document.createElement('p');p.className='chord-line';line.forEach(item=>{const span=document.createElement('span');span.className='word '+(item.c?'marked':'plain');span.textContent=item.t;if(item.c){const currentChord=transpose(item.c,semitones);const tag=document.createElement('button');tag.type='button';tag.className='chord-tag';tag.textContent=chordLabel(currentChord);tag.dataset.baseChord=item.c;tag.setAttribute('aria-label',`Ver diagrama de ${chordLabel(currentChord)}`);tag.addEventListener('mouseenter',showChordPopover);tag.addEventListener('mouseleave',schedulePopoverClose);tag.addEventListener('focus',showChordPopover);tag.addEventListener('blur',schedulePopoverClose);tag.addEventListener('click',toggleChordPopover);span.append(tag)}p.append(span)});block.append(p)});host.append(block)});
 }
 function diagramSvg(chord,type){const frets=SHAPES[type][chord]||[];const strings=type==='guitar'?6:4,w=100,h=132,left=16,right=84,top=30,bottom=110;const xs=Array.from({length:strings},(_,i)=>left+i*(right-left)/(strings-1));let min=Math.min(...frets.filter(f=>f>0));let max=Math.max(...frets.filter(f=>f>0));let start=max>4?Math.max(1,min):1;let s=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Diagrama de ${chordLabel(chord)} para ${type==='guitar'?'guitarra':'ukelele'}"><g stroke="currentColor" fill="none" stroke-linecap="round">`;
  for(let y=top;y<=bottom;y+=20)s+=`<path stroke-width="${y===top&&start===1?4:1.4}" d="M${left} ${y}H${right}"/>`;xs.forEach(x=>s+=`<path stroke-width="1.4" d="M${x} ${top}V${bottom}"/>`);s+='</g>';
  if(start>1)s+=`<text x="5" y="47" font-size="10" fill="currentColor">${start}</text>`;
  frets.forEach((f,i)=>{const x=xs[i];if(f===0)s+=`<circle cx="${x}" cy="16" r="4" fill="none" stroke="currentColor" stroke-width="2"/>`;else if(f<0)s+=`<path d="M${x-4} 12l8 8m0-8-8 8" stroke="currentColor" stroke-width="2"/>`;else{const shown=f-start+1;const y=top+(shown-.5)*20;s+=`<circle cx="${x}" cy="${y}" r="6.5" fill="currentColor"/>`}});return s+'</svg>'}
+
+const chordPopover=document.getElementById('chordPopover');
+const popoverChord=document.getElementById('popoverChord');
+const popoverInstrument=document.getElementById('popoverInstrument');
+const popoverDiagram=document.getElementById('popoverDiagram');
+let activeChordTag=null,closePopoverTimer=null;
+function positionChordPopover(tag){
+ const r=tag.getBoundingClientRect(),pad=10,pw=chordPopover.offsetWidth||194,ph=chordPopover.offsetHeight||190;
+ let left=r.left+r.width/2-pw/2;left=Math.max(pad,Math.min(left,window.innerWidth-pw-pad));
+ const spaceBelow=window.innerHeight-r.bottom,showAbove=spaceBelow<ph+18&&r.top>ph+18;
+ let top=showAbove?r.top-ph-10:r.bottom+10;top=Math.max(pad,Math.min(top,window.innerHeight-ph-pad));
+ chordPopover.classList.toggle('above',showAbove);
+ chordPopover.style.left=`${left}px`;chordPopover.style.top=`${top}px`;
+ const arrow=Math.max(16,Math.min(r.left+r.width/2-left,pw-16));chordPopover.style.setProperty('--arrow-x',`${arrow}px`);
+}
+function showChordPopover(event){
+ clearTimeout(closePopoverTimer);const tag=event.currentTarget||event;if(!tag?.dataset?.baseChord)return;
+ activeChordTag=tag;const chord=transpose(tag.dataset.baseChord,semitones);
+ popoverChord.textContent=notation==='latin'?`${spanish(chord)} (${chord})`:chord;
+ popoverInstrument.textContent=instrument==='guitar'?'Guitarra':'Ukelele';
+ popoverDiagram.innerHTML=diagramSvg(chord,instrument);
+ chordPopover.classList.add('open');chordPopover.setAttribute('aria-hidden','false');
+ requestAnimationFrame(()=>positionChordPopover(tag));
+}
+function hideChordPopover(){clearTimeout(closePopoverTimer);activeChordTag=null;chordPopover.classList.remove('open');chordPopover.setAttribute('aria-hidden','true')}
+function schedulePopoverClose(){closePopoverTimer=setTimeout(hideChordPopover,120)}
+function toggleChordPopover(event){event.stopPropagation();if(chordPopover.classList.contains('open')&&activeChordTag===event.currentTarget)hideChordPopover();else showChordPopover(event)}
+chordPopover.addEventListener('mouseenter',()=>clearTimeout(closePopoverTimer));
+chordPopover.addEventListener('mouseleave',schedulePopoverClose);
+document.addEventListener('click',e=>{if(!chordPopover.contains(e.target)&&!e.target.closest('.chord-tag'))hideChordPopover()});
+window.addEventListener('scroll',()=>{if(activeChordTag)positionChordPopover(activeChordTag)},{passive:true});
+window.addEventListener('resize',()=>{if(activeChordTag)positionChordPopover(activeChordTag)});
+
 function renderGrid(){const grid=document.getElementById('chordGrid');grid.innerHTML='';baseChords.forEach(base=>{const c=transpose(base,semitones);const card=document.createElement('div');card.className='chord-card';card.innerHTML=diagramSvg(c,diagramInstrument)+`<div><h3>${chordLabel(c)}${notation==='latin'?` <small>(${c})</small>`:''}</h3><p>${diagramInstrument==='guitar'?'Guitarra':'Ukelele'}</p></div>`;grid.append(card)})}
-function setInstrument(type){instrument=type;document.querySelectorAll('.instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));diagramInstrument=type;document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));renderGrid()}
+function setInstrument(type){instrument=type;document.querySelectorAll('.instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));diagramInstrument=type;document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));hideChordPopover();renderGrid()}
 function setDiagramInstrument(type){diagramInstrument=type;document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.classList.toggle('active',b.dataset.instrument===type));renderGrid()}
-function setNotation(type){notation=type;document.querySelectorAll('.notation-btn').forEach(b=>b.classList.toggle('active',b.dataset.notation===type));renderChordLyrics();renderGrid()}
+function setNotation(type){hideChordPopover();notation=type;document.querySelectorAll('.notation-btn').forEach(b=>b.classList.toggle('active',b.dataset.notation===type));renderChordLyrics();renderGrid()}
 function setPanel(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('hidden',p.id!==id));document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));window.scrollTo({top:0,behavior:'smooth'})}
 document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>setPanel(b.dataset.panel)));
 document.querySelectorAll('.instrument-btn').forEach(b=>b.addEventListener('click',()=>setInstrument(b.dataset.instrument)));
 document.querySelectorAll('.diagram-instrument-btn').forEach(b=>b.addEventListener('click',()=>setDiagramInstrument(b.dataset.instrument)));
 document.querySelectorAll('.notation-btn').forEach(b=>b.addEventListener('click',()=>setNotation(b.dataset.notation)));
-document.getElementById('toneUp').onclick=()=>{semitones++;renderChordLyrics();renderGrid()};
-document.getElementById('toneDown').onclick=()=>{semitones--;renderChordLyrics();renderGrid()};
+document.getElementById('toneUp').onclick=()=>{hideChordPopover();semitones++;renderChordLyrics();renderGrid()};
+document.getElementById('toneDown').onclick=()=>{hideChordPopover();semitones--;renderChordLyrics();renderGrid()};
 function updateSizes(){document.documentElement.style.setProperty('--lyric-size',`calc(clamp(1.34rem,5.6vw,1.7rem) + ${lyricStep*.12}rem)`);document.documentElement.style.setProperty('--chord-size',`calc(clamp(1.22rem,5.2vw,1.58rem) + ${chordStep*.11}rem)`)}
 document.getElementById('lyricsUp').onclick=()=>{lyricStep=Math.min(5,lyricStep+1);updateSizes()};document.getElementById('lyricsDown').onclick=()=>{lyricStep=Math.max(-3,lyricStep-1);updateSizes()};
 document.getElementById('chordsUp').onclick=()=>{chordStep=Math.min(5,chordStep+1);updateSizes()};document.getElementById('chordsDown').onclick=()=>{chordStep=Math.max(-3,chordStep-1);updateSizes()};
